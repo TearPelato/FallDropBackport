@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-15T14:35:57.2822988	Loot Tables
+// 26.1.2	2026-06-15T16:18:40.5988797	Loot Tables
 1fe5af96c895226e8371a9c8db159f4527ba029b data/falldrop_backport/loot_table/blocks/black_wool_slab.json
 515d887ec318d405609bcb7b8b99a0e1d43df1d5 data/falldrop_backport/loot_table/blocks/black_wool_stairs.json
 5cb47ce97b186a767ad1cc8d7ed1e3e177912b4b data/falldrop_backport/loot_table/blocks/blue_wool_slab.json
@@ -23,6 +23,9 @@ f6fd0b1bd707c851b1fbb02f04058e31bfdbc218 data/falldrop_backport/loot_table/block
 d197e132ce9a234631e33e05d2aaa9309b56724d data/falldrop_backport/loot_table/blocks/orange_wool_stairs.json
 3a7a65de92ddf0d00f280838fd59d5cf3da3362d data/falldrop_backport/loot_table/blocks/pink_wool_slab.json
 d64e2ccab61fba847ca7a1f4e394724775888500 data/falldrop_backport/loot_table/blocks/pink_wool_stairs.json
+5e7a797dfb6818efea5bb4ab892e1429efed21d1 data/falldrop_backport/loot_table/blocks/poplar_leaves.json
+36917963cf5d3a8e73639b7e8d2799e6c58e0846 data/falldrop_backport/loot_table/blocks/poplar_log.json
+76ae53c709a2de0c31f4e7138028658039ced2c3 data/falldrop_backport/loot_table/blocks/poplar_wood.json
 218de754e74d91ea635a69c4fd920f0a74f5e22d data/falldrop_backport/loot_table/blocks/purple_wool_slab.json
 830d675e7f4b2d7e1e970cf5c01279b1b130e118 data/falldrop_backport/loot_table/blocks/purple_wool_stairs.json
 b38e43bd90906b5f0dd568c8ed22303e66ec1bfe data/falldrop_backport/loot_table/blocks/red_wool_slab.json

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "falldrop_backport:abandoned_camp",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 9281875,
+    "spacing": 25,
+    "separation": 9
+  }
+}
