@@ -24,5 +24,6 @@ public class Datagen {
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
         generator.addProvider(true , new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
     }
 }
