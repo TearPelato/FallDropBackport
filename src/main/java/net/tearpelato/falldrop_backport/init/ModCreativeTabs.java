@@ -68,6 +68,26 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.PINK_WOOL_STAIRS);
                 output.accept(ModBlocks.PINK_WOOL_SLAB);
 
+                output.accept(ModBlocks.POPLAR_LOG);
+                output.accept(ModBlocks.POPLAR_WOOD);
+                output.accept(ModBlocks.STRIPPED_POPLAR_LOG);
+                output.accept(ModBlocks.STRIPPED_POPLAR_WOOD);
+                output.accept(ModBlocks.POPLAR_PLANKS);
+                output.accept(ModBlocks.POPLAR_STAIRS);
+                output.accept(ModBlocks.POPLAR_SLAB);
+                output.accept(ModBlocks.POPLAR_FENCE);
+                output.accept(ModBlocks.POPLAR_FENCE_GATE);
+                output.accept(ModBlocks.POPLAR_DOOR);
+                output.accept(ModBlocks.POPLAR_TRAPDOOR);
+                output.accept(ModBlocks.POPLAR_PRESSURE_PLATE);
+                output.accept(ModBlocks.POPLAR_BUTTON);
+                output.accept(ModItems.POPLAR_SIGN);
+                output.accept(ModItems.POPLAR_HANGING_SIGN);
+                output.accept(ModBlocks.RED_POPLAR_LEAVES);
+                output.accept(ModBlocks.ORANGE_POPLAR_LEAVES);
+                output.accept(ModBlocks.YELLOW_POPLAR_LEAVES);
+
+
             }).build()
     );
 

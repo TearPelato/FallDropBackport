@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "falldrop_backport:block/yellow_poplar_leaves"
+  }
+}

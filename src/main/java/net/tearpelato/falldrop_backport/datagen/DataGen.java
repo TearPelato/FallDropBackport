@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 @EventBusSubscriber(modid = Constants.MOD_ID)
-public class Datagen {
+public class DataGen {
     @SubscribeEvent
     public static void gatherClientData(GatherDataEvent.Client event) {
         DataGenerator generator = event.getGenerator();
@@ -25,5 +25,8 @@ public class Datagen {
         generator.addProvider(true , new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModBlockTagProvider(packOutput, lookupProvider));
+
+
     }
 }

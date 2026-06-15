@@ -7,6 +7,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.tearpelato.falldrop_backport.init.ModBlockEntities;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModCreativeTabs;
 import net.tearpelato.falldrop_backport.init.ModItems;
@@ -24,6 +25,7 @@ public class FallDropBackport {
         ModItems.init(modEventBus);
         ModBlocks.init(modEventBus);
         ModCreativeTabs.init(modEventBus);
+        ModBlockEntities.init(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::commonSetup);

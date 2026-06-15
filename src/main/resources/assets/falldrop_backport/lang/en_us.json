@@ -32,5 +32,22 @@
   "block.falldrop_backport.blue_wool_slab": "Blue Wool Slab",
   "block.falldrop_backport.purple_wool_slab": "Purple Wool Slab",
   "block.falldrop_backport.magenta_wool_slab": "Magenta Wool Slab",
-  "block.falldrop_backport.pink_wool_slab": "Pink Wool Slab"
+  "block.falldrop_backport.pink_wool_slab": "Pink Wool Slab",
+
+  "block.falldrop_backport.poplar_log": "Poplar Log",
+  "block.falldrop_backport.poplar_wood": "Poplar Wood",
+  "block.falldrop_backport.red_poplar_leaves": "Red Poplar Leaves",
+  "block.falldrop_backport.orange_poplar_leaves": "Orange Poplar Leaves",
+  "block.falldrop_backport.yellow_poplar_leaves": "Yellow Poplar Leaves",
+  "block.falldrop_backport.poplar_planks": "Poplar Planks",
+  "block.falldrop_backport.poplar_door": "Poplar Door",
+  "block.falldrop_backport.poplar_trapdoor": "Poplar Trapdoor",
+  "block.falldrop_backport.poplar_stairs": "Poplar Stairs",
+  "block.falldrop_backport.poplar_slab": "Poplar Slab",
+  "block.falldrop_backport.poplar_pressure_plate": "Poplar Pressure Plate",
+  "block.falldrop_backport.poplar_button": "Poplar Button",
+  "block.falldrop_backport.stripped_poplar_log": "Stripped Poplar Log",
+  "block.falldrop_backport.stripped_poplar_wood": "Stripped Poplar Wood",
+  "block.falldrop_backport.poplar_fence": "Poplar Fence",
+  "block.falldrop_backport.poplar_fence_gate": "Poplar Fence Gate"
 }

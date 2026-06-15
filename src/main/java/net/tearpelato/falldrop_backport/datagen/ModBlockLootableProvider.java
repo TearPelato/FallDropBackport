@@ -5,7 +5,9 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
+import net.tearpelato.falldrop_backport.init.ModItems;
 
 import java.util.Set;
 
@@ -50,6 +52,39 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
         add(ModBlocks.PURPLE_WOOL_SLAB.get(), this::createSlabItemTable);
         add(ModBlocks.MAGENTA_WOOL_SLAB.get(), this::createSlabItemTable);
         add(ModBlocks.PINK_WOOL_SLAB.get(), this::createSlabItemTable);
+
+
+
+        dropSelf(ModBlocks.POPLAR_LOG.get());
+        dropSelf(ModBlocks.POPLAR_WOOD.get());
+        dropSelf(ModBlocks.POPLAR_PLANKS.get());
+        dropSelf(ModBlocks.POPLAR_STAIRS.get());
+        add(ModBlocks.POPLAR_SLAB.get(), this::createSlabItemTable);
+        dropSelf(ModBlocks.POPLAR_FENCE.get());
+        dropSelf(ModBlocks.POPLAR_FENCE_GATE.get());
+        dropSelf(ModBlocks.POPLAR_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.POPLAR_BUTTON.get());
+        dropSelf(ModBlocks.POPLAR_DOOR.get());
+        dropSelf(ModBlocks.POPLAR_TRAPDOOR.get());
+
+        dropSelf(ModBlocks.STRIPPED_POPLAR_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_POPLAR_WOOD.get());
+
+       add(ModBlocks.ORANGE_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+       add(ModBlocks.RED_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+       add(ModBlocks.YELLOW_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+
+       add(ModBlocks.POPLAR_SIGN.get(), block ->
+                createSingleItemTable(ModItems.POPLAR_SIGN.get()));
+
+       add(ModBlocks.POPLAR_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.POPLAR_SIGN.get()));
+
+       add(ModBlocks.POPLAR_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.POPLAR_HANGING_SIGN.get()));
+
+       add(ModBlocks.POPLAR_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.POPLAR_HANGING_SIGN.get()));
 
     }
 

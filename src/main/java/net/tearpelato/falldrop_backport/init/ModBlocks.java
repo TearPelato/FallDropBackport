@@ -1,12 +1,22 @@
 package net.tearpelato.falldrop_backport.init;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
+import net.tearpelato.falldrop_backport.block.custom.*;
 
 import java.util.function.Function;
 
@@ -81,6 +91,169 @@ public class ModBlocks {
             properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final DeferredBlock<Block> PINK_WOOL_SLAB = registerBlock("pink_wool_slab",
             properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+
+    public static final DeferredBlock<Block> POPLAR_LOG = registerBlock("poplar_log",
+            properties -> new ModFlammablePillars(properties.sound(SoundType.WOOD).strength(2.0F).ignitedByLava()));
+
+    public static final DeferredBlock<Block> POPLAR_WOOD = registerBlock("poplar_wood",
+            properties -> new ModFlammablePillars(properties.sound(SoundType.WOOD).strength(2.0F).ignitedByLava()));
+
+    public static final DeferredBlock<Block> STRIPPED_POPLAR_LOG = registerBlock("stripped_poplar_log",
+            properties -> new ModFlammablePillars(properties.sound(SoundType.WOOD).strength(2.0F).ignitedByLava()));
+
+    public static final DeferredBlock<Block> STRIPPED_POPLAR_WOOD = registerBlock("stripped_poplar_wood",
+            properties -> new ModFlammablePillars(properties.sound(SoundType.WOOD).strength(2.0F).ignitedByLava()));
+
+
+    public static final DeferredBlock<Block> RED_POPLAR_LEAVES = registerBlock("red_poplar_leaves",
+            properties -> new TintedParticleLeavesBlock(0.1f, properties.mapColor(MapColor.PLANT)
+                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
+                    .isViewBlocking((_, _, _) -> false)
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false))
+            {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final DeferredBlock<Block> ORANGE_POPLAR_LEAVES = registerBlock("orange_poplar_leaves",
+            properties -> new UntintedParticleLeavesBlock(0f, ParticleTypes.CHERRY_LEAVES,
+                    properties.mapColor(MapColor.PLANT).strength(0.2F)
+                            .randomTicks().sound(SoundType.GRASS).noOcclusion()
+                            .isSuffocating((state, level, pos) -> false)
+                            .isViewBlocking((state, level, pos) -> false)
+                            .ignitedByLava().pushReaction(PushReaction.DESTROY)
+                            .isRedstoneConductor((state, level, pos) -> false)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final DeferredBlock<Block> YELLOW_POPLAR_LEAVES = registerBlock("yellow_poplar_leaves",
+            properties -> new UntintedParticleLeavesBlock(0f, ParticleTypes.CHERRY_LEAVES,
+                    properties.mapColor(MapColor.PLANT).strength(0.2F)
+                            .randomTicks().sound(SoundType.GRASS).noOcclusion()
+                            .isSuffocating((state, level, pos) -> false)
+                            .isViewBlocking((state, level, pos) -> false)
+                            .ignitedByLava().pushReaction(PushReaction.DESTROY)
+                            .isRedstoneConductor((state, level, pos) -> false)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+
+
+
+
+
+    public static final DeferredBlock<Block> POPLAR_PLANKS = registerBlock("poplar_planks",
+            properties -> new Block(properties.sound(SoundType.WOOD).strength(2f).ignitedByLava()) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+
+    public static final DeferredBlock<Block> POPLAR_STAIRS = registerBlock("poplar_stairs",
+            properties -> new StairBlock(POPLAR_LOG.get().defaultBlockState(), properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final DeferredBlock<Block> POPLAR_SLAB = registerBlock("poplar_slab",
+            properties -> new SlabBlock( properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final DeferredBlock<Block> POPLAR_FENCE = registerBlock("poplar_fence",
+            properties -> new FenceBlock(properties.strength(2f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> POPLAR_FENCE_GATE = registerBlock("poplar_fence_gate",
+            properties -> new FenceGateBlock(WoodType.PALE_OAK, properties.strength(2f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> POPLAR_DOOR = registerBlock("poplar_door",
+            properties -> new DoorBlock(BlockSetType.PALE_OAK, properties.strength(2f)
+                    .requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> POPLAR_TRAPDOOR = registerBlock("poplar_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.PALE_OAK, properties.strength(2f)
+                    .requiresCorrectToolForDrops().noOcclusion().isValidSpawn(Blocks::never)));
+
+    public static final DeferredBlock<Block> POPLAR_PRESSURE_PLATE = registerBlock("poplar_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.PALE_OAK,
+                    properties.strength(2f).requiresCorrectToolForDrops().forceSolidOn().noCollision().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> POPLAR_BUTTON = registerBlock("poplar_button",
+            properties -> new ButtonBlock(BlockSetType.PALE_OAK, 20,
+                    properties.strength(2f).requiresCorrectToolForDrops().noCollision().pushReaction(PushReaction.DESTROY)));
+
+
+    public static final DeferredBlock<Block> POPLAR_SIGN = BLOCKS.registerBlock("poplar_sign",
+            properties -> new ModStandingSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+
+    public static final DeferredBlock<Block> POPLAR_WALL_SIGN = BLOCKS.registerBlock("poplar_wall_sign",
+            properties -> new ModWallSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+
+    public static final DeferredBlock<Block> POPLAR_HANGING_SIGN = BLOCKS.registerBlock("poplar_hanging_sign",
+            properties -> new ModHangingSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+
+    public static final DeferredBlock<Block> POPLAR_WALL_HANGING_SIGN = BLOCKS.registerBlock("poplar_wall_hanging_sign",
+            properties -> new ModWallHangingSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

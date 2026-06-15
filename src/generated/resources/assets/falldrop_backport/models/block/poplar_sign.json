@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "falldrop_backport:block/poplar_sign"
+  }
+}
