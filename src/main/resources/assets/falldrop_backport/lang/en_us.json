@@ -49,5 +49,12 @@
   "block.falldrop_backport.stripped_poplar_log": "Stripped Poplar Log",
   "block.falldrop_backport.stripped_poplar_wood": "Stripped Poplar Wood",
   "block.falldrop_backport.poplar_fence": "Poplar Fence",
-  "block.falldrop_backport.poplar_fence_gate": "Poplar Fence Gate"
+  "block.falldrop_backport.poplar_fence_gate": "Poplar Fence Gate",
+
+  "item.falldrop_backport.poplar_sign": "Poplar Sign",
+  "item.falldrop_backport.poplar_hanging_sign": "Poplar Hanging Sign",
+  "item.falldrop_backport.poplar_boat": "Poplar Boat",
+  "item.falldrop_backport.poplar_chest_boat": "Poplar Chest Boat",
+
+  "entity.falldrop_backport.poplar_chest_boat": "Poplar Boat with Chest"
 }

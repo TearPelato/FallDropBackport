@@ -231,16 +231,16 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> POPLAR_SIGN = BLOCKS.registerBlock("poplar_sign",
-            properties -> new ModStandingSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+            properties -> new ModStandingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
     public static final DeferredBlock<Block> POPLAR_WALL_SIGN = BLOCKS.registerBlock("poplar_wall_sign",
-            properties -> new ModWallSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+            properties -> new ModWallSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
     public static final DeferredBlock<Block> POPLAR_HANGING_SIGN = BLOCKS.registerBlock("poplar_hanging_sign",
-            properties -> new ModHangingSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+            properties -> new ModHangingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
     public static final DeferredBlock<Block> POPLAR_WALL_HANGING_SIGN = BLOCKS.registerBlock("poplar_wall_hanging_sign",
-            properties -> new ModWallHangingSignBlock(WoodType.OAK, properties.strength(2f).ignitedByLava()));
+            properties -> new ModWallHangingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
 
 

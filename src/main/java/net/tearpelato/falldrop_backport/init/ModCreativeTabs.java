@@ -83,6 +83,8 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.POPLAR_BUTTON);
                 output.accept(ModItems.POPLAR_SIGN);
                 output.accept(ModItems.POPLAR_HANGING_SIGN);
+                output.accept(ModItems.POPLAR_BOAT);
+                output.accept(ModItems.POPLAR_CHEST_BOAT);
                 output.accept(ModBlocks.RED_POPLAR_LEAVES);
                 output.accept(ModBlocks.ORANGE_POPLAR_LEAVES);
                 output.accept(ModBlocks.YELLOW_POPLAR_LEAVES);
