@@ -1,4 +1,9 @@
-// 26.1.2	2026-06-17T16:19:51.6133004	Registries
-b4d86dc27f46cbe56505fd5cac4d76a87eeffbbe data/falldrop_backport/worldgen/biome/dappled_forest.json
+// 26.1.2	2026-06-17T23:37:10.9540563	Registries
+d41de9e99de353c7f45ca96605e2cc01df1f6fb2 data/falldrop_backport/worldgen/biome/dappled_forest.json
+814ad1cf2d03168abb9e7184d474e8cfdf745f55 data/falldrop_backport/worldgen/configured_feature/poplar_orange.json
+f23e2498930980314124ddb1b2d905abaa74828c data/falldrop_backport/worldgen/configured_feature/poplar_red.json
+4b8be0f9f327609ad92d63d46b2df102b203fe12 data/falldrop_backport/worldgen/configured_feature/poplar_tree.json
+17469de48234fcb83ab807ebb8156d578d558e96 data/falldrop_backport/worldgen/configured_feature/poplar_yellow.json
 c4f6acb319288ca62381a0ca8290b3104d3afed8 data/falldrop_backport/worldgen/configured_feature/red_shrub.json
+84c58e0eeb3a6389c10d1049369f9c042c6f36b0 data/falldrop_backport/worldgen/placed_feature/poplar.json
 11b178ec4c2ea179e93b26cbc9f0631893acb799 data/falldrop_backport/worldgen/placed_feature/red_shrub.json

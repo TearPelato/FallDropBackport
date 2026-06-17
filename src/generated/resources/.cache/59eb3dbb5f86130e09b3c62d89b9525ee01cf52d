@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-16T23:55:28.5108064	Loot Tables
+// 26.1.2	2026-06-17T23:34:00.9001288	Loot Tables
 1fe5af96c895226e8371a9c8db159f4527ba029b data/falldrop_backport/loot_table/blocks/black_wool_slab.json
 515d887ec318d405609bcb7b8b99a0e1d43df1d5 data/falldrop_backport/loot_table/blocks/black_wool_stairs.json
 5cb47ce97b186a767ad1cc8d7ed1e3e177912b4b data/falldrop_backport/loot_table/blocks/blue_wool_slab.json
@@ -32,6 +32,8 @@ e3d1fc3dd0f3f47eda5296619abb23d63ac496da data/falldrop_backport/loot_table/block
 36917963cf5d3a8e73639b7e8d2799e6c58e0846 data/falldrop_backport/loot_table/blocks/poplar_log.json
 9e65635abe2ca6d9af06f0bd3087152cec69089b data/falldrop_backport/loot_table/blocks/poplar_planks.json
 34d73bbfe25612099a6c31b13373794c7ba31b95 data/falldrop_backport/loot_table/blocks/poplar_pressure_plate.json
+ca83c961279efdf664ca4d2f002526be94d559dc data/falldrop_backport/loot_table/blocks/poplar_sapling.json
+167f5d31567705ec58b847fa3a9342a5326d47a1 data/falldrop_backport/loot_table/blocks/poplar_sapling_potted.json
 cca8aec6be3e10ec7c6949102b4321643863242a data/falldrop_backport/loot_table/blocks/poplar_sign.json
 7aeb5a29733b7dfa55a71aad7955dcdc814543a2 data/falldrop_backport/loot_table/blocks/poplar_slab.json
 f883e1d9955eb7e66163a9f74c444ece9b58e7e0 data/falldrop_backport/loot_table/blocks/poplar_stairs.json

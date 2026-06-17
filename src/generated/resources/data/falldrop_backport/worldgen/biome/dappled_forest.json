@@ -54,7 +54,8 @@
       "minecraft:glow_lichen",
       "minecraft:brown_mushroom_taiga",
       "falldrop_backport:red_shrub",
-      "minecraft:patch_leaf_litter"
+      "minecraft:patch_leaf_litter",
+      "falldrop_backport:poplar"
     ]
   ],
   "has_precipitation": true,

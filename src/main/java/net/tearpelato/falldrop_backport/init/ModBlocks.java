@@ -18,6 +18,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.block.custom.*;
+import net.tearpelato.falldrop_backport.worldgen.ModTreeGrowers;
 
 import java.util.function.Function;
 
@@ -253,8 +254,11 @@ public class ModBlocks {
 
 
 
+    public static final DeferredBlock<Block> POPLAR_SAPLING = registerBlock("poplar_sapling",
+            properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).instabreak().noCollision()));
 
-
+    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = registerBlock("poplar_sapling_potted",
+            properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).instabreak().noCollision()));
 
 
 
