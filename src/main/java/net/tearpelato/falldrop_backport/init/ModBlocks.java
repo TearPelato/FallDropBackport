@@ -3,6 +3,7 @@ package net.tearpelato.falldrop_backport.init;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
@@ -243,8 +244,11 @@ public class ModBlocks {
             properties -> new ModWallHangingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
 
+        public static final DeferredBlock<Block> RED_SHRUB = registerBlock("red_shrub",
+                properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
-
+    public static final DeferredBlock<Block> RED_SHRUB_POTTED = registerBlock("red_shrub_potted",
+            properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
 
 

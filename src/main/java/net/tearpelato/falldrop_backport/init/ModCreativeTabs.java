@@ -88,7 +88,7 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.RED_POPLAR_LEAVES);
                 output.accept(ModBlocks.ORANGE_POPLAR_LEAVES);
                 output.accept(ModBlocks.YELLOW_POPLAR_LEAVES);
-
+                output.accept(ModBlocks.RED_SHRUB);
 
             }).build()
     );

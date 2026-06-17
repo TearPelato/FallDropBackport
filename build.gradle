@@ -10,6 +10,7 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    maven { url = 'https://maven.minecraftforge.net/' }
 }
 
 base {
@@ -92,6 +93,8 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
 
+    implementation "com.github.glitchfiend:TerraBlender-neoforge:${minecraft_version}-${terrablender_version}"
+
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -107,7 +110,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
                              mod_license            : mod_license,
                              mod_version            : mod_version,
                              mod_authors            : mod_authors,
-                             mod_description        : mod_description]
+                             mod_description        : mod_description,
+                             terrablender_version   : terrablender_version]
     inputs.properties replaceProperties
     expand replaceProperties
     from "src/main/templates"

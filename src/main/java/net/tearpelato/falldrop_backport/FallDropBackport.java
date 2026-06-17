@@ -34,6 +34,10 @@ public class FallDropBackport {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+
+            ModBiomes.registerBiomes();
+        });
 
     }
 

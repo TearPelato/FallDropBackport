@@ -85,6 +85,8 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
 
        add(ModBlocks.POPLAR_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.POPLAR_HANGING_SIGN.get()));
+       dropSelf(ModBlocks.RED_SHRUB.get());
+       dropSelf(ModBlocks.RED_SHRUB_POTTED.get());
 
     }
 
