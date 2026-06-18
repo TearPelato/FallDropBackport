@@ -89,6 +89,7 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.RED_SHRUB_POTTED.get());
        dropSelf(ModBlocks.POPLAR_SAPLING.get());
        dropSelf(ModBlocks.POPLAR_SAPLING_POTTED.get());
+       dropSelf(ModBlocks.SHELF_MUSHROOM.get());
 
     }
 

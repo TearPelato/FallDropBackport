@@ -116,5 +116,8 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createPlantWithDefaultItem(ModBlocks.RED_SHRUB.get(), ModBlocks.RED_SHRUB_POTTED.get(), BlockModelGenerators.PlantType.TINTED);
         blockModels.createPlantWithDefaultItem(ModBlocks.POPLAR_SAPLING.get(), ModBlocks.POPLAR_SAPLING_POTTED.get(), BlockModelGenerators.PlantType.TINTED);
 
+        blockModels.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(ModBlocks.SHELF_MUSHROOM.get(),
+                BlockModelGenerators.plainVariant(Constants.id("block/shelf_mushroom"))).with(BlockModelGenerators.ROTATION_HORIZONTAL_FACING));
+
     }
 }

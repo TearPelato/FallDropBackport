@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-17T23:34:00.9001288	Loot Tables
+// 26.1.2	2026-06-18T14:03:53.1769991	Loot Tables
 1fe5af96c895226e8371a9c8db159f4527ba029b data/falldrop_backport/loot_table/blocks/black_wool_slab.json
 515d887ec318d405609bcb7b8b99a0e1d43df1d5 data/falldrop_backport/loot_table/blocks/black_wool_stairs.json
 5cb47ce97b186a767ad1cc8d7ed1e3e177912b4b data/falldrop_backport/loot_table/blocks/blue_wool_slab.json
@@ -48,6 +48,7 @@ a7832c3ef3ba5a5a9c6e801ccda3d3efcb428439 data/falldrop_backport/loot_table/block
 7a0769a4a1c43138f112815ed1e88a630d60fc92 data/falldrop_backport/loot_table/blocks/red_shrub_potted.json
 b38e43bd90906b5f0dd568c8ed22303e66ec1bfe data/falldrop_backport/loot_table/blocks/red_wool_slab.json
 02787bd3b4e078c80be8d6493e7502463dfc5ee3 data/falldrop_backport/loot_table/blocks/red_wool_stairs.json
+5fc52fd058af45b4cd245db03cdbe2e2fe90e30e data/falldrop_backport/loot_table/blocks/shelf_mushroom.json
 611d4972a1f1fd0adbb04e11542b85840895a342 data/falldrop_backport/loot_table/blocks/stripped_poplar_log.json
 7c573e1cf3609d0cb478c3e10483616d0efcdee7 data/falldrop_backport/loot_table/blocks/stripped_poplar_wood.json
 1275cd37fb50734a5392cabd3ceffb24a8effb69 data/falldrop_backport/loot_table/blocks/white_wool_slab.json

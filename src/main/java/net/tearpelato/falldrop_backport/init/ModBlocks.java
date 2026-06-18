@@ -261,7 +261,8 @@ public class ModBlocks {
             properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).instabreak().noCollision()));
 
 
-
+    public static final DeferredBlock<Block> SHELF_MUSHROOM = registerBlock("shelf_mushroom",
+            properties -> new ShelfMushroomBlock(properties.strength(1.0F)));
 
 
 

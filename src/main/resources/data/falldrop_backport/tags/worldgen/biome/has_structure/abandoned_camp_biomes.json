@@ -12,6 +12,11 @@
     "#minecraft:is_taiga",
     "minecraft:plains",
     "minecraft:snowy_plains",
+    "falldrop_backport:dappled_forest",
+    {
+      "id": "falldrop_backport:dappled_forest",
+      "required": false
+    },
     {
       "id": "#c:is_forest",
       "required": false
