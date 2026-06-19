@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
+import net.tearpelato.falldrop_backport.init.ModItems;
 import net.tearpelato.falldrop_backport.init.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -104,7 +105,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
 
         woodFromLogs(ModBlocks.POPLAR_WOOD, ModBlocks.POPLAR_LOG);
-        planksFromLog(ModBlocks.POPLAR_PLANKS.get(), ModTags.Items.POPLAR_LOGS, 4);
+        planksFromLogs(ModBlocks.POPLAR_PLANKS.get(), ModTags.Items.POPLAR_LOGS, 4);
         doorBuilder(ModBlocks.POPLAR_DOOR.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
         trapdoorBuilder(ModBlocks.POPLAR_TRAPDOOR.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
         stairBuilder(ModBlocks.POPLAR_STAIRS.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
@@ -113,8 +114,11 @@ public class ModRecipeProvider extends RecipeProvider {
         fenceGateBuilder(ModBlocks.POPLAR_FENCE_GATE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
         pressurePlateBuilder(RecipeCategory.REDSTONE, ModBlocks.POPLAR_PRESSURE_PLATE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
         buttonBuilder(ModBlocks.POPLAR_BUTTON.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-
-
+        signBuilder(ModBlocks.POPLAR_SIGN.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
+        hangingSign(ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_PLANKS.get());
+        woodenBoat(ModItems.POPLAR_BOAT.get(), ModBlocks.POPLAR_PLANKS.get());
+        chestBoat(ModItems.POPLAR_CHEST_BOAT.get(), ModBlocks.POPLAR_PLANKS.get());
+        shelf(ModBlocks.POPLAR_SHELF.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
 
 
 

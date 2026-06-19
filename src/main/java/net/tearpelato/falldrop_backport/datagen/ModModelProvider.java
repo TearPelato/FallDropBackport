@@ -106,8 +106,8 @@ public class ModModelProvider extends ModelProvider {
 
         blockModels.woodProvider(ModBlocks.POPLAR_LOG.get()).logWithHorizontal(ModBlocks.POPLAR_LOG.get()).wood(ModBlocks.POPLAR_WOOD.get());
         blockModels.woodProvider(ModBlocks.STRIPPED_POPLAR_LOG.get()).logWithHorizontal(ModBlocks.STRIPPED_POPLAR_LOG.get()).wood(ModBlocks.STRIPPED_POPLAR_WOOD.get());
-        blockModels.createTintedLeaves(ModBlocks.RED_POPLAR_LEAVES.get(), TexturedModel.LEAVES, -12012264);
-        blockModels.createTintedLeaves(ModBlocks.ORANGE_POPLAR_LEAVES.get(), TexturedModel.LEAVES, -12012255);
+        blockModels.createTintedLeaves(ModBlocks.RED_POPLAR_LEAVES.get(), TexturedModel.LEAVES, -7594470);;
+        blockModels.createTintedLeaves(ModBlocks.ORANGE_POPLAR_LEAVES.get(), TexturedModel.LEAVES, -3647744);
         blockModels.createTintedLeaves(ModBlocks.YELLOW_POPLAR_LEAVES.get(), TexturedModel.LEAVES, -12012255);
 
         blockModels.family(ModBlocks.POPLAR_PLANKS.get()).generateFor(ModBlockFamilies.POPLAR_PLANKS);
@@ -119,5 +119,6 @@ public class ModModelProvider extends ModelProvider {
         blockModels.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(ModBlocks.SHELF_MUSHROOM.get(),
                 BlockModelGenerators.plainVariant(Constants.id("block/shelf_mushroom"))).with(BlockModelGenerators.ROTATION_HORIZONTAL_FACING));
 
+        blockModels.createShelf(ModBlocks.POPLAR_SHELF.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
     }
 }

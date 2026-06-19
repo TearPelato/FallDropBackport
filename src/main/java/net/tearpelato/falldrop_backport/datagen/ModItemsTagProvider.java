@@ -5,7 +5,6 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
-import net.tearpelato.falldrop_backport.init.ModItems;
 import net.tearpelato.falldrop_backport.init.ModTags;
 
 import java.util.concurrent.CompletableFuture;

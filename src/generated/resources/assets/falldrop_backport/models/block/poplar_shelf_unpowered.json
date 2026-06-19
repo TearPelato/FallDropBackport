@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_shelf_unpowered",
+  "textures": {
+    "all": "falldrop_backport:block/poplar_shelf",
+    "particle": "falldrop_backport:block/stripped_poplar_log"
+  }
+}

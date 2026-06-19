@@ -244,6 +244,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> POPLAR_WALL_HANGING_SIGN = BLOCKS.registerBlock("poplar_wall_hanging_sign",
             properties -> new ModWallHangingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
+    public static final DeferredBlock<Block> POPLAR_SHELF = registerBlock("poplar_shelf",
+            properties -> new ModShelfBlock(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.SHELF)));
 
         public static final DeferredBlock<Block> RED_SHRUB = registerBlock("red_shrub",
                 properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));

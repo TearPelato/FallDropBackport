@@ -1,5 +1,6 @@
 package net.tearpelato.falldrop_backport.worldgen;
 
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -7,6 +8,9 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.tearpelato.falldrop_backport.Constants;
@@ -18,6 +22,8 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> RED_SHRUB = registerKey("red_shrub");
     public static final ResourceKey<PlacedFeature> POPLAR = registerKey("poplar");
+    public static final ResourceKey<PlacedFeature> SHELF_MUSHROOM = registerKey("shelf_mushroom");
+    public static final ResourceKey<PlacedFeature> FALLEN_POPLAR = registerKey("fallen_poplar");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -29,6 +35,24 @@ public class ModPlacedFeatures {
         register(context, POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.POPLAR_TREE),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.POPLAR_SAPLING.get()));
+
+        register(context, FALLEN_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_POPLAR),
+               List.of(new PlacementModifier[]{PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING)}));
+
+        register(context, SHELF_MUSHROOM, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHELF_MUSHROOM),
+                List.of(              CountPlacement.of(1),
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(50), VerticalAnchor.absolute(80)),
+                        EnvironmentScanPlacement.scanningFor(
+                                Direction.DOWN,
+                                BlockPredicate.matchesBlocks(ModBlocks.POPLAR_LOG.get()),
+                                BlockPredicate.ONLY_IN_AIR_PREDICATE,
+                                12
+                        ),
+                        BiomeFilter.biome()));
+
+
 
     }
 

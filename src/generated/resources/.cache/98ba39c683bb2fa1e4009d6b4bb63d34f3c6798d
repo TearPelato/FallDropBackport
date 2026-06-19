@@ -1,4 +1,13 @@
-// 26.1.2	2026-06-15T20:13:55.5188571	Tags for minecraft:block mod id falldrop_backport
+// 26.1.2	2026-06-19T20:32:46.0042429	Tags for minecraft:block mod id falldrop_backport
+5f33a733ee31807eeb3deb1ae09ea7ae777252dd data/minecraft/tags/block/doors.json
+c8c064ae2d3fc568737fc43edce8221941392510 data/minecraft/tags/block/fences.json
+ce3ffa8ed20d791b5af7087fafa78f5d00847d8b data/minecraft/tags/block/fence_gates.json
 f379b39a1ea92597c7f088c5336bbc1a15bbfd73 data/minecraft/tags/block/leaves.json
-59de0f832c6fa87aba806f8843436b35f462b2e4 data/minecraft/tags/block/logs.json
+2cc2a1e89eccbaf1dd52ac68958a7259ee870d7f data/minecraft/tags/block/logs.json
+3972ad46e66896e9d7858fc7bdc5d4995ad6e3c2 data/minecraft/tags/block/logs_that_burn.json
 82c7a90edfd00c455bb6913b2c7bbc779c92dd59 data/minecraft/tags/block/planks.json
+0b7501e701332a68fc3c948c07ca4af0602fffee data/minecraft/tags/block/saplings.json
+5ad3f56809eef465af4142b21f337d3f92e4ac90 data/minecraft/tags/block/slabs.json
+ec3ea5555c43b4e819587cb3826f990a0664d3a5 data/minecraft/tags/block/stairs.json
+d0e0458238fdbd341dd17175bedc47a8117c9069 data/minecraft/tags/block/trapdoors.json
+f7a0b96f45fe987d02584f026fa072b35833d395 data/minecraft/tags/block/wooden_shelves.json

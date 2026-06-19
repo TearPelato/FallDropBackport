@@ -55,7 +55,8 @@
       "minecraft:brown_mushroom_taiga",
       "falldrop_backport:red_shrub",
       "minecraft:patch_leaf_litter",
-      "falldrop_backport:poplar"
+      "falldrop_backport:poplar",
+      "falldrop_backport:fallen_poplar"
     ]
   ],
   "has_precipitation": true,

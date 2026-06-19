@@ -66,13 +66,14 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.POPLAR_BUTTON.get());
         dropSelf(ModBlocks.POPLAR_DOOR.get());
         dropSelf(ModBlocks.POPLAR_TRAPDOOR.get());
+        dropSelf(ModBlocks.POPLAR_SHELF.get());
 
         dropSelf(ModBlocks.STRIPPED_POPLAR_LOG.get());
         dropSelf(ModBlocks.STRIPPED_POPLAR_WOOD.get());
 
-       add(ModBlocks.ORANGE_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
-       add(ModBlocks.RED_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
-       add(ModBlocks.YELLOW_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+       add(ModBlocks.ORANGE_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+       add(ModBlocks.RED_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+       add(ModBlocks.YELLOW_POPLAR_LEAVES.get(), block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
        add(ModBlocks.POPLAR_SIGN.get(), block ->
                 createSingleItemTable(ModItems.POPLAR_SIGN.get()));
@@ -85,6 +86,8 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
 
        add(ModBlocks.POPLAR_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.POPLAR_HANGING_SIGN.get()));
+
+
        dropSelf(ModBlocks.RED_SHRUB.get());
        dropSelf(ModBlocks.RED_SHRUB_POTTED.get());
        dropSelf(ModBlocks.POPLAR_SAPLING.get());
