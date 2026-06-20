@@ -26,6 +26,8 @@ public class DataGen {
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModBlockTagProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModItemsTagProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
 
 
     }

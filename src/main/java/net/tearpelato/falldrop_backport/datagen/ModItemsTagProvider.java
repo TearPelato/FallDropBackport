@@ -18,8 +18,11 @@ public class ModItemsTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         tag(ModTags.Items.POPLAR_LOGS)
-                .add(ModBlocks.POPLAR_LOG.get().asItem())
-                .add(ModBlocks.POPLAR_WOOD.get().asItem());
+                .add(ModBlocks.POPLAR_LOG.asItem())
+                .add(ModBlocks.POPLAR_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_POPLAR_LOG.asItem())
+                .add(ModBlocks.STRIPPED_POPLAR_WOOD.asItem());
+
 
     }
 }

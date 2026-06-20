@@ -105,22 +105,35 @@ public class ModRecipeProvider extends RecipeProvider {
 
 
         woodFromLogs(ModBlocks.POPLAR_WOOD, ModBlocks.POPLAR_LOG);
-        planksFromLogs(ModBlocks.POPLAR_PLANKS.get(), ModTags.Items.POPLAR_LOGS, 4);
-        doorBuilder(ModBlocks.POPLAR_DOOR.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-        trapdoorBuilder(ModBlocks.POPLAR_TRAPDOOR.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-        stairBuilder(ModBlocks.POPLAR_STAIRS.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
+        planksFromLogs(ModBlocks.POPLAR_PLANKS, ModTags.Items.POPLAR_LOGS, 4);
+        doorBuilder(ModBlocks.POPLAR_DOOR.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
+        trapdoorBuilder(ModBlocks.POPLAR_TRAPDOOR.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
+        stairBuilder(ModBlocks.POPLAR_STAIRS.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
         slab(RecipeCategory.BUILDING_BLOCKS,ModBlocks.POPLAR_SLAB.get(), ModBlocks.POPLAR_PLANKS.get());
-        fenceBuilder(ModBlocks.POPLAR_FENCE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-        fenceGateBuilder(ModBlocks.POPLAR_FENCE_GATE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-        pressurePlateBuilder(RecipeCategory.REDSTONE, ModBlocks.POPLAR_PRESSURE_PLATE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-        buttonBuilder(ModBlocks.POPLAR_BUTTON.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
-        signBuilder(ModBlocks.POPLAR_SIGN.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()));
+        fenceBuilder(ModBlocks.POPLAR_FENCE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
+        fenceGateBuilder(ModBlocks.POPLAR_FENCE_GATE.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
+        pressurePlate(ModBlocks.POPLAR_PRESSURE_PLATE.get(), ModBlocks.POPLAR_PLANKS.get());
+        buttonBuilder(ModBlocks.POPLAR_BUTTON.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
+        signBuilder(ModBlocks.POPLAR_SIGN.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
+                .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
+                .save(output);
         hangingSign(ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_PLANKS.get());
         woodenBoat(ModItems.POPLAR_BOAT.get(), ModBlocks.POPLAR_PLANKS.get());
-        chestBoat(ModItems.POPLAR_CHEST_BOAT.get(), ModBlocks.POPLAR_PLANKS.get());
+        chestBoat(ModItems.POPLAR_CHEST_BOAT.get(), ModItems.POPLAR_BOAT.get());
         shelf(ModBlocks.POPLAR_SHELF.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
-
-
+        woodFromLogs(ModBlocks.STRIPPED_POPLAR_WOOD, ModBlocks.STRIPPED_POPLAR_LOG);
 
 
 
