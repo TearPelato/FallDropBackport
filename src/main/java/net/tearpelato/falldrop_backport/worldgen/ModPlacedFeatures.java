@@ -30,14 +30,14 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB),
-                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+                List.of(RarityFilter.onAverageOnceEvery(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         register(context, POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.POPLAR_TREE),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(8, 0.1f, 2),
                         ModBlocks.POPLAR_SAPLING.get()));
 
         register(context, FALLEN_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_POPLAR),
-               List.of(new PlacementModifier[]{PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING)}));
+               List.of(new PlacementModifier[]{PlacementUtils.filteredByBlockSurvival(ModBlocks.POPLAR_SAPLING.get())}));
 
         register(context, SHELF_MUSHROOM, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHELF_MUSHROOM),
                 List.of(              CountPlacement.of(1),

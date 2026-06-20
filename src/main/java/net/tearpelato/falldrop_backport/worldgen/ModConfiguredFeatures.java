@@ -13,6 +13,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -25,6 +26,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePla
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator;
+import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
@@ -101,12 +103,12 @@ public class ModConfiguredFeatures {
     private static TreeConfiguration.TreeConfigurationBuilder createPoplar(Block leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
-                new FancyTrunkPlacer(6, 2, 0),          // altezza base 6, +0~2 random
+                new FancyTrunkPlacer(6, 2, 0),
                 BlockStateProvider.simple(leaves),
-                new FancyFoliagePlacer(                     // chioma larga e irregolare
-                        ConstantInt.of(3),                  // radius
-                        ConstantInt.of(4),                  // offset dal top del tronco
-                        4                                   // altezza chioma
+                new FancyFoliagePlacer(
+                        ConstantInt.of(3),
+                        ConstantInt.of(4),
+                        4
                 ),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).ignoreVines();
@@ -116,33 +118,18 @@ public class ModConfiguredFeatures {
 
     private static FallenTreeConfiguration.FallenTreeConfigurationBuilder createFallenPoplar() {
         return new FallenTreeConfiguration.FallenTreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.X)),
                 UniformInt.of(3, 5))
                 .logDecorators(ImmutableList.of(
-                        new AttachedToLogsDecorator(
-                                0.25f,
-                                new WeightedStateProvider(
-                                        WeightedList.<BlockState>builder()
-                                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState()
-                                                        .setValue(ShelfMushroomBlock.FACING, Direction.NORTH), 2)
-                                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState()
-                                                        .setValue(ShelfMushroomBlock.FACING, Direction.SOUTH), 2)
-                                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState()
-                                                        .setValue(ShelfMushroomBlock.FACING, Direction.EAST), 2)
-                                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState()
-                                                        .setValue(ShelfMushroomBlock.FACING, Direction.WEST), 2)
-                                ),
-                                List.of(Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST)
-                        ),
-                        new AttachedToLogsDecorator(
-                                0.4f,
-                                new WeightedStateProvider(
-                                        WeightedList.<BlockState>builder()
-                                                .add(Blocks.MOSS_CARPET.defaultBlockState(), 3)
-                                                .add(Blocks.MOSS_BLOCK.defaultBlockState(), 1)
-                                ),
-                                List.of(Direction.UP)
-                        )
-                ));
+        new AttachedToLogsDecorator(
+                0.25f,
+                new WeightedStateProvider(
+                        WeightedList.<BlockState>builder()
+                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState(),2)
+                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState(), 2)
+                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState(), 2)
+                                .add(ModBlocks.SHELF_MUSHROOM.get().defaultBlockState(), 2)),
+                List.of(Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST))
+                )).stumpDecorators(ImmutableList.of(TrunkVineDecorator.INSTANCE));
     }
 }

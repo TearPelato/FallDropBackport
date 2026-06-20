@@ -29,6 +29,5 @@ public class DataGen {
         generator.addProvider(true, new ModItemsTagProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
 
-
     }
 }
