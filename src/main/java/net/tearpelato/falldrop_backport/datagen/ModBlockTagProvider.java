@@ -82,5 +82,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_POPLAR_LOG.get())
                 .add(ModBlocks.STRIPPED_POPLAR_WOOD.get());
 
+        tag(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POPLAR_SAPLING_POTTED.get())
+                .add(ModBlocks.RED_SHRUB_POTTED.get());
     }
 }

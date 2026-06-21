@@ -28,6 +28,6 @@ public class DataGen {
         generator.addProvider(true, new ModBlockTagProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModItemsTagProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
-
+        generator.addProvider(true, new ModBiomeTagsProvider(packOutput, lookupProvider));
     }
 }

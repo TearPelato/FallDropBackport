@@ -2,6 +2,8 @@ package net.tearpelato.falldrop_backport;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -42,7 +44,8 @@ public class FallDropBackport {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RED_SHRUB.getId(), ModBlocks.RED_SHRUB_POTTED);
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.POPLAR_SAPLING.getId(), ModBlocks.POPLAR_SAPLING_POTTED);
     }
 
 

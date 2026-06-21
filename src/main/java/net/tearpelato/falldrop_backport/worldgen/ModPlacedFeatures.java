@@ -33,7 +33,7 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         register(context, POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.POPLAR_TREE),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(8, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
                         ModBlocks.POPLAR_SAPLING.get()));
 
         register(context, FALLEN_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_POPLAR),

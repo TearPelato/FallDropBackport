@@ -1,7 +1,8 @@
-// 26.1.2	2026-06-19T20:32:46.0042429	Tags for minecraft:block mod id falldrop_backport
+// 26.1.2	2026-06-21T20:16:28.115951	Tags for minecraft:block mod id falldrop_backport
 5f33a733ee31807eeb3deb1ae09ea7ae777252dd data/minecraft/tags/block/doors.json
 c8c064ae2d3fc568737fc43edce8221941392510 data/minecraft/tags/block/fences.json
 ce3ffa8ed20d791b5af7087fafa78f5d00847d8b data/minecraft/tags/block/fence_gates.json
+052cd59f9960ae0c6d2aff25273ba622adbe5032 data/minecraft/tags/block/flower_pots.json
 f379b39a1ea92597c7f088c5336bbc1a15bbfd73 data/minecraft/tags/block/leaves.json
 2cc2a1e89eccbaf1dd52ac68958a7259ee870d7f data/minecraft/tags/block/logs.json
 3972ad46e66896e9d7858fc7bdc5d4995ad6e3c2 data/minecraft/tags/block/logs_that_burn.json

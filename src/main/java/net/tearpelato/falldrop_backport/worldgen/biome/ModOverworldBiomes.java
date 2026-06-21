@@ -21,8 +21,11 @@ public class ModOverworldBiomes {
 
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 30, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 1, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 30, new MobSpawnSettings.SpawnerData(EntityType.COW, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.COW, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.PIG, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 1, 5));
         spawnBuilder.addSpawn(MobCategory.CREATURE, 25, new MobSpawnSettings.SpawnerData(EntityType.FOX, 1, 3));
 
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
@@ -30,6 +33,7 @@ public class ModOverworldBiomes {
         BiomeDefaultFeatures.addDefaultMonsterRoom(biomeBuilder);
         BiomeDefaultFeatures.addDefaultUndergroundVariety(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.BROWN_MUSHROOM_TAIGA);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.RED_SHRUB);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.PATCH_LEAF_LITTER);

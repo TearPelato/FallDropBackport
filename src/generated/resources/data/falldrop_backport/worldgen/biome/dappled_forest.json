@@ -52,6 +52,7 @@
     [],
     [
       "minecraft:glow_lichen",
+      "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_taiga",
       "falldrop_backport:red_shrub",
       "minecraft:patch_leaf_litter",
@@ -76,13 +77,31 @@
         "type": "minecraft:chicken",
         "maxCount": 5,
         "minCount": 1,
-        "weight": 30
+        "weight": 35
       },
       {
         "type": "minecraft:cow",
         "maxCount": 5,
         "minCount": 1,
-        "weight": 30
+        "weight": 35
+      },
+      {
+        "type": "minecraft:pig",
+        "maxCount": 5,
+        "minCount": 1,
+        "weight": 35
+      },
+      {
+        "type": "minecraft:rabbit",
+        "maxCount": 5,
+        "minCount": 1,
+        "weight": 35
+      },
+      {
+        "type": "minecraft:sheep",
+        "maxCount": 5,
+        "minCount": 1,
+        "weight": 35
       },
       {
         "type": "minecraft:fox",

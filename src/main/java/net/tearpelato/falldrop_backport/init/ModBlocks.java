@@ -259,9 +259,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> POPLAR_SAPLING = registerBlock("poplar_sapling",
             properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).instabreak().noCollision()));
 
-    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = registerBlock("poplar_sapling_potted",
-            properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).instabreak().noCollision()));
-
+    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = BLOCKS.registerBlock("poplar_sapling_potted",
+            properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, POPLAR_SAPLING,
+                    properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> SHELF_MUSHROOM = registerBlock("shelf_mushroom",
             properties -> new ShelfMushroomBlock(properties.strength(1.0F)));

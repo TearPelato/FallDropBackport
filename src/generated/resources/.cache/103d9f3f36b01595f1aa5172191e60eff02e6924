@@ -1,5 +1,5 @@
-// 26.1.2	2026-06-20T23:27:20.6225763	Registries
-0d6621158be23ca7fdc1b272041dc03e0e69fae0 data/falldrop_backport/worldgen/biome/dappled_forest.json
+// 26.1.2	2026-06-21T21:26:06.6019109	Registries
+c89485804da480e6df3a3588a2c6be41e7d09713 data/falldrop_backport/worldgen/biome/dappled_forest.json
 e0f0884e074dc5a291998e602283a4133a1de03f data/falldrop_backport/worldgen/configured_feature/fallen_poplar.json
 6f49f23aa562290f04bd8538d0a200087f3895f3 data/falldrop_backport/worldgen/configured_feature/poplar_orange.json
 398b9923dbd998f66f05730beb3a1ea48c0d2f54 data/falldrop_backport/worldgen/configured_feature/poplar_red.json
@@ -8,6 +8,6 @@ e0f0884e074dc5a291998e602283a4133a1de03f data/falldrop_backport/worldgen/configu
 c4f6acb319288ca62381a0ca8290b3104d3afed8 data/falldrop_backport/worldgen/configured_feature/red_shrub.json
 50e28639402d50ee2656c89c6593c4e7e3f1e6fb data/falldrop_backport/worldgen/configured_feature/shelf_mushroom.json
 11cd08781b91b5fc5c71c711cf2a88c9bedeb550 data/falldrop_backport/worldgen/placed_feature/fallen_poplar.json
-a1a70f260760cdfebf9b1b4dcf329fc01d75a621 data/falldrop_backport/worldgen/placed_feature/poplar.json
+aa678daacebb160e8888ef76c9fee2b639dde8d0 data/falldrop_backport/worldgen/placed_feature/poplar.json
 a2cf104ae8088257c37f8856c5f7e864cfa04afa data/falldrop_backport/worldgen/placed_feature/red_shrub.json
 c800ff0641d2ceacacfc1b56b6afb93a8f7e7fd5 data/falldrop_backport/worldgen/placed_feature/shelf_mushroom.json
