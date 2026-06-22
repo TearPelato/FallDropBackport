@@ -132,13 +132,12 @@ public class ModBlocks {
             });
 
     public static final DeferredBlock<Block> ORANGE_POPLAR_LEAVES = registerBlock("orange_poplar_leaves",
-            properties -> new UntintedParticleLeavesBlock(0f, ParticleTypes.CHERRY_LEAVES,
-                    properties.mapColor(MapColor.PLANT).strength(0.2F)
-                            .randomTicks().sound(SoundType.GRASS).noOcclusion()
-                            .isSuffocating((state, level, pos) -> false)
-                            .isViewBlocking((state, level, pos) -> false)
-                            .ignitedByLava().pushReaction(PushReaction.DESTROY)
-                            .isRedstoneConductor((state, level, pos) -> false)) {
+            properties -> new TintedParticleLeavesBlock(0.1f, properties.mapColor(MapColor.PLANT)
+                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
+                    .isViewBlocking((_, _, _) -> false)
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false))
+            {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -154,15 +153,15 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
 
     public static final DeferredBlock<Block> YELLOW_POPLAR_LEAVES = registerBlock("yellow_poplar_leaves",
-            properties -> new UntintedParticleLeavesBlock(0f, ParticleTypes.CHERRY_LEAVES,
-                    properties.mapColor(MapColor.PLANT).strength(0.2F)
-                            .randomTicks().sound(SoundType.GRASS).noOcclusion()
-                            .isSuffocating((state, level, pos) -> false)
-                            .isViewBlocking((state, level, pos) -> false)
-                            .ignitedByLava().pushReaction(PushReaction.DESTROY)
-                            .isRedstoneConductor((state, level, pos) -> false)) {
+            properties -> new TintedParticleLeavesBlock(0.1f, properties.mapColor(MapColor.PLANT)
+                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
+                    .isViewBlocking((_, _, _) -> false)
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false))
+            {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -178,6 +177,7 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
 
 
 

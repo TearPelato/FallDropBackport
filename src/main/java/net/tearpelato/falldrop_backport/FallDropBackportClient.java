@@ -1,5 +1,6 @@
 package net.tearpelato.falldrop_backport;
 
+import net.minecraft.client.color.block.BlockTintSource;
 import net.minecraft.client.color.block.BlockTintSources;
 import net.minecraft.client.model.object.boat.BoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -43,5 +44,9 @@ public class FallDropBackportClient {
         event.registerLayerDefinition(ModModelLayerLocations.POPLAR_CHEST_BOAT, BoatModel::createChestBoatModel);
     }
 
+    @SubscribeEvent
+    public static void registerCloBlocks(RegisterColorHandlersEvent.BlockTintSources event) {
+
+    }
 
 }
