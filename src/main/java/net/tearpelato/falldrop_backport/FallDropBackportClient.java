@@ -1,7 +1,5 @@
 package net.tearpelato.falldrop_backport;
 
-import net.minecraft.client.color.block.BlockTintSource;
-import net.minecraft.client.color.block.BlockTintSources;
 import net.minecraft.client.model.object.boat.BoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.ShelfRenderer;
@@ -16,10 +14,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.tearpelato.falldrop_backport.entity.client.ModModelLayerLocations;
 import net.tearpelato.falldrop_backport.init.ModBlockEntities;
-import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModEntities;
-
-import java.util.List;
 
 @EventBusSubscriber(modid = Constants.MOD_ID, value = Dist.CLIENT)
 public class FallDropBackportClient {

@@ -37,7 +37,6 @@ public class FallDropBackport {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
 
-            Sheets.addWoodType(ModWoodType.POPLAR);
             ModBiomes.registerBiomes();
         });
 

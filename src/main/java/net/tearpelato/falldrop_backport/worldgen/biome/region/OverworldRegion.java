@@ -1,5 +1,5 @@
 package net.tearpelato.falldrop_backport.worldgen.biome.region;
-
+/*
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
@@ -12,10 +12,12 @@ import terrablender.api.Region;
 import terrablender.api.RegionType;
 import terrablender.api.VanillaParameterOverlayBuilder;
 
-import java.util.function.Consumer;
+import java.util.function.Consumer;*/
 
-public class OverworldRegion extends Region {
-    public OverworldRegion(Identifier name, int weight) {
+public class OverworldRegion
+       // extends Region
+{
+   /* public OverworldRegion(Identifier name, int weight) {
         super(name, RegionType.OVERWORLD, weight);
     }
 
@@ -38,5 +40,5 @@ public class OverworldRegion extends Region {
         builder.build().forEach(mapper);
 
 
-    }
+    }*/
 }

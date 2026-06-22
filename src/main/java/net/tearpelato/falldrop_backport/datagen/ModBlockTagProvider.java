@@ -16,7 +16,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(BlockTags.LOGS)
+     /*   tag(BlockTags.LOGS)
                 .add(ModBlocks.POPLAR_LOG.get())
                 .add(ModBlocks.POPLAR_WOOD.get())
                 .add(ModBlocks.STRIPPED_POPLAR_WOOD.get())
@@ -84,6 +84,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.POPLAR_SAPLING_POTTED.get())
-                .add(ModBlocks.RED_SHRUB_POTTED.get());
+                .add(ModBlocks.RED_SHRUB_POTTED.get());*/
     }
 }

@@ -18,29 +18,27 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.SimpleRandomSelectorFeature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.tearpelato.falldrop_backport.Constants;
-import net.tearpelato.falldrop_backport.block.custom.ShelfMushroomBlock;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 
 import java.util.List;
 
 public class ModConfiguredFeatures {
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_SHRUB = registerKey("red_shrub");
+   // public static final ResourceKey<ConfiguredFeature<?, ?>> RED_SHRUB = registerKey("red_shrub");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_TREE = registerKey("poplar_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_RED = registerKey("poplar_red");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_ORANGE = registerKey("poplar_orange");
@@ -50,15 +48,15 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
-        register(context, RED_SHRUB, Feature.SIMPLE_RANDOM_SELECTOR,
-                new SimpleRandomFeatureConfiguration(
+       /* register(context, RED_SHRUB, Feature.SIMPLE_RANDOM_SELECTOR,
+                new SimpleRandomSelectorFeature(
                         HolderSet.direct(PlacementUtils.inlinePlaced(
                                 Feature.SIMPLE_BLOCK,
                                 new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.RED_SHRUB.get())),
                                 CountPlacement.of(32),
                                 RandomOffsetPlacement.ofTriangle(6, 3),
                                 BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)))));
-
+*/
 
 
             context.register(POPLAR_RED, new ConfiguredFeature<>(Feature.TREE,
@@ -110,8 +108,8 @@ public class ModConfiguredFeatures {
                         ConstantInt.of(4),
                         4
                 ),
-                new TwoLayersFeatureSize(1, 0, 2)
-        ).ignoreVines();
+                new TwoLayersFeatureSize(1, 0, 2),
+                BlockStateProvider.simple(Blocks.AIR)).ignoreVines();
     }
 
 

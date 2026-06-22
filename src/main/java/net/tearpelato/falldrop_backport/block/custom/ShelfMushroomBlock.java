@@ -52,10 +52,9 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock {
         }
     }
 
-    @Override
+
     public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
         if (entity.isSuppressingBounce()) {
-            super.updateEntityMovementAfterFallOn(level, entity);
         } else {
             this.bounceUp(entity);
         }

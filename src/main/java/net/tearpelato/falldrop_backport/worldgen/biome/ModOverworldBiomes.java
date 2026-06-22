@@ -5,6 +5,7 @@ import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
@@ -21,12 +22,12 @@ public class ModOverworldBiomes {
 
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 1, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.COW, 1, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.PIG, 1, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 1, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 1, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 25, new MobSpawnSettings.SpawnerData(EntityType.FOX, 1, 3));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityTypes.CHICKEN, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityTypes.COW, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityTypes.PIG, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityTypes.RABBIT, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 35, new MobSpawnSettings.SpawnerData(EntityTypes.SHEEP, 1, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, 25, new MobSpawnSettings.SpawnerData(EntityTypes.FOX, 1, 3));
 
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
         BiomeDefaultFeatures.addDefaultCrystalFormations(biomeBuilder);

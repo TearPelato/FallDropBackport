@@ -29,9 +29,9 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB),
+     /*   register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB),
                 List.of(RarityFilter.onAverageOnceEvery(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-
+*/
         register(context, POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.POPLAR_TREE),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
                         ModBlocks.POPLAR_SAPLING.get()));
