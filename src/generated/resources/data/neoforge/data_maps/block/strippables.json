@@ -1,10 +1,10 @@
 {
   "values": {
-    "falldrop_backport:poplar_log": {
-      "stripped_block": "falldrop_backport:stripped_poplar_log"
+    "minecraft:poplar_log": {
+      "stripped_block": "minecraft:stripped_poplar_log"
     },
-    "falldrop_backport:poplar_wood": {
-      "stripped_block": "falldrop_backport:stripped_poplar_wood"
+    "minecraft:poplar_wood": {
+      "stripped_block": "minecraft:stripped_poplar_wood"
     }
   }
 }

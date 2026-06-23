@@ -16,7 +16,7 @@ public class ModBiomes {
 
 
     public static void registerBiomes() {
-        Regions.register(new OverworldRegion(Constants.id("falldrop_backport_overworld"), 20));
+        Regions.register(new OverworldRegion(Constants.vanilla("overworld"), 20));
 
     }
 
@@ -38,6 +38,6 @@ public class ModBiomes {
     }
 
     private static ResourceKey<Biome> registerBiomeKey(String name) {
-        return ResourceKey.create(Registries.BIOME, Constants.id(name));
+        return ResourceKey.create(Registries.BIOME, Constants.vanilla(name));
     }
 }

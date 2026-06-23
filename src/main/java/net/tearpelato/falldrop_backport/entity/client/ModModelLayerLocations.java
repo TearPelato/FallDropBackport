@@ -6,7 +6,7 @@ import net.tearpelato.falldrop_backport.Constants;
 public class ModModelLayerLocations {
 
     public static final ModelLayerLocation POPLAR_BOAT =
-            new ModelLayerLocation(Constants.id("boat/poplar"), "main");
+            new ModelLayerLocation(Constants.vanilla("boat/poplar"), "main");
     public static final ModelLayerLocation POPLAR_CHEST_BOAT =
-            new ModelLayerLocation(Constants.id("chest_boat/poplar"), "main");
+            new ModelLayerLocation(Constants.vanilla("chest_boat/poplar"), "main");
 }

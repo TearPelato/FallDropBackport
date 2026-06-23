@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_pressed",
-  "textures": {
-    "texture": "falldrop_backport:block/poplar_planks"
-  }
-}

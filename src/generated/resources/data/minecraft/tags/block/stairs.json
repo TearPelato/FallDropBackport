@@ -1,21 +1,21 @@
 {
   "values": [
-    "falldrop_backport:poplar_stairs",
-    "falldrop_backport:white_wool_stairs",
-    "falldrop_backport:light_gray_wool_stairs",
-    "falldrop_backport:gray_wool_stairs",
-    "falldrop_backport:black_wool_stairs",
-    "falldrop_backport:brown_wool_stairs",
-    "falldrop_backport:red_wool_stairs",
-    "falldrop_backport:orange_wool_stairs",
-    "falldrop_backport:yellow_wool_stairs",
-    "falldrop_backport:lime_wool_stairs",
-    "falldrop_backport:green_wool_stairs",
-    "falldrop_backport:cyan_wool_stairs",
-    "falldrop_backport:light_blue_wool_stairs",
-    "falldrop_backport:blue_wool_stairs",
-    "falldrop_backport:purple_wool_stairs",
-    "falldrop_backport:magenta_wool_stairs",
-    "falldrop_backport:pink_wool_stairs"
+    "minecraft:poplar_stairs",
+    "minecraft:white_wool_stairs",
+    "minecraft:light_gray_wool_stairs",
+    "minecraft:gray_wool_stairs",
+    "minecraft:black_wool_stairs",
+    "minecraft:brown_wool_stairs",
+    "minecraft:red_wool_stairs",
+    "minecraft:orange_wool_stairs",
+    "minecraft:yellow_wool_stairs",
+    "minecraft:lime_wool_stairs",
+    "minecraft:green_wool_stairs",
+    "minecraft:cyan_wool_stairs",
+    "minecraft:light_blue_wool_stairs",
+    "minecraft:blue_wool_stairs",
+    "minecraft:purple_wool_stairs",
+    "minecraft:magenta_wool_stairs",
+    "minecraft:pink_wool_stairs"
   ]
 }

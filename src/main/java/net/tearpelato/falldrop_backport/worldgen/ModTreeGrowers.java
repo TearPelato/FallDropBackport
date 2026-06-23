@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public class ModTreeGrowers {
 
-    public static final TreeGrower POPLAR = new TreeGrower("popalr",
+    public static final TreeGrower POPLAR = new TreeGrower("poplar",
             Optional.empty(), Optional.of(ModConfiguredFeatures.POPLAR_TREE), Optional.empty());
 }

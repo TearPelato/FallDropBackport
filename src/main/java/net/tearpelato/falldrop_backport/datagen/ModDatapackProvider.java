@@ -22,6 +22,6 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(Constants.MOD_ID));
+        super(output, registries, BUILDER, Set.of(Constants.NAMESPACE));
     }
 }

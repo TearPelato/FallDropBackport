@@ -1,8 +1,8 @@
 {
   "values": [
-    "falldrop_backport:poplar_log",
-    "falldrop_backport:poplar_wood",
-    "falldrop_backport:stripped_poplar_wood",
-    "falldrop_backport:stripped_poplar_log"
+    "minecraft:poplar_log",
+    "minecraft:poplar_wood",
+    "minecraft:stripped_poplar_wood",
+    "minecraft:stripped_poplar_log"
   ]
 }
