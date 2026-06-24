@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
 
 public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Constants.MOD_ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Constants.NAMESPACE);
 
     public static final DeferredItem<Item> POPLAR_SIGN = ITEMS.registerItem("poplar_sign",
             (properties)-> new SignItem( ModBlocks.POPLAR_WALL_SIGN.get(), ModBlocks.POPLAR_SIGN.get(), properties.stacksTo(16)));

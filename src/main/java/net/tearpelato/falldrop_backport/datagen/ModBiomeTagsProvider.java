@@ -16,6 +16,6 @@ public class ModBiomeTagsProvider extends BiomeTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        tag(BiomeTags.SPAWNS_COLD_VARIANT_FARM_ANIMALS).addOptional(ModBiomes.DAPPLED_FOREST);
+        tag(BiomeTags.SPAWNS_COLD_VARIANT_FARM_ANIMALS).add(ModBiomes.DAPPLED_FOREST);
     }
 }

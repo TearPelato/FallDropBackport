@@ -6,6 +6,6 @@ import net.tearpelato.falldrop_backport.Constants;
 
 public class ModWoodType {
 
-    public static final WoodType POPLAR = WoodType.register(new WoodType(Constants.MOD_ID + ":poplar", BlockSetType.OAK));
+    public static final WoodType POPLAR = WoodType.register(new WoodType(Constants.NAMESPACE + ":poplar", BlockSetType.OAK));
 
 }

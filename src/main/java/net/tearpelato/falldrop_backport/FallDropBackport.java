@@ -1,6 +1,5 @@
 package net.tearpelato.falldrop_backport;
 
-import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -11,13 +10,10 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.tearpelato.falldrop_backport.init.*;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(FallDropBackport.MOD_ID)
+@Mod(Constants.MOD_ID)
 public class FallDropBackport {
-    public static final String MOD_ID = "falldrop_backport";
-    private static final Logger LOGGER = LogUtils.getLogger();
 
     public FallDropBackport(IEventBus modEventBus, ModContainer modContainer) {
 
@@ -27,6 +23,10 @@ public class FallDropBackport {
         ModCreativeTabs.init(modEventBus);
         ModBlockEntities.init(modEventBus);
         ModEntities.init(modEventBus);
+        ModParticleTypes.init(modEventBus);
+        ModTrunkPlacerTypes.init(modEventBus);
+        ModFoliagePlacerTypes.init(modEventBus);
+        ModTreeDecoratorType.init(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);

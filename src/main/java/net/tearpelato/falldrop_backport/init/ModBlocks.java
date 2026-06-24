@@ -24,7 +24,7 @@ import java.util.function.Function;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
-            DeferredRegister.createBlocks(Constants.MOD_ID);
+            DeferredRegister.createBlocks(Constants.NAMESPACE);
 
     //WoolSet
     public static final DeferredBlock<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
@@ -109,7 +109,7 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> RED_POPLAR_LEAVES = registerBlock("red_poplar_leaves",
-            properties -> new TintedParticleLeavesBlock(0.1f, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.RED_POPLAR_LEAVES.get(), properties.mapColor(MapColor.PLANT)
                     .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
@@ -132,7 +132,7 @@ public class ModBlocks {
             });
 
     public static final DeferredBlock<Block> ORANGE_POPLAR_LEAVES = registerBlock("orange_poplar_leaves",
-            properties -> new TintedParticleLeavesBlock(0.1f, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.ORANGE_POPLAR_LEAVES.get(), properties.mapColor(MapColor.PLANT)
                     .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
@@ -156,7 +156,7 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> YELLOW_POPLAR_LEAVES = registerBlock("yellow_poplar_leaves",
-            properties -> new TintedParticleLeavesBlock(0.1f, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.YELLOW_POPLAR_LEAVES.get(), properties.mapColor(MapColor.PLANT)
                     .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
@@ -248,10 +248,10 @@ public class ModBlocks {
             properties -> new ModShelfBlock(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.SHELF)));
 
         public static final DeferredBlock<Block> RED_SHRUB = registerBlock("red_shrub",
-                properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+                properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> RED_SHRUB_POTTED = registerBlock("red_shrub_potted",
-            properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+            properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
 
 

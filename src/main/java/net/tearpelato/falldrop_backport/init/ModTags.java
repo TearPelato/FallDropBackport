@@ -16,7 +16,7 @@ public class ModTags {
 
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(Identifier.fromNamespaceAndPath(Constants.MOD_ID, name));
+            return BlockTags.create(Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
         }
     }
 
@@ -26,7 +26,7 @@ public class ModTags {
         public static final TagKey<Item> POPLAR_LOGS = createTag("poplar_logs");
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(Identifier.fromNamespaceAndPath(Constants.MOD_ID, name));
+            return ItemTags.create(Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
         }
     }
 }
