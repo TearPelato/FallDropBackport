@@ -248,10 +248,10 @@ public class ModBlocks {
             properties -> new ModShelfBlock(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.SHELF)));
 
         public static final DeferredBlock<Block> RED_SHRUB = registerBlock("red_shrub",
-                properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+                properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> RED_SHRUB_POTTED = registerBlock("red_shrub_potted",
-            properties -> new FlowerBlock(MobEffects.ABSORPTION, 10,properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+            properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
 
 

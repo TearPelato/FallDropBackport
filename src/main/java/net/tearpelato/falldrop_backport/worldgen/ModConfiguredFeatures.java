@@ -72,7 +72,7 @@ public class ModConfiguredFeatures {
                         HolderSet.direct(PlacementUtils.inlinePlaced(
                                 Feature.SIMPLE_BLOCK,
                                 new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.RED_SHRUB.get())),
-                                CountPlacement.of(32),
+                                CountPlacement.of(24),
                                 RandomOffsetPlacement.ofTriangle(6, 3),
                                 BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)))));
 

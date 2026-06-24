@@ -16,7 +16,7 @@ public class ModBiomes {
 
 
     public static void registerBiomes() {
-        Regions.register(new OverworldRegion(Constants.vanilla("overworld"), 20));
+        Regions.register(new OverworldRegion(Constants.id("overworld"), 20));
 
     }
 

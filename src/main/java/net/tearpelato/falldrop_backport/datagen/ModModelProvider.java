@@ -29,7 +29,6 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.POPLAR_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
 
 
-
         blockModels.family(Blocks.WHITE_WOOL)
                 .stairs(ModBlocks.WHITE_WOOL_STAIRS.get())
                 .slab(ModBlocks.WHITE_WOOL_SLAB.get());
@@ -114,6 +113,16 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialBlock(ModBlocks.RED_POPLAR_LEAVES.get(), TexturedModel.LEAVES);
         blockModels.createTrivialBlock(ModBlocks.ORANGE_POPLAR_LEAVES.get(), TexturedModel.LEAVES);
         blockModels.createTrivialBlock(ModBlocks.YELLOW_POPLAR_LEAVES.get(), TexturedModel.LEAVES);
+        blockModels.registerSimpleItemModel(ModBlocks.RED_POPLAR_LEAVES.get(),Constants.vanilla("block/red_poplar_leaves"));
+        blockModels.registerSimpleItemModel(ModBlocks.ORANGE_POPLAR_LEAVES.get(),Constants.vanilla("block/orange_poplar_leaves"));
+        blockModels.registerSimpleItemModel(ModBlocks.YELLOW_POPLAR_LEAVES.get(),Constants.vanilla("block/yellow_poplar_leaves"));
+
+
+        blockModels.registerSimpleItemModel(ModBlocks.POPLAR_PLANKS.get(),Constants.vanilla("block/poplar_planks"));
+        blockModels.registerSimpleItemModel(ModBlocks.POPLAR_PRESSURE_PLATE.get(),Constants.vanilla("block/poplar_pressure_plate"));
+        blockModels.registerSimpleItemModel(ModBlocks.POPLAR_FENCE_GATE.get(),Constants.vanilla("block/poplar_fence_gate"));
+        blockModels.registerSimpleItemModel(ModBlocks.SHELF_MUSHROOM.get(),Constants.vanilla("block/shelf_mushroom_stage0"));
+
 
         blockModels.family(ModBlocks.POPLAR_PLANKS.get()).generateFor(ModBlockFamilies.POPLAR_PLANKS);
         blockModels.createHangingSign(ModBlocks.POPLAR_PLANKS.get(), ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_WALL_HANGING_SIGN.get());
