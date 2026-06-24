@@ -29,81 +29,81 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.POPLAR_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
 
 
-        blockModels.family(Blocks.WHITE_WOOL)
+        blockModels.family(Blocks.WOOL.white())
                 .stairs(ModBlocks.WHITE_WOOL_STAIRS.get())
                 .slab(ModBlocks.WHITE_WOOL_SLAB.get());
 
-        blockModels.family(Blocks.LIGHT_GRAY_WOOL)
+        blockModels.family(Blocks.WOOL.lightGray())
                 .stairs(ModBlocks.LIGHT_GRAY_WOOL_STAIRS.get())
                 .slab(ModBlocks.LIGHT_GRAY_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.GRAY_WOOL)
+        blockModels.family(Blocks.WOOL.gray())
                 .stairs(ModBlocks.GRAY_WOOL_STAIRS.get())
                 .slab(ModBlocks.GRAY_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.BLACK_WOOL)
+        blockModels.family(Blocks.WOOL.black())
                 .stairs(ModBlocks.BLACK_WOOL_STAIRS.get())
                 .slab(ModBlocks.BLACK_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.BROWN_WOOL)
+        blockModels.family(Blocks.WOOL.brown())
                 .stairs(ModBlocks.BROWN_WOOL_STAIRS.get())
                 .slab(ModBlocks.BROWN_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.RED_WOOL)
+        blockModels.family(Blocks.WOOL.red())
                 .stairs(ModBlocks.RED_WOOL_STAIRS.get())
                 .slab(ModBlocks.RED_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.ORANGE_WOOL)
+        blockModels.family(Blocks.WOOL.orange())
                 .stairs(ModBlocks.ORANGE_WOOL_STAIRS.get())
                 .slab(ModBlocks.ORANGE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.YELLOW_WOOL)
+        blockModels.family(Blocks.WOOL.yellow())
                 .stairs(ModBlocks.YELLOW_WOOL_STAIRS.get())
                 .slab(ModBlocks.YELLOW_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.LIME_WOOL)
+        blockModels.family(Blocks.WOOL.lime())
                 .stairs(ModBlocks.LIME_WOOL_STAIRS.get())
                 .slab(ModBlocks.LIME_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.GREEN_WOOL)
+        blockModels.family(Blocks.WOOL.green())
                 .stairs(ModBlocks.GREEN_WOOL_STAIRS.get())
                 .slab(ModBlocks.GREEN_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.CYAN_WOOL)
+        blockModels.family(Blocks.WOOL.cyan())
                 .stairs(ModBlocks.CYAN_WOOL_STAIRS.get())
                 .slab(ModBlocks.CYAN_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.LIGHT_BLUE_WOOL)
+        blockModels.family(Blocks.WOOL.lightBlue())
                 .stairs(ModBlocks.LIGHT_BLUE_WOOL_STAIRS.get())
                 .slab(ModBlocks.LIGHT_BLUE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.BLUE_WOOL)
+        blockModels.family(Blocks.WOOL.blue())
                 .stairs(ModBlocks.BLUE_WOOL_STAIRS.get())
                 .slab(ModBlocks.BLUE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.PURPLE_WOOL)
+        blockModels.family(Blocks.WOOL.purple())
                 .stairs(ModBlocks.PURPLE_WOOL_STAIRS.get())
                 .slab(ModBlocks.PURPLE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.MAGENTA_WOOL)
+        blockModels.family(Blocks.WOOL.magenta())
                 .stairs(ModBlocks.MAGENTA_WOOL_STAIRS.get())
                 .slab(ModBlocks.MAGENTA_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.PINK_WOOL)
+        blockModels.family(Blocks.WOOL.pink())
                 .stairs(ModBlocks.PINK_WOOL_STAIRS.get())
                 .slab(ModBlocks.PINK_WOOL_SLAB.get());
 
@@ -125,7 +125,7 @@ public class ModModelProvider extends ModelProvider {
 
 
         blockModels.family(ModBlocks.POPLAR_PLANKS.get()).generateFor(ModBlockFamilies.POPLAR_PLANKS);
-        blockModels.createHangingSign(ModBlocks.POPLAR_PLANKS.get(), ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_WALL_HANGING_SIGN.get());
+        //blockModels.createHangingSign(ModBlocks.POPLAR_PLANKS.get(), ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_WALL_HANGING_SIGN.get());
 
         blockModels.createPlantWithDefaultItem(ModBlocks.RED_SHRUB.get(), ModBlocks.RED_SHRUB_POTTED.get(), BlockModelGenerators.PlantType.TINTED);
         blockModels.createPlantWithDefaultItem(ModBlocks.POPLAR_SAPLING.get(), ModBlocks.POPLAR_SAPLING_POTTED.get(), BlockModelGenerators.PlantType.TINTED);

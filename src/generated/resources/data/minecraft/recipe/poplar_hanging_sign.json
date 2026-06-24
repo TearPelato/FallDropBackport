@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "hanging_sign",
   "key": {
-    "#": "minecraft:poplar_planks",
+    "#": "minecraft:stripped_poplar_log",
     "X": "minecraft:iron_chain"
   },
   "pattern": [
