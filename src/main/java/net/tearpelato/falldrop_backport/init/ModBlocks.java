@@ -2,8 +2,11 @@ package net.tearpelato.falldrop_backport.init;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.effect.MobEffects;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
@@ -28,37 +31,37 @@ public class ModBlocks {
 
     //WoolSet
     public static final DeferredBlock<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> RED_WOOL_STAIRS = registerBlock("red_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
 
 
     public static final DeferredBlock<Block> WHITE_WOOL_SLAB = registerBlock("white_wool_slab",
@@ -185,7 +188,7 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> POPLAR_PLANKS = registerBlock("poplar_planks",
-            properties -> new Block(properties.sound(SoundType.WOOD).strength(2f).ignitedByLava()) {
+            properties -> new Block(properties.sound(SoundType.WOOD).strength(2F).ignitedByLava()) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -204,7 +207,7 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> POPLAR_STAIRS = registerBlock("poplar_stairs",
-            properties -> new StairBlock(POPLAR_LOG.get().defaultBlockState(), properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+            properties -> new StairBlock(POPLAR_PLANKS.get().defaultBlockState(), properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> POPLAR_SLAB = registerBlock("poplar_slab",
             properties -> new SlabBlock( properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
@@ -257,9 +260,10 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> POPLAR_SAPLING = registerBlock("poplar_sapling",
-            properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).instabreak().noCollision()));
+            properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).noCollision()
+                    .randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
-    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = BLOCKS.registerBlock("poplar_sapling_potted",
+    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = BLOCKS.registerBlock("potted_ebony_sapling",
             properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, POPLAR_SAPLING,
                     properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 

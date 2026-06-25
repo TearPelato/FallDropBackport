@@ -1,8 +1,6 @@
 package net.tearpelato.falldrop_backport.worldgen;
 
-import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -15,33 +13,22 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.WeightedListInt;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator;
-import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.tearpelato.falldrop_backport.Constants;
-import net.tearpelato.falldrop_backport.block.custom.ShelfMushroomBlock;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.worldgen.placer.PoplarFoliagePlacer;
 import net.tearpelato.falldrop_backport.worldgen.placer.PoplarTrunkPlacer;
@@ -89,12 +76,13 @@ public class ModConfiguredFeatures {
 
 
 
-            context.register(POPLAR_TREE, new ConfiguredFeature<>(Feature.RANDOM_SELECTOR,
-                    new RandomFeatureConfiguration(
-                            List.of(
-                                    new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_RED)), 0.33f),
-                                    new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_ORANGE)), 0.33f)),
-                                    PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_YELLOW)))));
+        context.register(POPLAR_TREE, new ConfiguredFeature<>(Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(
+                        List.of(
+                                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(RED_POPLAR_LEAF_LITTER)), 0.33f),
+                                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(ORANGE_POPLAR_LEAF_LITTER)), 0.33f),
+                                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(FALLEN_POPLAR)), 0.30f)),
+                        PlacementUtils.inlinePlaced(lookup.getOrThrow(YELLOW_POPLAR_LEAF_LITTER)))));
 
         context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(
@@ -146,10 +134,10 @@ public class ModConfiguredFeatures {
 
     private static FallenTreeConfiguration.FallenTreeConfigurationBuilder createFallenPoplar() {
         return new FallenTreeConfiguration.FallenTreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, Direction.Axis.X)),
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
                 UniformInt.of(4,7))
-                .logDecorators(ImmutableList.of(
-        new AttachedToLogsDecorator(0.1F, BlockStateProvider.simple(Blocks.BROWN_MUSHROOM.defaultBlockState()),
+                .logDecorators(List.of(
+        new AttachedToLogsDecorator(0.1F, BlockStateProvider.simple(Blocks.BROWN_MUSHROOM),
                 List.of(Direction.UP)))).logDecorators(List.of(new ShelfMushroomDecorator(0.8F)));
     }
 }

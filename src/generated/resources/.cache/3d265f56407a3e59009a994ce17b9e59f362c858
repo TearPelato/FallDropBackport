@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-24T19:44:19.1763995	Model Definitions - falldrop_backport
+// 26.1.2	2026-06-25T19:30:57.7692348	Model Definitions - falldrop_backport
 b8b85105eb39074a50c584e5187439d07fa556a6 assets/minecraft/blockstates/black_wool.json
 fded6f084728c09069af48b4ea062b0772d7f264 assets/minecraft/blockstates/black_wool_slab.json
 eaf90f39f764a0030bfc24c30a5be96bc5c4c0cc assets/minecraft/blockstates/black_wool_stairs.json
@@ -45,7 +45,6 @@ d6bf8b474494108510de66668d4556be74f27026 assets/minecraft/blockstates/poplar_log
 d670622457600d17d065825f2371f7788431d375 assets/minecraft/blockstates/poplar_planks.json
 f64247f8c398eba35167a9e1dc9f684b8b04ea34 assets/minecraft/blockstates/poplar_pressure_plate.json
 dee840fed028729ed089117f87830c69b6cd18a8 assets/minecraft/blockstates/poplar_sapling.json
-1198484f2b16862d7bb84766371a0c707c12a99d assets/minecraft/blockstates/poplar_sapling_potted.json
 315fb14fe7f728c0d2d041704371097ef474a542 assets/minecraft/blockstates/poplar_shelf.json
 03d2b483f9324714cf17eb8e36afdf356479cbdc assets/minecraft/blockstates/poplar_sign.json
 efc7789367091691dff07b9fed46c95442e59293 assets/minecraft/blockstates/poplar_slab.json
@@ -54,6 +53,7 @@ ec6e607990c9e508743afa6b74613643a0314357 assets/minecraft/blockstates/poplar_tra
 8613e81095299fc2911c9ad2accd397520923457 assets/minecraft/blockstates/poplar_wall_hanging_sign.json
 03d2b483f9324714cf17eb8e36afdf356479cbdc assets/minecraft/blockstates/poplar_wall_sign.json
 9ad6f0e98c772f910a19b5a8b8334499645fea11 assets/minecraft/blockstates/poplar_wood.json
+001c00eb145951ac8de50b5de0441b9dc13f24b1 assets/minecraft/blockstates/potted_ebony_sapling.json
 857d2c3c724d1618419594e10b1d8564de439763 assets/minecraft/blockstates/purple_wool.json
 3e3e1bff26d952975a550ab311d55b830bfafd9e assets/minecraft/blockstates/purple_wool_slab.json
 86839d31a51d0257668fd5604fa0efc34e70ad64 assets/minecraft/blockstates/purple_wool_stairs.json
@@ -227,7 +227,6 @@ d2566b1df93d5a89ba4e5a2eb3a103f99e770f80 assets/minecraft/models/block/poplar_pl
 8618d7de59df117f6f05ee4331f53e1dac916084 assets/minecraft/models/block/poplar_pressure_plate.json
 205adfab670d74878c2ecd8da00007515c5b4cfc assets/minecraft/models/block/poplar_pressure_plate_down.json
 0b818b34fccc7ac4a6d2666a44259d888ffcf042 assets/minecraft/models/block/poplar_sapling.json
-aebe013c569d6e1e39dbded5258028087653f261 assets/minecraft/models/block/poplar_sapling_potted.json
 ce2459cf47fa7d079c43acb6d762156380b13072 assets/minecraft/models/block/poplar_shelf.json
 6fb465b5ea5951fa7363995718c0bdd91a6e3974 assets/minecraft/models/block/poplar_shelf_center.json
 dfb24b89cdee75ab5f401f3bb631f7ae6a1c7fb8 assets/minecraft/models/block/poplar_shelf_inventory.json
@@ -245,6 +244,7 @@ cb569f2eb57cc5aeafad3d19d92fc7fe0fd39155 assets/minecraft/models/block/poplar_tr
 e14097d99bca24ab7b737d001a144ad8875595e2 assets/minecraft/models/block/poplar_trapdoor_open.json
 e19b3ddac852acc2a14d9e150812689ca768ee56 assets/minecraft/models/block/poplar_trapdoor_top.json
 497218af8c10aa30b5b39f1202bdc719e8995aea assets/minecraft/models/block/poplar_wood.json
+aebe013c569d6e1e39dbded5258028087653f261 assets/minecraft/models/block/potted_ebony_sapling.json
 a520af48a2967b33d56f1a11052576cf4924c202 assets/minecraft/models/block/purple_wool.json
 c8d2414784d7232198a737e5c61114a56af1803b assets/minecraft/models/block/purple_wool_slab.json
 4ca2fa598d30919ede47d2a66188592230950c17 assets/minecraft/models/block/purple_wool_slab_top.json
