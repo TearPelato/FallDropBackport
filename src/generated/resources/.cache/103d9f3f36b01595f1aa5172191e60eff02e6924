@@ -1,10 +1,11 @@
-// 26.1.2	2026-06-25T22:04:58.5392275	Registries
+// 26.1.2	2026-06-26T18:14:45.0570427	Registries
 7ebdb67034d348f9b659a6e3b08933486711bcc5 data/minecraft/worldgen/biome/dappled_forest.json
 aa970fb4e962612cfd39c3e233acafb5c0e37e0d data/minecraft/worldgen/configured_feature/fallen_poplar.json
 90b504c68b11be3354cfcabfdbcdd7069ad62474 data/minecraft/worldgen/configured_feature/orange_poplar_leaf_litter.json
 e6a60520b70b4dbf60dcaf747ec8836c914c52ed data/minecraft/worldgen/configured_feature/poplar_orange.json
 74497213d24ee6b60bf4f40904a4ae584cbe4396 data/minecraft/worldgen/configured_feature/poplar_red.json
 c441153f7bf9933fb90cdb0fbc5553701c188273 data/minecraft/worldgen/configured_feature/poplar_tree.json
+6b7b6eb40db4ce443c2c8198879c3ab90e85cf3e data/minecraft/worldgen/configured_feature/poplar_trees.json
 198c2e5b1b76aff4862939abb71d655bc2016da8 data/minecraft/worldgen/configured_feature/poplar_yellow.json
 61bcef655cfab2477af326206bd1c0fbd7dca8df data/minecraft/worldgen/configured_feature/red_poplar_leaf_litter.json
 4307529d26409849e62d3d5b77096cafb0dc55d6 data/minecraft/worldgen/configured_feature/red_shrub.json

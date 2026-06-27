@@ -6,12 +6,11 @@ import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
-
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
-        super(output, lookupProvider, Constants.MOD_ID);
+        super(output, lookupProvider, Constants.NAMESPACE);
     }
 
     @Override
@@ -30,9 +29,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RED_POPLAR_LEAVES.get())
                 .add(ModBlocks.ORANGE_POPLAR_LEAVES.get())
                 .add(ModBlocks.YELLOW_POPLAR_LEAVES.get());
-
-        tag(BlockTags.PLANKS)
-                .add(ModBlocks.POPLAR_PLANKS.get());
 
 
         tag(BlockTags.STAIRS)

@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-25T22:02:12.3191211	Loot Tables
+// 26.1.2	2026-06-26T18:14:45.0550283	Loot Tables
 f0233c6a4e76ea7838e39b521616c883712fe536 data/minecraft/loot_table/blocks/black_wool_slab.json
 a4707e0f260217b0cccb6ae51c3b3776848ede8e data/minecraft/loot_table/blocks/black_wool_stairs.json
 00b580f2e189f520da1e2965461700a37c458971 data/minecraft/loot_table/blocks/blue_wool_slab.json
@@ -41,7 +41,7 @@ a4a353f214ccd56adfad74292f84fd6e08de4c02 data/minecraft/loot_table/blocks/poplar
 a95c65fabcb712e7396aa324abf2d643d79786f0 data/minecraft/loot_table/blocks/poplar_wall_hanging_sign.json
 b31043063a0c701a02b7574bfab982cb914c7fa9 data/minecraft/loot_table/blocks/poplar_wall_sign.json
 579da932b7c5e63636cbfc9414ce249722c495ee data/minecraft/loot_table/blocks/poplar_wood.json
-53c3dc69658343a8f6ec4b27db567b14e4e632a0 data/minecraft/loot_table/blocks/potted_ebony_sapling.json
+f6ce4c004265a1679ce69a1839a51f6367b8fc83 data/minecraft/loot_table/blocks/potted_poplar_sapling.json
 6d39e64e5a15f12b8df6bee8706f629fa0d65842 data/minecraft/loot_table/blocks/purple_wool_slab.json
 3e62305bcf161c8229ec132ca79988b86bc8aaf3 data/minecraft/loot_table/blocks/purple_wool_stairs.json
 a6733ac41a24b11203876a448fa24d59f592d2af data/minecraft/loot_table/blocks/red_poplar_leaves.json

@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-25T19:30:57.7692348	Model Definitions - falldrop_backport
+// 26.1.2	2026-06-26T18:14:45.0495251	Model Definitions - falldrop_backport
 b8b85105eb39074a50c584e5187439d07fa556a6 assets/minecraft/blockstates/black_wool.json
 fded6f084728c09069af48b4ea062b0772d7f264 assets/minecraft/blockstates/black_wool_slab.json
 eaf90f39f764a0030bfc24c30a5be96bc5c4c0cc assets/minecraft/blockstates/black_wool_stairs.json
@@ -53,7 +53,7 @@ ec6e607990c9e508743afa6b74613643a0314357 assets/minecraft/blockstates/poplar_tra
 8613e81095299fc2911c9ad2accd397520923457 assets/minecraft/blockstates/poplar_wall_hanging_sign.json
 03d2b483f9324714cf17eb8e36afdf356479cbdc assets/minecraft/blockstates/poplar_wall_sign.json
 9ad6f0e98c772f910a19b5a8b8334499645fea11 assets/minecraft/blockstates/poplar_wood.json
-001c00eb145951ac8de50b5de0441b9dc13f24b1 assets/minecraft/blockstates/potted_ebony_sapling.json
+5582af39097965e46deb1063411f3396eb060a4c assets/minecraft/blockstates/potted_poplar_sapling.json
 857d2c3c724d1618419594e10b1d8564de439763 assets/minecraft/blockstates/purple_wool.json
 3e3e1bff26d952975a550ab311d55b830bfafd9e assets/minecraft/blockstates/purple_wool_slab.json
 86839d31a51d0257668fd5604fa0efc34e70ad64 assets/minecraft/blockstates/purple_wool_stairs.json
@@ -244,7 +244,7 @@ cb569f2eb57cc5aeafad3d19d92fc7fe0fd39155 assets/minecraft/models/block/poplar_tr
 e14097d99bca24ab7b737d001a144ad8875595e2 assets/minecraft/models/block/poplar_trapdoor_open.json
 e19b3ddac852acc2a14d9e150812689ca768ee56 assets/minecraft/models/block/poplar_trapdoor_top.json
 497218af8c10aa30b5b39f1202bdc719e8995aea assets/minecraft/models/block/poplar_wood.json
-aebe013c569d6e1e39dbded5258028087653f261 assets/minecraft/models/block/potted_ebony_sapling.json
+aebe013c569d6e1e39dbded5258028087653f261 assets/minecraft/models/block/potted_poplar_sapling.json
 a520af48a2967b33d56f1a11052576cf4924c202 assets/minecraft/models/block/purple_wool.json
 c8d2414784d7232198a737e5c61114a56af1803b assets/minecraft/models/block/purple_wool_slab.json
 4ca2fa598d30919ede47d2a66188592230950c17 assets/minecraft/models/block/purple_wool_slab_top.json

@@ -40,6 +40,7 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_SHRUB = registerKey("red_shrub");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_TREE = registerKey("poplar_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_TREES = registerKey("poplar_trees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_RED = registerKey("poplar_red");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_ORANGE = registerKey("poplar_orange");
     public static final ResourceKey<ConfiguredFeature<?, ?>> POPLAR_YELLOW = registerKey("poplar_yellow");
@@ -83,6 +84,14 @@ public class ModConfiguredFeatures {
                                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(ORANGE_POPLAR_LEAF_LITTER)), 0.33f),
                                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(FALLEN_POPLAR)), 0.30f)),
                         PlacementUtils.inlinePlaced(lookup.getOrThrow(YELLOW_POPLAR_LEAF_LITTER)))));
+
+        context.register(POPLAR_TREES, new ConfiguredFeature<>(Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(
+                        List.of(
+                                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_RED)), 0.33f),
+                                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_ORANGE)), 0.33f)),
+                        PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_YELLOW)))));
+
 
         context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(

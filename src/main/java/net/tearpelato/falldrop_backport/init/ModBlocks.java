@@ -263,7 +263,7 @@ public class ModBlocks {
             properties -> new SaplingBlock(ModTreeGrowers.POPLAR, properties.mapColor(MapColor.PLANT).noCollision()
                     .randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
-    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = BLOCKS.registerBlock("potted_ebony_sapling",
+    public static final DeferredBlock<Block> POPLAR_SAPLING_POTTED = BLOCKS.registerBlock("potted_poplar_sapling",
             properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, POPLAR_SAPLING,
                     properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
