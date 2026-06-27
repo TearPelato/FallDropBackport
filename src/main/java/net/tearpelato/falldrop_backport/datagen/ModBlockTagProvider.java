@@ -17,7 +17,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.POPLAR_STAIRS.get());
+                .add(ModBlocks.POPLAR_STAIRS.get())
+                .add(ModBlocks.POPLAR_PLANKS.get())
+                .add(ModBlocks.POPLAR_SLAB.get())
+                .add(ModBlocks.POPLAR_FENCE.get())
+                .add(ModBlocks.POPLAR_SIGN.get())
+                .add(ModBlocks.POPLAR_WALL_SIGN.get())
+                .add(ModBlocks.POPLAR_HANGING_SIGN.get())
+                .add(ModBlocks.POPLAR_WALL_HANGING_SIGN.get())
+                .add(ModBlocks.POPLAR_DOOR.get())
+                .add(ModBlocks.POPLAR_TRAPDOOR.get())
+                .add(ModBlocks.POPLAR_BUTTON.get())
+                .add(ModBlocks.POPLAR_PRESSURE_PLATE.get());
 
         tag(BlockTags.LOGS)
                 .add(ModBlocks.POPLAR_LOG.get())

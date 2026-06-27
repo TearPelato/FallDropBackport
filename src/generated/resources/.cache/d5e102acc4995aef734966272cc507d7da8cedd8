@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-27T20:25:16.7383072	Tags for minecraft:block mod id minecraft
+// 26.1.2	2026-06-27T21:07:16.3111517	Tags for minecraft:block mod id minecraft
 6b032efcd276b288b7aa5a3975b74938608c6242 data/minecraft/tags/block/doors.json
 f446a5b2ec37a9b24827411263080c50858d5520 data/minecraft/tags/block/fences.json
 8d92f7061b7f50dee74ad4a33138fed6812019cd data/minecraft/tags/block/fence_gates.json
@@ -6,7 +6,7 @@ f446a5b2ec37a9b24827411263080c50858d5520 data/minecraft/tags/block/fences.json
 72c44315c1e1e7aae7c24aa8a4f46383dfad3894 data/minecraft/tags/block/leaves.json
 e8e8ba97bbb8b6c596ade5a7f8c40941cd62640d data/minecraft/tags/block/logs.json
 22842b6f1bcaebbd2d2a80269d7fe5180877ae6f data/minecraft/tags/block/logs_that_burn.json
-5760b837ad84a6bdcc6c0e138154bc3d98bb101d data/minecraft/tags/block/mineable/axe.json
+8b32754302afc062f813e50ffbbb7e561da99ec8 data/minecraft/tags/block/mineable/axe.json
 abe12e1c414442635659291d652b03dfe66497f7 data/minecraft/tags/block/saplings.json
 d56ee86b8a52557579c7161b04217f37d0d36f16 data/minecraft/tags/block/slabs.json
 a3162514208e2aa3b72c30d23dab70e3149ebba2 data/minecraft/tags/block/stairs.json
