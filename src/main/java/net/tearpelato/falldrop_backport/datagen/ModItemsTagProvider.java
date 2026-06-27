@@ -19,11 +19,11 @@ public class ModItemsTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         tag(ModTags.Items.POPLAR_LOGS)
-                .add(ModBlocks.POPLAR_LOG.asItem())
-                .add(ModBlocks.POPLAR_WOOD.asItem())
-                .add(ModBlocks.STRIPPED_POPLAR_LOG.asItem())
-                .add(ModBlocks.STRIPPED_POPLAR_WOOD.asItem());
-        tag(ItemTags.WOODEN_TOOL_MATERIALS).add(ModBlocks.POPLAR_PLANKS.asItem());
+                .add(ModBlocks.POPLAR_LOG.asItem().builtInRegistryHolder().key())
+                .add(ModBlocks.POPLAR_WOOD.asItem().builtInRegistryHolder().key())
+                .add(ModBlocks.STRIPPED_POPLAR_LOG.asItem().builtInRegistryHolder().key())
+                .add(ModBlocks.STRIPPED_POPLAR_WOOD.asItem().builtInRegistryHolder().key());
+        tag(ItemTags.WOODEN_TOOL_MATERIALS).add(ModBlocks.POPLAR_PLANKS.asItem().builtInRegistryHolder().key());
 
 
     }
