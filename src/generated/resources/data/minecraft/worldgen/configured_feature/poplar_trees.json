@@ -2,28 +2,21 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "minecraft:yellow_poplar_leaf_litter",
+      "feature": "minecraft:poplar_yellow",
       "placement": []
     },
     "features": [
       {
         "chance": 0.33,
         "feature": {
-          "feature": "minecraft:red_poplar_leaf_litter",
+          "feature": "minecraft:poplar_red",
           "placement": []
         }
       },
       {
         "chance": 0.33,
         "feature": {
-          "feature": "minecraft:orange_poplar_leaf_litter",
-          "placement": []
-        }
-      },
-      {
-        "chance": 0.3,
-        "feature": {
-          "feature": "minecraft:fallen_poplar",
+          "feature": "minecraft:poplar_orange",
           "placement": []
         }
       }

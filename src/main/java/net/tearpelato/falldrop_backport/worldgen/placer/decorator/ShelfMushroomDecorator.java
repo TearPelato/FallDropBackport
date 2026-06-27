@@ -124,7 +124,10 @@ public class ShelfMushroomDecorator extends TreeDecorator {
     }
 
     private static void placeMushroom(final TreeDecorator.Context context, final BlockPos pos, final Direction facing, final RandomSource random) {
-        context.setBlock(pos, (BlockState)((BlockState) ModBlocks.SHELF_MUSHROOM.get().defaultBlockState().setValue(ShelfMushroomBlock.AGE, random.nextInt(2))).setValue(ShelfMushroomBlock.FACING, facing));
+        Direction blockFacing = facing.getOpposite();
+        context.setBlock(pos, ModBlocks.SHELF_MUSHROOM.get().defaultBlockState()
+                .setValue(ShelfMushroomBlock.AGE, random.nextInt(2))
+                .setValue(ShelfMushroomBlock.FACING, blockFacing));
     }
 
     private static boolean hasShelfMushroomAt(final TreeDecorator.Context context, final BlockPos pos) {
