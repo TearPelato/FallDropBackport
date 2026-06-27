@@ -129,12 +129,11 @@ public class ModRecipeProvider extends RecipeProvider {
         signBuilder(ModBlocks.POPLAR_SIGN.get(), Ingredient.of(ModBlocks.POPLAR_PLANKS.get()))
                 .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
                 .save(output);
-        hangingSign(ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_PLANKS.get());
+        hangingSign(ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
         woodenBoat(ModItems.POPLAR_BOAT.get(), ModBlocks.POPLAR_PLANKS.get());
         chestBoat(ModItems.POPLAR_CHEST_BOAT.get(), ModItems.POPLAR_BOAT.get());
         shelf(ModBlocks.POPLAR_SHELF.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
         woodFromLogs(ModBlocks.STRIPPED_POPLAR_WOOD, ModBlocks.STRIPPED_POPLAR_LOG);
-
 
 
     }

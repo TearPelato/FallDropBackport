@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:poplar_planks"
+            "items": "minecraft:stripped_poplar_log"
           }
         ]
       },

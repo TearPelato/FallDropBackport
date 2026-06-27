@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-23T23:50:45.3608308	
+// 26.1.2	2026-06-27T20:25:16.7287658	
 329cb32cdae8164febcdb932d8317ac919f5e6a9 data/minecraft/advancement/recipes/building_blocks/black_wool_slab.json
 7a9a3c400c197a170ab503e24b5e2fc2df26a982 data/minecraft/advancement/recipes/building_blocks/black_wool_stairs.json
 3e4354d991b819b4dcc542d77a307ef6f949262a data/minecraft/advancement/recipes/building_blocks/blue_wool_slab.json
@@ -37,7 +37,7 @@ e998ea17aa8406650a35b7ed7c590baeaaca294a data/minecraft/advancement/recipes/buil
 cbfcd8c5d6f9866dccbfc995bb414f96cb8d503b data/minecraft/advancement/recipes/building_blocks/yellow_wool_slab.json
 72c4685e1657d19d4135f91dca25aee70143ba83 data/minecraft/advancement/recipes/building_blocks/yellow_wool_stairs.json
 695f3776286e17e1b03ffeb978f7faa0d01fa0ad data/minecraft/advancement/recipes/decorations/poplar_fence.json
-358a345e8fa322b6ec8be12ea9e0b7bbdf5b587f data/minecraft/advancement/recipes/decorations/poplar_hanging_sign.json
+a08e1a207456d58dd97082ab3f0c3f3d83e118cf data/minecraft/advancement/recipes/decorations/poplar_hanging_sign.json
 c1e8577ce6b6bb5812e8250779778ecbaa6d85a2 data/minecraft/advancement/recipes/decorations/poplar_shelf.json
 c502410cb73eb56dd3c0e50369a488c2db86bedd data/minecraft/advancement/recipes/decorations/poplar_sign.json
 0f26f5ff5261990713956db3c5bea745c5fc6931 data/minecraft/advancement/recipes/redstone/poplar_button.json
@@ -77,7 +77,7 @@ ef53ab9eb8df5cbf0c9d8fe808836e937d95aba6 data/minecraft/recipe/poplar_button.jso
 ada34f56ec039ace43039e3a322438fc5ed38842 data/minecraft/recipe/poplar_door.json
 379733f49a3a737c0dd383b580891e8aac8db85c data/minecraft/recipe/poplar_fence.json
 f3d32b2988de6a415b6e0accfed22d65138f8318 data/minecraft/recipe/poplar_fence_gate.json
-dcf8aa35be75acb18071a1211e3e18aa7257a142 data/minecraft/recipe/poplar_hanging_sign.json
+e3457246f0300971b4d31f77de42288f0654755a data/minecraft/recipe/poplar_hanging_sign.json
 6d497e4c718a89ffd4e78bd1806728f050241d8e data/minecraft/recipe/poplar_planks.json
 2bbbd63794d18df3f0c7dbfa116b2544a52109c1 data/minecraft/recipe/poplar_pressure_plate.json
 175328a969334cd46466759f20d2b4e16490e877 data/minecraft/recipe/poplar_shelf.json
