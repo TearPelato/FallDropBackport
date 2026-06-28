@@ -8,6 +8,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -286,5 +287,12 @@ public class ModBlocks {
         BLOCKS.register(bus);
     }
 
+
+    public static ResourceKey<Block> getResourceKey(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
+    public static ResourceKey<Item> getResourceKeyItem(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
 }

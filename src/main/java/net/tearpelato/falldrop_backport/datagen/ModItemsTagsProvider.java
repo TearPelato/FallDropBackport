@@ -20,19 +20,19 @@ public class ModItemsTagsProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         tag(ModTags.Items.POPLAR_LOGS)
-                .add(ModBlocks.POPLAR_LOG.asItem())
-                .add(ModBlocks.POPLAR_WOOD.asItem())
-                .add(ModBlocks.STRIPPED_POPLAR_LOG.asItem())
-                .add(ModBlocks.STRIPPED_POPLAR_WOOD.asItem());
-        tag(ItemTags.WOODEN_TOOL_MATERIALS).add(ModBlocks.POPLAR_PLANKS.asItem());
-        tag(ItemTags.PLANKS).add(ModBlocks.POPLAR_PLANKS.asItem());
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_LOG.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_WOOD.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.STRIPPED_POPLAR_LOG.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.STRIPPED_POPLAR_WOOD.asItem()));
+        tag(ItemTags.WOODEN_TOOL_MATERIALS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_PLANKS.asItem()));
+        tag(ItemTags.PLANKS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_PLANKS.asItem()));
 
-        tag(ItemTags.WOODEN_BUTTONS).add(ModBlocks.POPLAR_BUTTON.asItem());
-        tag(ItemTags.WOODEN_DOORS).add(ModBlocks.POPLAR_DOOR.asItem());
-        tag(ItemTags.WOODEN_FENCES).add(ModBlocks.POPLAR_FENCE.asItem());
-        tag(ItemTags.WOODEN_SLABS).add(ModBlocks.POPLAR_SLAB.asItem());
-        tag(ItemTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.POPLAR_PRESSURE_PLATE.asItem());
-        tag(ItemTags.WOODEN_STAIRS).add(ModBlocks.POPLAR_STAIRS.asItem());
-        tag(ItemTags.WOODEN_TRAPDOORS).add(ModBlocks.POPLAR_TRAPDOOR.asItem());
+        tag(ItemTags.WOODEN_BUTTONS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_BUTTON.asItem()));
+        tag(ItemTags.WOODEN_DOORS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_DOOR.asItem()));
+        tag(ItemTags.WOODEN_FENCES).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_FENCE.asItem()));
+        tag(ItemTags.WOODEN_SLABS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_SLAB.asItem()));
+        tag(ItemTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_PRESSURE_PLATE.asItem()));
+        tag(ItemTags.WOODEN_STAIRS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_STAIRS.asItem()));
+        tag(ItemTags.WOODEN_TRAPDOORS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_TRAPDOOR.asItem()));
     }
 }
