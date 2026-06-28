@@ -8,8 +8,8 @@ import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockTagProvider extends BlockTagsProvider {
-    public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class ModBlockTagsProvider extends BlockTagsProvider {
+    public ModBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider, Constants.NAMESPACE);
     }
 
@@ -96,5 +96,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.POPLAR_SAPLING_POTTED.get())
                 .add(ModBlocks.RED_SHRUB_POTTED.get());
+
+        tag(BlockTags.WOODEN_BUTTONS).add(ModBlocks.POPLAR_BUTTON.get());
+        tag(BlockTags.WOODEN_DOORS).add(ModBlocks.POPLAR_DOOR.get());
+        tag(BlockTags.WOODEN_FENCES).add(ModBlocks.POPLAR_FENCE.get());
+        tag(BlockTags.WOODEN_SLABS).add(ModBlocks.POPLAR_SLAB.get());
+        tag(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.POPLAR_PRESSURE_PLATE.get());
+        tag(BlockTags.WOODEN_STAIRS).add(ModBlocks.POPLAR_STAIRS.get());
+        tag(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.POPLAR_TRAPDOOR.get());
+
+
+
     }
 }

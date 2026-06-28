@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-27T21:07:16.3111517	Tags for minecraft:block mod id minecraft
+// 26.1.2	2026-06-28T20:57:03.6161475	Tags for minecraft:block mod id minecraft
 6b032efcd276b288b7aa5a3975b74938608c6242 data/minecraft/tags/block/doors.json
 f446a5b2ec37a9b24827411263080c50858d5520 data/minecraft/tags/block/fences.json
 8d92f7061b7f50dee74ad4a33138fed6812019cd data/minecraft/tags/block/fence_gates.json
@@ -11,4 +11,11 @@ abe12e1c414442635659291d652b03dfe66497f7 data/minecraft/tags/block/saplings.json
 d56ee86b8a52557579c7161b04217f37d0d36f16 data/minecraft/tags/block/slabs.json
 a3162514208e2aa3b72c30d23dab70e3149ebba2 data/minecraft/tags/block/stairs.json
 f0a9d5f18a595f122cf147d0c5a20aa566924fb3 data/minecraft/tags/block/trapdoors.json
+7afa4440e408512b99d62db10b26df113b77514e data/minecraft/tags/block/wooden_buttons.json
+6b032efcd276b288b7aa5a3975b74938608c6242 data/minecraft/tags/block/wooden_doors.json
+f446a5b2ec37a9b24827411263080c50858d5520 data/minecraft/tags/block/wooden_fences.json
+b00738f3f012691262c22e3a858eb708e60d89ce data/minecraft/tags/block/wooden_pressure_plates.json
 6133f1fc46c9246da0685330413378b0e081c568 data/minecraft/tags/block/wooden_shelves.json
+e74cb691347d6589f80d34382866b25a0f6f279a data/minecraft/tags/block/wooden_slabs.json
+5760b837ad84a6bdcc6c0e138154bc3d98bb101d data/minecraft/tags/block/wooden_stairs.json
+f0a9d5f18a595f122cf147d0c5a20aa566924fb3 data/minecraft/tags/block/wooden_trapdoors.json
