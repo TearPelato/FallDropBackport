@@ -1,23 +1,22 @@
 package net.tearpelato.falldrop_backport.init;
 
-import net.minecraft.core.registries.Registries;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
 
 import java.util.function.Supplier;
 
 public class ModCreativeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_TAB =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Constants.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> FALL_DROP_TAB = CREATIVE_TAB.register("falldrop_backport",
-            ()->  CreativeModeTab.builder()
-            .title(Component.translatable(Constants.MOD_ID+ ".fall_drop_tab"))
+
+    public static final CreativeModeTab FALL_DROP_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,Constants.id("falldrop_backport"),
+          FabricCreativeModeTab.builder()
+            .title(Component.translatable(Constants.MOD_ID + ".fall_drop_tab"))
                     .icon(()-> new ItemStack(Blocks.LEAF_LITTER))
             .displayItems((provider, output)->{
                 output.accept(ModBlocks.WHITE_WOOL_STAIRS);
@@ -98,7 +97,8 @@ public class ModCreativeTabs {
 
 
 
-    public static void init(IEventBus bus) {
-        CREATIVE_TAB.register(bus);
+
+    public static void registerCreativeModeTabs() {
+        Constants.LOGGER.info("Registering Creative Mode Tabs for " + Constants.MOD_ID);
     }
 }

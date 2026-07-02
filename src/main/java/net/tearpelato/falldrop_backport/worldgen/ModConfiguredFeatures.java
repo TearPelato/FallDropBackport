@@ -59,7 +59,7 @@ public class ModConfiguredFeatures {
                 new SimpleRandomFeatureConfiguration(
                         HolderSet.direct(PlacementUtils.inlinePlaced(
                                 Feature.SIMPLE_BLOCK,
-                                new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.RED_SHRUB.get())),
+                                new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.RED_SHRUB)),
                                 CountPlacement.of(24),
                                 RandomOffsetPlacement.ofTriangle(6, 3),
                                 BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)))));
@@ -67,13 +67,13 @@ public class ModConfiguredFeatures {
 
 
             context.register(POPLAR_RED, new ConfiguredFeature<>(Feature.TREE,
-                    createPoplar(ModBlocks.RED_POPLAR_LEAVES.get()).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
+                    createPoplar(ModBlocks.RED_POPLAR_LEAVES).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
 
             context.register(POPLAR_ORANGE, new ConfiguredFeature<>(Feature.TREE,
-                    createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get()).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
+                    createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
 
             context.register(POPLAR_YELLOW, new ConfiguredFeature<>(Feature.TREE,
-                    createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get()).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
+                    createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
 
 
 
@@ -95,7 +95,7 @@ public class ModConfiguredFeatures {
 
         context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(
-                        BlockStateProvider.simple(ModBlocks.SHELF_MUSHROOM.get())
+                        BlockStateProvider.simple(ModBlocks.SHELF_MUSHROOM)
                 )
         ));
 
@@ -103,17 +103,17 @@ public class ModConfiguredFeatures {
                 createFallenPoplar().build()));
 
         context.register(RED_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.RED_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+                createPoplar(ModBlocks.RED_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
         context.register(ORANGE_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
         context.register(YELLOW_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
 
     }
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Constants.vanilla(name));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
@@ -123,7 +123,7 @@ public class ModConfiguredFeatures {
 
     private static TreeConfiguration.TreeConfigurationBuilder createPoplar(Block leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG),
                 new PoplarTrunkPlacer(7, 4, 0, ConstantInt.of(4), UniformInt.of(1, 4)),
                 BlockStateProvider.simple(leaves),
                 new PoplarFoliagePlacer(new WeightedListInt(
@@ -143,7 +143,7 @@ public class ModConfiguredFeatures {
 
     private static FallenTreeConfiguration.FallenTreeConfigurationBuilder createFallenPoplar() {
         return new FallenTreeConfiguration.FallenTreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG),
                 UniformInt.of(4,7))
                 .logDecorators(List.of(
         new AttachedToLogsDecorator(0.1F, BlockStateProvider.simple(Blocks.BROWN_MUSHROOM),

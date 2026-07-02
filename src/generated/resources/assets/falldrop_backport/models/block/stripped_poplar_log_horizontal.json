@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "falldrop_backport:block/stripped_poplar_log_top",
+    "side": "falldrop_backport:block/stripped_poplar_log"
+  }
+}

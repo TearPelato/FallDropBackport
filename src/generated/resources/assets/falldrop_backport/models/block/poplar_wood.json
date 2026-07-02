@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "falldrop_backport:block/poplar_log",
+    "side": "falldrop_backport:block/poplar_log"
+  }
+}

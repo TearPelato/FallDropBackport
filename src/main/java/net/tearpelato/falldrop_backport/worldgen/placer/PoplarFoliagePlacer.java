@@ -36,7 +36,7 @@ public class PoplarFoliagePlacer extends FoliagePlacer {
     }
 
     protected FoliagePlacerType<?> type() {
-        return ModFoliagePlacerTypes.POPLAR_FOLIAGE_PLACER.get();
+        return ModFoliagePlacerTypes.POPLAR_FOLIAGE_PLACER;
     }
 
 

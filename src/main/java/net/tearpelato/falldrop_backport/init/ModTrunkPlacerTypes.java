@@ -1,22 +1,27 @@
 package net.tearpelato.falldrop_backport.init;
 
-import net.minecraft.core.registries.Registries;
+import com.mojang.serialization.MapCodec;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.worldgen.placer.PoplarTrunkPlacer;
 
 public class ModTrunkPlacerTypes {
-    public static final DeferredRegister<TrunkPlacerType<?>> TRUNK_PLACER_TYPES =
-            DeferredRegister.create(Registries.TRUNK_PLACER_TYPE, Constants.NAMESPACE);
-
-    public static final DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<PoplarTrunkPlacer>> POPLAR_TRUNK_PLACER =
-            TRUNK_PLACER_TYPES.register("poplar_trunk_placer", () -> new TrunkPlacerType<>(PoplarTrunkPlacer.CODEC));
 
 
-    public static void init(IEventBus bus) {
-        TRUNK_PLACER_TYPES.register(bus);
+    public static final TrunkPlacerType<PoplarTrunkPlacer> POPLAR_TRUNK_PLACER =
+            register("poplar_trunk_placer", PoplarTrunkPlacer.CODEC);
+
+    private static <P extends TrunkPlacer> TrunkPlacerType<P> register(String name, MapCodec<P> codec) {
+        return Registry.register(
+                BuiltInRegistries.TRUNK_PLACER_TYPE,
+                Constants.vanilla(name),
+                new TrunkPlacerType<>(codec)
+        );
+    }
+    public static void registerTrunkPlacer() {
+        Constants.LOGGER.info("Registering Trunk Placer for " + Constants.MOD_ID);
     }
 }

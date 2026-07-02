@@ -1,7 +1,7 @@
 {
   "values": [
-    "minecraft:red_poplar_leaves",
-    "minecraft:orange_poplar_leaves",
-    "minecraft:yellow_poplar_leaves"
+    "falldrop_backport:red_poplar_leaves",
+    "falldrop_backport:orange_poplar_leaves",
+    "falldrop_backport:yellow_poplar_leaves"
   ]
 }

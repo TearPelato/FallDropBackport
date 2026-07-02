@@ -35,7 +35,7 @@ public class PoplarTrunkPlacer extends TrunkPlacer {
     }
 
     protected TrunkPlacerType<?> type() {
-        return ModTrunkPlacerTypes.POPLAR_TRUNK_PLACER.get();
+        return ModTrunkPlacerTypes.POPLAR_TRUNK_PLACER;
     }
 
 

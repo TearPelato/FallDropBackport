@@ -1,0 +1,21 @@
+// 26.1.2	-999999999-01-01T00:00:00	FallDropBackport/Tags for minecraft:block
+5f33a733ee31807eeb3deb1ae09ea7ae777252dd data/minecraft/tags/block/doors.json
+ce3ffa8ed20d791b5af7087fafa78f5d00847d8b data/minecraft/tags/block/fence_gates.json
+c8c064ae2d3fc568737fc43edce8221941392510 data/minecraft/tags/block/fences.json
+fdc84d54ec9ebbada969033d2182a85f45b7ce51 data/minecraft/tags/block/flower_pots.json
+f379b39a1ea92597c7f088c5336bbc1a15bbfd73 data/minecraft/tags/block/leaves.json
+2cc2a1e89eccbaf1dd52ac68958a7259ee870d7f data/minecraft/tags/block/logs.json
+3972ad46e66896e9d7858fc7bdc5d4995ad6e3c2 data/minecraft/tags/block/logs_that_burn.json
+038b58ec57b61f4050789076533a7e5078b02550 data/minecraft/tags/block/mineable/axe.json
+0b7501e701332a68fc3c948c07ca4af0602fffee data/minecraft/tags/block/saplings.json
+5ad3f56809eef465af4142b21f337d3f92e4ac90 data/minecraft/tags/block/slabs.json
+ec3ea5555c43b4e819587cb3826f990a0664d3a5 data/minecraft/tags/block/stairs.json
+d0e0458238fdbd341dd17175bedc47a8117c9069 data/minecraft/tags/block/trapdoors.json
+16bd1898c6fde64140ddfa76b876feb33931b3c3 data/minecraft/tags/block/wooden_buttons.json
+5f33a733ee31807eeb3deb1ae09ea7ae777252dd data/minecraft/tags/block/wooden_doors.json
+c8c064ae2d3fc568737fc43edce8221941392510 data/minecraft/tags/block/wooden_fences.json
+a2e95d12c8a4e2a063d38fcf61375743669ca5db data/minecraft/tags/block/wooden_pressure_plates.json
+f7a0b96f45fe987d02584f026fa072b35833d395 data/minecraft/tags/block/wooden_shelves.json
+f0d9753daa8dacc8c808ca7ff77ac18ef05d13c4 data/minecraft/tags/block/wooden_slabs.json
+021c1fd620b4a323535b77f070f2efb36df57d90 data/minecraft/tags/block/wooden_stairs.json
+d0e0458238fdbd341dd17175bedc47a8117c9069 data/minecraft/tags/block/wooden_trapdoors.json

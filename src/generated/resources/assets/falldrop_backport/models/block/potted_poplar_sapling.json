@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_flower_pot_cross",
+  "textures": {
+    "plant": "falldrop_backport:block/poplar_sapling"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "falldrop_backport:block/poplar_hanging_sign"
+    }
+  }
+}

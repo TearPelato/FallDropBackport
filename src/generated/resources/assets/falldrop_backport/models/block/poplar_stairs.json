@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "falldrop_backport:block/poplar_planks",
+    "side": "falldrop_backport:block/poplar_planks",
+    "top": "falldrop_backport:block/poplar_planks"
+  }
+}

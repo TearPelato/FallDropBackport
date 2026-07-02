@@ -1,5 +1,6 @@
 package net.tearpelato.falldrop_backport.init;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -16,7 +17,7 @@ public class ModTags {
 
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
+            return TagKey.create(Registries.BLOCK, Constants.vanilla(name));
         }
     }
 
@@ -26,7 +27,7 @@ public class ModTags {
         public static final TagKey<Item> POPLAR_LOGS = createTag("poplar_logs");
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
+            return TagKey.create(Registries.ITEM, Constants.vanilla(name));
         }
     }
 }
