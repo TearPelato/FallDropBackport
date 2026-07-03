@@ -16,20 +16,6 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.POPLAR_STAIRS)
-                .add(ModBlocks.POPLAR_PLANKS)
-                .add(ModBlocks.POPLAR_SLAB)
-                .add(ModBlocks.POPLAR_FENCE)
-                .add(ModBlocks.POPLAR_SIGN)
-                .add(ModBlocks.POPLAR_WALL_SIGN)
-                .add(ModBlocks.POPLAR_HANGING_SIGN)
-                .add(ModBlocks.POPLAR_WALL_HANGING_SIGN)
-                .add(ModBlocks.POPLAR_DOOR)
-                .add(ModBlocks.POPLAR_TRAPDOOR)
-                .add(ModBlocks.POPLAR_BUTTON)
-                .add(ModBlocks.POPLAR_PRESSURE_PLATE);
-
         valueLookupBuilder(BlockTags.LOGS)
                 .add(ModBlocks.POPLAR_LOG)
                 .add(ModBlocks.POPLAR_WOOD)

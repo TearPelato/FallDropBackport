@@ -1,6 +1,6 @@
 {
   "values": [
-    "falldrop_backport:potted_poplar_sapling",
-    "falldrop_backport:red_shrub_potted"
+    "minecraft:potted_poplar_sapling",
+    "minecraft:red_shrub_potted"
   ]
 }

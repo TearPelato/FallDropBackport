@@ -81,7 +81,8 @@ processResources {
             "mod_description": mod_description,
             "mod_authors": mod_authors,
             "loader_version": loader_version,
-            "minecraft_version_range": minecraft_version_range
+            "minecraft_version_range": minecraft_version_range,
+            "minecraft_version": minecraft_version
     ]
     inputs.properties(props)
 

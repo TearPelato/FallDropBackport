@@ -11,14 +11,15 @@ import net.minecraft.client.renderer.blockentity.StandingSignRenderer;
 import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.tearpelato.falldrop_backport.entity.client.ModModelLayerLocations;
+import net.tearpelato.falldrop_backport.particle.PoplarParticles;
 import net.tearpelato.falldrop_backport.init.ModBlockEntities;
 import net.tearpelato.falldrop_backport.init.ModEntities;
 import net.tearpelato.falldrop_backport.init.ModParticleTypes;
-import net.tearpelato.falldrop_backport.particle.PoplarParticles;
 
 public class FallDropBackportClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.POPLAR_BOAT, BoatModel::createBoatModel);
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.POPLAR_CHEST_BOAT, BoatModel::createChestBoatModel);
         EntityRenderers.register(ModEntities.POPLAR_BOAT, context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_BOAT));
@@ -32,6 +33,8 @@ public class FallDropBackportClient implements ClientModInitializer {
         BlockEntityRenderers.register(ModBlockEntities.SHELF, ShelfRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.SIGN, StandingSignRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.HANGING_SIGN, HangingSignRenderer::new);
+
+
 
     }
 }

@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": "falldrop_backport:poplar_planks"
+    "#": "minecraft:poplar_planks"
   },
   "pattern": [
     "##"
   ],
   "result": {
-    "id": "falldrop_backport:poplar_pressure_plate"
+    "id": "minecraft:poplar_pressure_plate"
   }
 }

@@ -4,14 +4,12 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.renderer.block.dispatch.VariantMutator;
 import net.minecraft.core.Direction;
-import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.tearpelato.falldrop_backport.Constants;
@@ -122,7 +120,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.registerSimpleItemModel(ModBlocks.YELLOW_POPLAR_LEAVES,Constants.vanilla("block/yellow_poplar_leaves"));
 
 
-        blockModelGenerators.registerSimpleItemModel(ModBlocks.POPLAR_PLANKS,Constants.vanilla("block/poplar_planks"));
+        blockModelGenerators.registerSimpleItemModel(ModBlocks.POPLAR_PLANKS, Constants.vanilla("block/poplar_planks"));
         blockModelGenerators.registerSimpleItemModel(ModBlocks.POPLAR_PRESSURE_PLATE,Constants.vanilla("block/poplar_pressure_plate"));
         blockModelGenerators.registerSimpleItemModel(ModBlocks.POPLAR_FENCE_GATE,Constants.vanilla("block/poplar_fence_gate"));
         blockModelGenerators.registerSimpleItemModel(ModBlocks.SHELF_MUSHROOM,Constants.vanilla("block/shelf_mushroom_stage0"));
@@ -150,5 +148,5 @@ public class ModModelProvider extends FabricModelProvider {
 
     }
 
-    
+
 }

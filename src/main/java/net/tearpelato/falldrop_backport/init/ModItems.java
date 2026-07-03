@@ -12,7 +12,7 @@ import net.tearpelato.falldrop_backport.Constants;
 import java.util.function.Function;
 
 public class ModItems {
- 
+
     public static final Item POPLAR_SIGN = registerItem("poplar_sign",
             properties -> new SignItem( ModBlocks.POPLAR_WALL_SIGN, ModBlocks.POPLAR_SIGN, properties.stacksTo(16)));
     public static final Item POPLAR_HANGING_SIGN = registerItem("poplar_hanging_sign",
@@ -28,13 +28,13 @@ public class ModItems {
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
-        return Registry.register(BuiltInRegistries.ITEM, Constants.id(name),
-                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Constants.id(name)))));
+        return Registry.register(BuiltInRegistries.ITEM, Constants.vanilla(name),
+                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Constants.vanilla(name)))));
     }
 
     public static void registerModItems() {
         Constants.LOGGER.info("Registering Mod Items for " + Constants.MOD_ID);
-        
+
     }
 
 }

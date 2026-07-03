@@ -8,7 +8,6 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModItems;
 import net.tearpelato.falldrop_backport.init.ModTags;
@@ -22,10 +21,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-        return new RecipeProvider(registries, output) {
+        return new RecipeProvider(registries,output) {
             @Override
             public void buildRecipes() {
-
                 stairBuilder(ModBlocks.WHITE_WOOL_STAIRS, Ingredient.of(Blocks.WHITE_WOOL))
                         .unlockedBy(getHasName(Blocks.WHITE_WOOL), has(Blocks.WHITE_WOOL))
                         .save(output);
@@ -140,7 +138,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 shelf(ModBlocks.POPLAR_SHELF, ModBlocks.STRIPPED_POPLAR_LOG);
                 woodFromLogs(ModBlocks.STRIPPED_POPLAR_WOOD, ModBlocks.STRIPPED_POPLAR_LOG);
 
-
             }
         };
     }
@@ -148,6 +145,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return Constants.MOD_ID + "Recipes";
+        return "FallDropBackport Recipes";
     }
 }

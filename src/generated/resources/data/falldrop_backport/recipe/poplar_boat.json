@@ -3,13 +3,13 @@
   "category": "misc",
   "group": "boat",
   "key": {
-    "#": "falldrop_backport:poplar_planks"
+    "#": "minecraft:poplar_planks"
   },
   "pattern": [
     "# #",
     "###"
   ],
   "result": {
-    "id": "falldrop_backport:poplar_boat"
+    "id": "minecraft:poplar_boat"
   }
 }

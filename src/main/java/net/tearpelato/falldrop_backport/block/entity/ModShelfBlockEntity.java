@@ -15,4 +15,9 @@ public class ModShelfBlockEntity extends ShelfBlockEntity {
     public BlockEntityType<?> getType() {
         return ModBlockEntities.SHELF;
     }
+
+    @Override
+    public boolean isValidBlockState(BlockState blockState) {
+        return ModBlockEntities.SHELF.isValid(blockState);
+    }
 }

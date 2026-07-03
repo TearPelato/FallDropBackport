@@ -13,5 +13,5 @@ public class ModFlammableBlocks {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ORANGE_POPLAR_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.YELLOW_POPLAR_LEAVES, 30, 60);
     }
-    
+
 }

@@ -5,9 +5,6 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
 import net.tearpelato.falldrop_backport.block.custom.ShelfMushroomBlock;
@@ -15,6 +12,7 @@ import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModTreeDecoratorType;
 
 import java.util.List;
+
 
 public class ShelfMushroomDecorator extends TreeDecorator {
     public static final MapCodec<ShelfMushroomDecorator> CODEC = Codec.floatRange(0.0F, 1.0F).fieldOf("probability").xmap(ShelfMushroomDecorator::new, (d) -> d.placementProbability);
@@ -32,7 +30,7 @@ public class ShelfMushroomDecorator extends TreeDecorator {
         return ModTreeDecoratorType.SHELF_MUSHROOM;
     }
 
-    public void place(final TreeDecorator.Context context) {
+    public void place(final Context context) {
         RandomSource random = context.random();
         if (!(random.nextFloat() >= this.placementProbability)) {
             List<BlockPos> logs = context.logs();
@@ -47,7 +45,7 @@ public class ShelfMushroomDecorator extends TreeDecorator {
         }
     }
 
-    private static void placeOnStandingTree(final TreeDecorator.Context context, final List<BlockPos> logs, final RandomSource random) {
+    private static void placeOnStandingTree(final Context context, final List<BlockPos> logs, final RandomSource random) {
         Direction[] directions = pickTwoPerpendicularDirections(random);
         int treeBaseY = ((BlockPos)logs.getFirst()).getY();
 
@@ -63,7 +61,7 @@ public class ShelfMushroomDecorator extends TreeDecorator {
 
     }
 
-    private static void placeOnFallenLog(final TreeDecorator.Context context, final List<BlockPos> logs, final RandomSource random) {
+    private static void placeOnFallenLog(final Context context, final List<BlockPos> logs, final RandomSource random) {
         Direction[] directions = perpendicularToFallenLog(logs);
 
         for(BlockPos logPos : logs) {
@@ -76,7 +74,7 @@ public class ShelfMushroomDecorator extends TreeDecorator {
 
     }
 
-    private static boolean tryPlaceMushroomOnStandingTree(final TreeDecorator.Context context, final BlockPos logPos, final Direction facing, final RandomSource random) {
+    private static boolean tryPlaceMushroomOnStandingTree(final Context context, final BlockPos logPos, final Direction facing, final RandomSource random) {
         BlockPos mushroomPos = mushroomPosFor(logPos, facing);
         if (!context.isAir(mushroomPos)) {
             return false;
@@ -88,7 +86,7 @@ public class ShelfMushroomDecorator extends TreeDecorator {
         }
     }
 
-    private static void tryPlaceMushroomOnFallenTree(final TreeDecorator.Context context, final BlockPos logPos, final Direction facing, final RandomSource random) {
+    private static void tryPlaceMushroomOnFallenTree(final Context context, final BlockPos logPos, final Direction facing, final RandomSource random) {
         BlockPos mushroomPos = mushroomPosFor(logPos, facing);
         if (context.isAir(mushroomPos)) {
             if (!hasHorizontallyAdjacentShelfMushroom(context, mushroomPos) && !hasHorizontallyAdjacentShelfMushroom(context, logPos)) {
@@ -123,18 +121,18 @@ public class ShelfMushroomDecorator extends TreeDecorator {
         return logPos.offset(opposite.getStepX(), 0, opposite.getStepZ());
     }
 
-    private static void placeMushroom(final TreeDecorator.Context context, final BlockPos pos, final Direction facing, final RandomSource random) {
+    private static void placeMushroom(final Context context, final BlockPos pos, final Direction facing, final RandomSource random) {
         Direction blockFacing = facing.getOpposite();
         context.setBlock(pos, ModBlocks.SHELF_MUSHROOM.defaultBlockState()
                 .setValue(ShelfMushroomBlock.AGE, random.nextInt(2))
                 .setValue(ShelfMushroomBlock.FACING, blockFacing));
     }
 
-    private static boolean hasShelfMushroomAt(final TreeDecorator.Context context, final BlockPos pos) {
+    private static boolean hasShelfMushroomAt(final Context context, final BlockPos pos) {
         return context.checkBlock(pos, (state) -> state.is(ModBlocks.SHELF_MUSHROOM));
     }
 
-    private static boolean hasHorizontallyAdjacentShelfMushroom(final TreeDecorator.Context context, final BlockPos pos) {
+    private static boolean hasHorizontallyAdjacentShelfMushroom(final Context context, final BlockPos pos) {
         for(Direction dir : Direction.Plane.HORIZONTAL) {
             if (hasShelfMushroomAt(context, pos.relative(dir))) {
                 return true;

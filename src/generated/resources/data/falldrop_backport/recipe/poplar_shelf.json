@@ -3,7 +3,7 @@
   "category": "misc",
   "group": "shelf",
   "key": {
-    "#": "falldrop_backport:stripped_poplar_log"
+    "#": "minecraft:stripped_poplar_log"
   },
   "pattern": [
     "###",
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 6,
-    "id": "falldrop_backport:poplar_shelf"
+    "id": "minecraft:poplar_shelf"
   }
 }

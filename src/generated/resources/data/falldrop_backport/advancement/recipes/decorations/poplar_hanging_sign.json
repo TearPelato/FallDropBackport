@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "falldrop_backport:stripped_poplar_log"
+            "items": "minecraft:stripped_poplar_log"
           }
         ]
       },

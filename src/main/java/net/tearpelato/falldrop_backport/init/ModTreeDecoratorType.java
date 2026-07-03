@@ -23,7 +23,7 @@ public class ModTreeDecoratorType {
     }
 
 
-    public static void registerCreativeModeTabs() {
+    public static void registerTreeDecorators() {
         Constants.LOGGER.info("Registering Tree Decorators for " + Constants.MOD_ID);
     }
 }

@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
   "ingredients": [
-    "falldrop_backport:poplar_planks"
+    "minecraft:poplar_planks"
   ],
   "result": {
-    "id": "falldrop_backport:poplar_button"
+    "id": "minecraft:poplar_button"
   }
 }

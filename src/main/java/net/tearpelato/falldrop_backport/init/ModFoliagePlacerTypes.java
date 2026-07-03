@@ -25,4 +25,3 @@ public class ModFoliagePlacerTypes {
         Constants.LOGGER.info("Registering Foliage Placers for " + Constants.MOD_ID);
     }
 }
-

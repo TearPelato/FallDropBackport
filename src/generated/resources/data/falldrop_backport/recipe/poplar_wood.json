@@ -3,7 +3,7 @@
   "category": "building",
   "group": "bark",
   "key": {
-    "#": "falldrop_backport:poplar_log"
+    "#": "minecraft:poplar_log"
   },
   "pattern": [
     "##",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 3,
-    "id": "falldrop_backport:poplar_wood"
+    "id": "minecraft:poplar_wood"
   }
 }

@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": "minecraft:stick",
-    "W": "falldrop_backport:poplar_planks"
+    "W": "minecraft:poplar_planks"
   },
   "pattern": [
     "W#W",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 3,
-    "id": "falldrop_backport:poplar_fence"
+    "id": "minecraft:poplar_fence"
   }
 }

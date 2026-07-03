@@ -1,5 +1,6 @@
 package net.tearpelato.falldrop_backport.datagen;
 
+
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.advancements.criterion.StatePropertiesPredicate;
@@ -20,6 +21,7 @@ public class ModBlockLootableProvider extends FabricBlockLootSubProvider {
     public ModBlockLootableProvider(FabricPackOutput packOutput, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(packOutput, registriesFuture);
     }
+
 
     @Override
     public void generate() {
@@ -69,34 +71,34 @@ public class ModBlockLootableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.POPLAR_FENCE_GATE);
         dropSelf(ModBlocks.POPLAR_PRESSURE_PLATE);
         dropSelf(ModBlocks.POPLAR_BUTTON);
-        dropSelf(ModBlocks.POPLAR_DOOR);
+        add(ModBlocks.POPLAR_DOOR, createDoorTable(ModBlocks.POPLAR_DOOR));
         dropSelf(ModBlocks.POPLAR_TRAPDOOR);
         dropSelf(ModBlocks.POPLAR_SHELF);
 
         dropSelf(ModBlocks.STRIPPED_POPLAR_LOG);
         dropSelf(ModBlocks.STRIPPED_POPLAR_WOOD);
 
-       add(ModBlocks.ORANGE_POPLAR_LEAVES, block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
-       add(ModBlocks.RED_POPLAR_LEAVES, block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
-       add(ModBlocks.YELLOW_POPLAR_LEAVES, block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.ORANGE_POPLAR_LEAVES, block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.RED_POPLAR_LEAVES, block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.YELLOW_POPLAR_LEAVES, block-> createLeavesDrops(block, ModBlocks.POPLAR_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
 
-       add(ModBlocks.POPLAR_SIGN, block ->
+        add(ModBlocks.POPLAR_SIGN, block ->
                 createSingleItemTable(ModItems.POPLAR_SIGN));
 
-       add(ModBlocks.POPLAR_WALL_SIGN, block ->
+        add(ModBlocks.POPLAR_WALL_SIGN, block ->
                 createSingleItemTable(ModItems.POPLAR_SIGN));
 
-       add(ModBlocks.POPLAR_HANGING_SIGN, block ->
+        add(ModBlocks.POPLAR_HANGING_SIGN, block ->
                 createSingleItemTable(ModItems.POPLAR_HANGING_SIGN));
 
-       add(ModBlocks.POPLAR_WALL_HANGING_SIGN, block ->
+        add(ModBlocks.POPLAR_WALL_HANGING_SIGN, block ->
                 createSingleItemTable(ModItems.POPLAR_HANGING_SIGN));
 
 
-       dropSelf(ModBlocks.RED_SHRUB);
-       dropSelf(ModBlocks.POPLAR_SAPLING);
-       add(ModBlocks.POPLAR_SAPLING_POTTED, createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING));
-       add(ModBlocks.RED_SHRUB_POTTED, createPotFlowerItemTable(ModBlocks.RED_SHRUB));
+        dropSelf(ModBlocks.RED_SHRUB);
+        dropSelf(ModBlocks.POPLAR_SAPLING);
+        add(ModBlocks.POPLAR_SAPLING_POTTED, createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING));
+        add(ModBlocks.RED_SHRUB_POTTED, createPotFlowerItemTable(ModBlocks.RED_SHRUB));
         add(ModBlocks.SHELF_MUSHROOM, block ->
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool()
@@ -123,7 +125,6 @@ public class ModBlockLootableProvider extends FabricBlockLootSubProvider {
         );
 
     }
-
 
 
 }

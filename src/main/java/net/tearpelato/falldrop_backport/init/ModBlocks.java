@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -19,45 +20,42 @@ import net.tearpelato.falldrop_backport.worldgen.ModTreeGrowers;
 import java.util.function.Function;
 
 public class ModBlocks {
-
-
-    //WoolSet
     public static final Block WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block RED_WOOL_STAIRS = registerBlock("red_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
 
     public static final Block WHITE_WOOL_SLAB = registerBlock("white_wool_slab",
-            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new SlabBlock(properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIGHT_GRAY_WOOL_SLAB = registerBlock("light_gray_wool_slab",
             properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block GRAY_WOOL_SLAB = registerBlock("gray_wool_slab",
@@ -137,32 +135,32 @@ public class ModBlocks {
 
 
     public static final Block POPLAR_STAIRS = registerBlock("poplar_stairs",
-            properties -> new StairBlock(POPLAR_PLANKS.defaultBlockState(), properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava().requiresCorrectToolForDrops()));
+            properties -> new StairBlock(POPLAR_PLANKS.defaultBlockState(), properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
 
     public static final Block POPLAR_SLAB = registerBlock("poplar_slab",
-            properties -> new SlabBlock( properties.strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+            properties -> new SlabBlock(properties.mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
     public static final Block POPLAR_FENCE = registerBlock("poplar_fence",
-            properties -> new FenceBlock(properties.strength(2f).requiresCorrectToolForDrops()));
+            properties -> new FenceBlock(properties.strength(2f)));
 
     public static final Block POPLAR_FENCE_GATE = registerBlock("poplar_fence_gate",
-            properties -> new FenceGateBlock(WoodType.PALE_OAK, properties.strength(2f).requiresCorrectToolForDrops()));
+            properties -> new FenceGateBlock(WoodType.PALE_OAK, properties.strength(2f)));
 
     public static final Block POPLAR_DOOR = registerBlock("poplar_door",
             properties -> new DoorBlock(BlockSetType.PALE_OAK, properties.strength(2f)
-                    .requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY)));
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final Block POPLAR_TRAPDOOR = registerBlock("poplar_trapdoor",
             properties -> new TrapDoorBlock(BlockSetType.PALE_OAK, properties.strength(2f)
-                    .requiresCorrectToolForDrops().noOcclusion().isValidSpawn(Blocks::never)));
+                    .noOcclusion().isValidSpawn(Blocks::never)));
 
     public static final Block POPLAR_PRESSURE_PLATE = registerBlock("poplar_pressure_plate",
             properties -> new PressurePlateBlock(BlockSetType.PALE_OAK,
-                    properties.strength(2f).requiresCorrectToolForDrops().forceSolidOn().noCollision().pushReaction(PushReaction.DESTROY)));
+                    properties.strength(2f).forceSolidOn().noCollision().pushReaction(PushReaction.DESTROY)));
 
     public static final Block POPLAR_BUTTON = registerBlock("poplar_button",
             properties -> new ButtonBlock(BlockSetType.PALE_OAK, 20,
-                    properties.strength(2f).requiresCorrectToolForDrops().noCollision().pushReaction(PushReaction.DESTROY)));
+                    properties.strength(2f).noCollision().pushReaction(PushReaction.DESTROY)));
 
 
     public static final Block POPLAR_SIGN = registerBlockWithoutBlockItem("poplar_sign",
@@ -178,10 +176,10 @@ public class ModBlocks {
             properties -> new ModWallHangingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
 
     public static final Block POPLAR_SHELF = registerBlock("poplar_shelf",
-            properties -> new ModShelfBlock(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.SHELF)));
+            properties -> new ModShelfBlock(properties.strength(2f).sound(SoundType.SHELF)));
 
-        public static final Block RED_SHRUB = registerBlock("red_shrub",
-                properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+    public static final Block RED_SHRUB = registerBlock("red_shrub",
+            properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final Block RED_SHRUB_POTTED = registerBlock("red_shrub_potted",
             properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
@@ -203,21 +201,21 @@ public class ModBlocks {
 
 
     private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
-        return Registry.register(BuiltInRegistries.BLOCK, Constants.id(name), function.apply(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, Constants.id(name)))));
+        return Registry.register(BuiltInRegistries.BLOCK, Constants.vanilla(name), function.apply(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, Constants.vanilla(name)))));
     }
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, Constants.id(name))));
+                .setId(ResourceKey.create(Registries.BLOCK, Constants.vanilla(name))));
         registerBlockItem(name, toRegister);
-        return Registry.register(BuiltInRegistries.BLOCK, Constants.id(name), toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Constants.vanilla(name), toRegister);
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(BuiltInRegistries.ITEM, Constants.id(name),
+        Registry.register(BuiltInRegistries.ITEM, Constants.vanilla(name),
                 new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
-                        .setId(ResourceKey.create(Registries.ITEM, Constants.id(name)))));
+                        .setId(ResourceKey.create(Registries.ITEM, Constants.vanilla(name)))));
     }
 
     public static void registerModBlocks() {

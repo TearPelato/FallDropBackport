@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_post",
-  "textures": {
-    "texture": "falldrop_backport:block/poplar_planks"
-  }
-}

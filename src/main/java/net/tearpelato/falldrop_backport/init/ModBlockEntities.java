@@ -9,21 +9,16 @@ import net.tearpelato.falldrop_backport.block.entity.ModHangingSignBlockEntity;
 import net.tearpelato.falldrop_backport.block.entity.ModShelfBlockEntity;
 import net.tearpelato.falldrop_backport.block.entity.ModSignBlockEntity;
 
-import java.util.function.Supplier;
-
 public class ModBlockEntities {
-
-    public static final BlockEntityType<ModHangingSignBlockEntity> HANGING_SIGN =
-            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("hanging_sign"),
-                    FabricBlockEntityTypeBuilder.create(ModHangingSignBlockEntity::new, ModBlocks.POPLAR_HANGING_SIGN, ModBlocks.POPLAR_WALL_HANGING_SIGN).build());
-
 
     public static final BlockEntityType<ModSignBlockEntity> SIGN =
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("sign"),
                     FabricBlockEntityTypeBuilder.create(ModSignBlockEntity::new, ModBlocks.POPLAR_SIGN, ModBlocks.POPLAR_WALL_SIGN).build());
-
+    public static final BlockEntityType<ModHangingSignBlockEntity> HANGING_SIGN =
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("hanging_sign"),
+                    FabricBlockEntityTypeBuilder.create(ModHangingSignBlockEntity::new, ModBlocks.POPLAR_HANGING_SIGN, ModBlocks.POPLAR_WALL_HANGING_SIGN).build());
     public static final BlockEntityType<ModShelfBlockEntity> SHELF =
-            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("shelf"),
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("crystallizer_be"),
                     FabricBlockEntityTypeBuilder.create(ModShelfBlockEntity::new, ModBlocks.POPLAR_SHELF).build());
 
 

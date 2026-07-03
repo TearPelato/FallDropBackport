@@ -12,7 +12,6 @@ import net.minecraft.util.valueproviders.IntProviders;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
@@ -60,7 +59,7 @@ public class PoplarFoliagePlacer extends FoliagePlacer {
         this.placeLeavesRow(level, foliageSetter, random, tree, foliagePos, Mth.clamp(currentRadius - 2, 1, 2), -1, doubleTrunk);
     }
 
-    private void replaceLeavesWithLog(final WorldGenLevel level, final FoliagePlacer.FoliageSetter foliageSetter, final TreeConfiguration tree, final RandomSource random, final BlockPos origin, final int currentRadius, final int y, final boolean doubleTrunk) {
+    private void replaceLeavesWithLog(final WorldGenLevel level, final FoliageSetter foliageSetter, final TreeConfiguration tree, final RandomSource random, final BlockPos origin, final int currentRadius, final int y, final boolean doubleTrunk) {
         int offset = doubleTrunk ? 1 : 0;
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
 
@@ -77,7 +76,7 @@ public class PoplarFoliagePlacer extends FoliagePlacer {
 
     }
 
-    private static void tryPlaceLog(final WorldGenLevel level, final FoliagePlacer.FoliageSetter foliageSetter, final RandomSource random, final TreeConfiguration tree, final BlockPos pos, final Function<BlockState, BlockState> stateModifier) {
+    private static void tryPlaceLog(final WorldGenLevel level, final FoliageSetter foliageSetter, final RandomSource random, final TreeConfiguration tree, final BlockPos pos, final Function<BlockState, BlockState> stateModifier) {
         if (level.isStateAtPosition(pos, (state) -> state.equals(tree.foliageProvider.getState(level, random, pos)))) {
             foliageSetter.set(pos, (BlockState)stateModifier.apply(tree.trunkProvider.getState(level, random, pos)));
         }

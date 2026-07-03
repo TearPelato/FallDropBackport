@@ -3,7 +3,7 @@
   "category": "building",
   "group": "bark",
   "key": {
-    "#": "falldrop_backport:stripped_poplar_log"
+    "#": "minecraft:stripped_poplar_log"
   },
   "pattern": [
     "##",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 3,
-    "id": "falldrop_backport:stripped_poplar_wood"
+    "id": "minecraft:stripped_poplar_wood"
   }
 }

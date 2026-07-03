@@ -3,7 +3,7 @@
   "category": "misc",
   "group": "sign",
   "key": {
-    "#": "falldrop_backport:poplar_planks",
+    "#": "minecraft:poplar_planks",
     "X": "minecraft:stick"
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 3,
-    "id": "falldrop_backport:poplar_sign"
+    "id": "minecraft:poplar_sign"
   }
 }

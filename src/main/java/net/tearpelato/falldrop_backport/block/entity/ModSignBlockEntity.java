@@ -8,11 +8,16 @@ import net.tearpelato.falldrop_backport.init.ModBlockEntities;
 
 public class ModSignBlockEntity extends SignBlockEntity {
     public ModSignBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(pPos, pBlockState);
+        super(ModBlockEntities.SIGN, pPos, pBlockState);
     }
 
     @Override
     public BlockEntityType<?> getType() {
         return ModBlockEntities.SIGN;
+    }
+
+    @Override
+    public boolean isValidBlockState(BlockState blockState) {
+        return ModBlockEntities.SIGN.isValid(blockState);
     }
 }
