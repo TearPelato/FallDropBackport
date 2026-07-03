@@ -107,22 +107,6 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock implements Bo
         }
     }
 
-    public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
-        if (entity.isSuppressingBounce()) {
-            super.updateEntityMovementAfterFallOn(level, entity);
-        } else {
-            this.bounceUp(entity);
-        }
-    }
-
-    private void bounceUp(Entity entity) {
-        Vec3 deltaMovement = entity.getDeltaMovement();
-        if (deltaMovement.y < 0.0) {
-            double multiplier = entity instanceof LivingEntity ? 1.0 : 0.8;
-            entity.setDeltaMovement(deltaMovement.x, -deltaMovement.y * multiplier, deltaMovement.z);
-        }
-    }
-
     static {
         AGE = BlockStateProperties.AGE_1;
         SHAPES = IntStream.rangeClosed(0, 1).mapToObj((i) -> Shapes.rotateHorizontal(Block.column((double)(10 + i * 4), (double)(7 + i * 3), (double)(9 - i * 2), (double)12.0F).move((double)0.0F, (double)(i - 2) / (double)16.0F, -((double)i * (double)1.5F - (double)4.5F) / (double)16.0F).optimize())).toList();

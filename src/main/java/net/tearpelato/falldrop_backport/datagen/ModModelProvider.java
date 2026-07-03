@@ -31,81 +31,82 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        blockModelGenerators.family(Blocks.WHITE_WOOL)
+
+        blockModelGenerators.family(Blocks.WOOL.white())
                 .stairs(ModBlocks.WHITE_WOOL_STAIRS)
                 .slab(ModBlocks.WHITE_WOOL_SLAB);
 
-        blockModelGenerators.family(Blocks.LIGHT_GRAY_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.lightGray())
                 .stairs(ModBlocks.LIGHT_GRAY_WOOL_STAIRS)
                 .slab(ModBlocks.LIGHT_GRAY_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.GRAY_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.gray())
                 .stairs(ModBlocks.GRAY_WOOL_STAIRS)
                 .slab(ModBlocks.GRAY_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.BLACK_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.black())
                 .stairs(ModBlocks.BLACK_WOOL_STAIRS)
                 .slab(ModBlocks.BLACK_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.BROWN_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.brown())
                 .stairs(ModBlocks.BROWN_WOOL_STAIRS)
                 .slab(ModBlocks.BROWN_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.RED_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.red())
                 .stairs(ModBlocks.RED_WOOL_STAIRS)
                 .slab(ModBlocks.RED_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.ORANGE_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.orange())
                 .stairs(ModBlocks.ORANGE_WOOL_STAIRS)
                 .slab(ModBlocks.ORANGE_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.YELLOW_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.yellow())
                 .stairs(ModBlocks.YELLOW_WOOL_STAIRS)
                 .slab(ModBlocks.YELLOW_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.LIME_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.lime())
                 .stairs(ModBlocks.LIME_WOOL_STAIRS)
                 .slab(ModBlocks.LIME_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.GREEN_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.green())
                 .stairs(ModBlocks.GREEN_WOOL_STAIRS)
                 .slab(ModBlocks.GREEN_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.CYAN_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.cyan())
                 .stairs(ModBlocks.CYAN_WOOL_STAIRS)
                 .slab(ModBlocks.CYAN_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.LIGHT_BLUE_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.lightBlue())
                 .stairs(ModBlocks.LIGHT_BLUE_WOOL_STAIRS)
                 .slab(ModBlocks.LIGHT_BLUE_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.BLUE_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.blue())
                 .stairs(ModBlocks.BLUE_WOOL_STAIRS)
                 .slab(ModBlocks.BLUE_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.PURPLE_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.purple())
                 .stairs(ModBlocks.PURPLE_WOOL_STAIRS)
                 .slab(ModBlocks.PURPLE_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.MAGENTA_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.magenta())
                 .stairs(ModBlocks.MAGENTA_WOOL_STAIRS)
                 .slab(ModBlocks.MAGENTA_WOOL_SLAB);
 
 
-        blockModelGenerators.family(Blocks.PINK_WOOL)
+        blockModelGenerators.family(Blocks.WOOL.pink())
                 .stairs(ModBlocks.PINK_WOOL_STAIRS)
                 .slab(ModBlocks.PINK_WOOL_SLAB);
 
@@ -127,7 +128,7 @@ public class ModModelProvider extends FabricModelProvider {
 
 
         blockModelGenerators.family(ModBlocks.POPLAR_PLANKS).generateFor(ModBlockFamilies.POPLAR_PLANKS);
-        blockModelGenerators.createHangingSign(ModBlocks.POPLAR_PLANKS, ModBlocks.POPLAR_HANGING_SIGN, ModBlocks.POPLAR_WALL_HANGING_SIGN);
+
 
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.RED_SHRUB, ModBlocks.RED_SHRUB_POTTED, BlockModelGenerators.PlantType.TINTED);
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.POPLAR_SAPLING, ModBlocks.POPLAR_SAPLING_POTTED, BlockModelGenerators.PlantType.TINTED);

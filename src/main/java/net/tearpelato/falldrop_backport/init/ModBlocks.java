@@ -21,37 +21,37 @@ import java.util.function.Function;
 
 public class ModBlocks {
     public static final Block WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block RED_WOOL_STAIRS = registerBlock("red_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
     public static final Block PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs",
-            properties -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+            properties -> new StairBlock(Blocks.WOOL.white().defaultBlockState(), properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
 
     public static final Block WHITE_WOOL_SLAB = registerBlock("white_wool_slab",

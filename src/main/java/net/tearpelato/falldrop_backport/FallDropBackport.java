@@ -26,8 +26,6 @@ public class FallDropBackport implements ModInitializer, TerraBlenderApi {
         ModStrippableBlocks.registerStrippableBlocks();
         ModTreeDecoratorType.registerTreeDecorators();
 
-        Sheets.createSignSprite(ModWoodType.POPLAR);
-        Sheets.createHangingSignSprite(ModWoodType.POPLAR);
 
 
     }

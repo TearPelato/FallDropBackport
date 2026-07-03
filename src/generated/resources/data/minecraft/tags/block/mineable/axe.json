@@ -1,0 +1,16 @@
+{
+  "values": [
+    "minecraft:poplar_stairs",
+    "minecraft:poplar_planks",
+    "minecraft:poplar_slab",
+    "minecraft:poplar_fence",
+    "minecraft:poplar_sign",
+    "minecraft:poplar_wall_sign",
+    "minecraft:poplar_hanging_sign",
+    "minecraft:poplar_wall_hanging_sign",
+    "minecraft:poplar_door",
+    "minecraft:poplar_trapdoor",
+    "minecraft:poplar_button",
+    "minecraft:poplar_pressure_plate"
+  ]
+}

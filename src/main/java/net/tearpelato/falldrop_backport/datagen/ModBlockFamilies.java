@@ -12,6 +12,7 @@ public class ModBlockFamilies {
             .pressurePlate(ModBlocks.POPLAR_PRESSURE_PLATE)
             .button(ModBlocks.POPLAR_BUTTON)
             .sign(ModBlocks.POPLAR_SIGN, ModBlocks.POPLAR_WALL_SIGN)
+            .hangingSign(ModBlocks.POPLAR_HANGING_SIGN, ModBlocks.POPLAR_WALL_HANGING_SIGN)
             .door(ModBlocks.POPLAR_DOOR)
             .trapdoor(ModBlocks.POPLAR_TRAPDOOR)
             .getFamily();
