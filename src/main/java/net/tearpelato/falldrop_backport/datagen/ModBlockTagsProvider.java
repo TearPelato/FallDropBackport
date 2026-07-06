@@ -69,7 +69,6 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.POPLAR_FENCE);
         valueLookupBuilder(BlockTags.FENCE_GATES).add(ModBlocks.POPLAR_FENCE_GATE);
         valueLookupBuilder(BlockTags.DOORS).add(ModBlocks.POPLAR_DOOR);
-        valueLookupBuilder(BlockTags.TRAPDOORS).add(ModBlocks.POPLAR_TRAPDOOR);
         valueLookupBuilder(BlockTags.SAPLINGS).add(ModBlocks.POPLAR_SAPLING);
         valueLookupBuilder(BlockTags.WOODEN_SHELVES).add(ModBlocks.POPLAR_SHELF);
 
@@ -90,8 +89,15 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.POPLAR_PRESSURE_PLATE);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.POPLAR_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.POPLAR_TRAPDOOR);
+        valueLookupBuilder(BlockTags.SIGNS)
+                .add(ModBlocks.POPLAR_SIGN)
+                .add(ModBlocks.POPLAR_WALL_SIGN);
+        valueLookupBuilder(BlockTags.WALL_SIGNS).add(ModBlocks.POPLAR_WALL_SIGN);
+        valueLookupBuilder(BlockTags.STANDING_SIGNS).add(ModBlocks.POPLAR_SIGN);
 
-
+        valueLookupBuilder(BlockTags.ALL_HANGING_SIGNS)
+                .add(ModBlocks.POPLAR_HANGING_SIGN)
+                .add(ModBlocks.POPLAR_WALL_HANGING_SIGN);
 
     }
 }
