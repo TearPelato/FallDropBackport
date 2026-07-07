@@ -271,6 +271,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SHELF_MUSHROOM = registerBlock("shelf_mushroom",
             properties -> new ShelfMushroomBlock(properties.strength(1.0F).mapColor(MapColor.PLANT).bounceRestitution(0.75F).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
+    public static final DeferredBlock<StrawBedBlock> STRAW_BED = registerBlock("straw_bed",
+            properties-> new StrawBedBlock(properties.strength(0.2f)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

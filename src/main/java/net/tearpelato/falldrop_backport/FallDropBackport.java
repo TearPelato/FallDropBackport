@@ -1,6 +1,5 @@
 package net.tearpelato.falldrop_backport;
 
-import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.bus.api.IEventBus;
@@ -27,6 +26,9 @@ public class FallDropBackport {
         ModTrunkPlacerTypes.init(modEventBus);
         ModFoliagePlacerTypes.init(modEventBus);
         ModTreeDecoratorType.init(modEventBus);
+        ModStats.init(modEventBus);
+       // ModAttributeTypes.init(modEventBus);
+       // ModEnvironmentAttributes.init(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);

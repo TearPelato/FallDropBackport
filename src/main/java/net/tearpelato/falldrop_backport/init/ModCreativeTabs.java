@@ -84,6 +84,7 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.PINK_WOOL_SLAB);
                 output.accept(ModItems.CUSHION.pink());
 
+                output.accept(ModBlocks.STRAW_BED);
 
                 output.accept(ModBlocks.POPLAR_LOG);
                 output.accept(ModBlocks.POPLAR_WOOD);

@@ -1,5 +1,6 @@
 package net.tearpelato.falldrop_backport.datagen;
 
+import com.mojang.math.Transformation;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
@@ -7,14 +8,28 @@ import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.client.data.models.model.ItemModelUtils;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.block.custom.ShelfMushroomBlock;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModItems;
+import org.joml.Quaternionf;
+import org.joml.Quaternionfc;
+import org.joml.Vector3f;
+import org.joml.Vector3fc;
+
+import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
 
 public class ModModelProvider extends ModelProvider {
     public ModModelProvider(PackOutput output) {
@@ -144,12 +159,32 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createPlantWithDefaultItem(ModBlocks.RED_SHRUB.get(), ModBlocks.RED_SHRUB_POTTED.get(), BlockModelGenerators.PlantType.TINTED);
         blockModels.createPlantWithDefaultItem(ModBlocks.POPLAR_SAPLING.get(), ModBlocks.POPLAR_SAPLING_POTTED.get(), BlockModelGenerators.PlantType.TINTED);
 
+      // createStrawBed(ModBlocks.STRAW_BED.get(), null,null);
         blockModels.blockStateOutput.accept(
                 MultiVariantGenerator.dispatch(ModBlocks.SHELF_MUSHROOM.get())
                         .with(PropertyDispatch.initial(ShelfMushroomBlock.AGE)
-                                .select(0, BlockModelGenerators.plainVariant(Constants.vanilla("block/shelf_mushroom_stage0")))
-                                .select(1, BlockModelGenerators.plainVariant(Constants.vanilla("block/shelf_mushroom_stage1"))))
+                                .select(0, plainVariant(Constants.vanilla("block/shelf_mushroom_stage0")))
+                                .select(1, plainVariant(Constants.vanilla("block/shelf_mushroom_stage1"))))
                         .with(BlockModelGenerators.ROTATION_HORIZONTAL_FACING));
         blockModels.createShelf(ModBlocks.POPLAR_SHELF.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
+
+
     }
+   /* private void createStrawBed() {
+        Block strawBed = ModBlocks.STRAW_BED.get();
+        Identifier head = ModelLocationUtils.getModelLocation(strawBed, "_head");
+        Identifier foot = ModelLocationUtils.getModelLocation(strawBed, "_foot");
+        blockStateOutput.accept(createStrawBed(strawBed, plainVariant(head), plainVariant(foot)));
+        Transformation headTransformation = new Transformation(new Vector3f(0.85F, 0.0F, 0.6F), (new Quaternionf()).rotationY((float)Math.PI), (Vector3fc)null, (Quaternionfc)null);
+        Transformation footTransformation = new Transformation(new Vector3f(0.85F, 0.0F, 1.6F), (new Quaternionf()).rotationY((float)Math.PI), (Vector3fc)null, (Quaternionfc)null);
+        ItemModel.Unbaked itemModelHead = ItemModelUtils.plainModel(head, headTransformation);
+        ItemModel.Unbaked itemModelFoot = ItemModelUtils.plainModel(foot, footTransformation);
+        itemModelOutput.accept(strawBed.asItem(), ItemModelUtils.composite(new ItemModel.Unbaked[]{itemModelHead, itemModelFoot}));
+    }
+
+    private static BlockModelDefinitionGenerator createStrawBed(final Block block, final MultiVariant headModel, final MultiVariant footModel) {
+        return MultiVariantGenerator.dispatch(block).with(PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.BED_PART).select(Direction.NORTH, BedPart.HEAD, headModel.with(BlockModelGenerators.Y_ROT_180)).select(Direction.SOUTH, BedPart.HEAD, headModel).select(Direction.EAST, BedPart.HEAD, headModel.with(BlockModelGenerators.Y_ROT_270)).select(Direction.WEST, BedPart.HEAD, headModel.with(BlockModelGenerators.Y_ROT_90)).select(Direction.NORTH, BedPart.FOOT, footModel.with(BlockModelGenerators.Y_ROT_180)).select(Direction.SOUTH, BedPart.FOOT, footModel).select(Direction.EAST, BedPart.FOOT, footModel.with(BlockModelGenerators.Y_ROT_270)).select(Direction.WEST, BedPart.FOOT, footModel.with(BlockModelGenerators.Y_ROT_90)));
+    }*/
+
+
 }
