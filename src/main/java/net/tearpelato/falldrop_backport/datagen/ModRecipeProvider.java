@@ -5,6 +5,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
@@ -135,10 +136,29 @@ public class ModRecipeProvider extends RecipeProvider {
         shelf(ModBlocks.POPLAR_SHELF.get(), ModBlocks.STRIPPED_POPLAR_LOG.get());
         woodFromLogs(ModBlocks.STRIPPED_POPLAR_WOOD, ModBlocks.STRIPPED_POPLAR_LOG);
 
+        cushionRecipe(ModBlocks.WHITE_WOOL_SLAB.asItem(), ModItems.CUSHION.white().get());
+        cushionRecipe(ModBlocks.LIGHT_GRAY_WOOL_SLAB.asItem(), ModItems.CUSHION.lightGray().get());
+        cushionRecipe(ModBlocks.GRAY_WOOL_SLAB.asItem(), ModItems.CUSHION.gray().get());
+        cushionRecipe(ModBlocks.BLACK_WOOL_SLAB.asItem(), ModItems.CUSHION.black().get());
+        cushionRecipe(ModBlocks.BROWN_WOOL_SLAB.asItem(), ModItems.CUSHION.brown().get());
+        cushionRecipe(ModBlocks.RED_WOOL_SLAB.asItem(), ModItems.CUSHION.red().get());
+        cushionRecipe(ModBlocks.ORANGE_WOOL_SLAB.asItem(), ModItems.CUSHION.orange().get());
+        cushionRecipe(ModBlocks.YELLOW_WOOL_SLAB.asItem(), ModItems.CUSHION.yellow().get());
+        cushionRecipe(ModBlocks.LIME_WOOL_SLAB.asItem(), ModItems.CUSHION.lime().get());
+        cushionRecipe(ModBlocks.GREEN_WOOL_SLAB.asItem(), ModItems.CUSHION.green().get());
+        cushionRecipe(ModBlocks.CYAN_WOOL_SLAB.asItem(), ModItems.CUSHION.cyan().get());
+        cushionRecipe(ModBlocks.LIGHT_BLUE_WOOL_SLAB.asItem(), ModItems.CUSHION.lightBlue().get());
+        cushionRecipe(ModBlocks.BLUE_WOOL_SLAB.asItem(), ModItems.CUSHION.blue().get());
+        cushionRecipe(ModBlocks.PURPLE_WOOL_SLAB.asItem(), ModItems.CUSHION.purple().get());
+        cushionRecipe(ModBlocks.MAGENTA_WOOL_SLAB.asItem(), ModItems.CUSHION.magenta().get());
+        cushionRecipe(ModBlocks.PINK_WOOL_SLAB.asItem(), ModItems.CUSHION.pink().get());
 
 
     }
 
+    protected void cushionRecipe(final Item woolSlab, final Item result) {
+        this.shaped(RecipeCategory.DECORATIONS, result, 1).define('#', woolSlab).group("cushion").unlockedBy(getHasName(woolSlab), this.has(woolSlab)).pattern("###").save(this.output);
+    }
 
 
     public static class Runner extends RecipeProvider.Runner {

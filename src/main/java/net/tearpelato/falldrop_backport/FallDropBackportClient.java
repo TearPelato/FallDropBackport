@@ -12,7 +12,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.tearpelato.falldrop_backport.entity.client.CushionModel;
 import net.tearpelato.falldrop_backport.entity.client.ModModelLayerLocations;
+import net.tearpelato.falldrop_backport.entity.renderer.CushionRenderer;
 import net.tearpelato.falldrop_backport.init.ModBlockEntities;
 import net.tearpelato.falldrop_backport.init.ModEntities;
 import net.tearpelato.falldrop_backport.init.ModParticleTypes;
@@ -25,6 +27,8 @@ public class FallDropBackportClient {
     public static void onClientSetupEvent(FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntities.POPLAR_BOAT.get(), context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_BOAT));
         EntityRenderers.register(ModEntities.POPLAR_CHEST_BOAT.get(), context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_CHEST_BOAT));
+        EntityRenderers.register(ModEntities.CUSHION.get(), context -> new CushionRenderer(context));
+
     }
 
 
@@ -39,6 +43,7 @@ public class FallDropBackportClient {
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayerLocations.POPLAR_BOAT, BoatModel::createBoatModel);
         event.registerLayerDefinition(ModModelLayerLocations.POPLAR_CHEST_BOAT, BoatModel::createChestBoatModel);
+        event.registerLayerDefinition(ModModelLayerLocations.CUSHION, CushionModel::createBodyLayer);
     }
 
     @SubscribeEvent

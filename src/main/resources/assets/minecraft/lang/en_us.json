@@ -60,5 +60,22 @@
   "item.minecraft.poplar_boat": "Poplar Boat",
   "item.minecraft.poplar_chest_boat": "Poplar Chest Boat",
 
+  "item.minecraft.white_cushion": "White Cushion",
+  "item.minecraft.light_gray_cushion": "Light Gray Cushion",
+  "item.minecraft.gray_cushion": "Gray Cushion",
+  "item.minecraft.black_cushion": "Black Cushion",
+  "item.minecraft.brown_cushion": "Brown Cushion",
+  "item.minecraft.red_cushion": "Red Cushion",
+  "item.minecraft.orange_cushion": "Orange Cushion",
+  "item.minecraft.yellow_cushion": "Yellow Cushion",
+  "item.minecraft.lime_cushion": "Lime Cushion",
+  "item.minecraft.green_cushion": "Green Cushion",
+  "item.minecraft.cyan_cushion": "Cyan Cushion",
+  "item.minecraft.light_blue_cushion": "Light Blue Cushion",
+  "item.minecraft.blue_cushion": "Blue Cushion",
+  "item.minecraft.purple_cushion": "Purple Cushion",
+  "item.minecraft.magenta_cushion": "Magenta Cushion",
+  "item.minecraft.pink_cushion": "Pink Cushion",
+
   "entity.falldrop_backport.poplar_chest_boat": "Poplar Boat with Chest"
 }

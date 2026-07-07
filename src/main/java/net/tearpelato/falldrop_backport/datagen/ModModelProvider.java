@@ -27,7 +27,22 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.generateFlatItem(ModItems.POPLAR_BOAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.POPLAR_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
-
+        itemModels.generateFlatItem(ModItems.CUSHION.white().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lightGray().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.gray().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.black().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.brown().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.red().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.orange().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.yellow().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lime().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.green().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.cyan().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lightBlue().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.blue().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.purple().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.magenta().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.pink().get(), ModelTemplates.FLAT_ITEM);
 
         blockModels.family(Blocks.WOOL.white())
                 .stairs(ModBlocks.WHITE_WOOL_STAIRS.get())
