@@ -1,7 +1,7 @@
 package net.tearpelato.falldrop_backport.worldgen;
 
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderGetter;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.VegetationFeatures;
@@ -13,9 +13,9 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.WeightedListInt;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -25,6 +25,9 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator;
+import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
+import net.minecraft.world.level.levelgen.placement.CountPlacement;
+import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.worldgen.placer.PoplarFoliagePlacer;
@@ -51,21 +54,26 @@ public class ModConfiguredFeatures {
         PlaceOnGroundDecorator sparseLeafLitter = new PlaceOnGroundDecorator(96, 4, 2, new WeightedStateProvider(VegetationFeatures.leafLitterPatchBuilder(1, 3)));
         PlaceOnGroundDecorator thickLeafLitter = new PlaceOnGroundDecorator(150, 2, 2, new WeightedStateProvider(VegetationFeatures.leafLitterPatchBuilder(1, 4)));
         var lookup = context.lookup(Registries.CONFIGURED_FEATURE);
-        HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
-        BlockStateProvider belowTrunkProvider = TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(biomes);
 
-        register(context, RED_SHRUB, Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.RED_SHRUB.get())));
+        register(context, RED_SHRUB, Feature.SIMPLE_RANDOM_SELECTOR,
+                new SimpleRandomFeatureConfiguration(
+                        HolderSet.direct(PlacementUtils.inlinePlaced(
+                                Feature.SIMPLE_BLOCK,
+                                new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.RED_SHRUB.get())),
+                                CountPlacement.of(24),
+                                RandomOffsetPlacement.ofTriangle(6, 3),
+                                BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)))));
 
 
-            context.register(POPLAR_RED, new ConfiguredFeature<>(Feature.TREE,
-                    createPoplar(ModBlocks.RED_POPLAR_LEAVES.get(), belowTrunkProvider).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
 
-            context.register(POPLAR_ORANGE, new ConfiguredFeature<>(Feature.TREE,
-                    createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get(),belowTrunkProvider).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
+        context.register(POPLAR_RED, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.RED_POPLAR_LEAVES.get()).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
 
-            context.register(POPLAR_YELLOW, new ConfiguredFeature<>(Feature.TREE,
-                    createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get(),belowTrunkProvider).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
+        context.register(POPLAR_ORANGE, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get()).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
+
+        context.register(POPLAR_YELLOW, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get()).decorators(List.of(new ShelfMushroomDecorator(0.4F))).build()));
 
 
 
@@ -95,11 +103,11 @@ public class ModConfiguredFeatures {
                 createFallenPoplar().build()));
 
         context.register(RED_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.RED_POPLAR_LEAVES.get(), belowTrunkProvider).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+                createPoplar(ModBlocks.RED_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
         context.register(ORANGE_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get(), belowTrunkProvider).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
         context.register(YELLOW_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get(), belowTrunkProvider).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
 
     }
 
@@ -113,7 +121,7 @@ public class ModConfiguredFeatures {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 
-    private static TreeConfiguration.TreeConfigurationBuilder createPoplar(Block leaves, BlockStateProvider belowTrunkPlacer) {
+    private static TreeConfiguration.TreeConfigurationBuilder createPoplar(Block leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
                 new PoplarTrunkPlacer(7, 4, 0, ConstantInt.of(4), UniformInt.of(1, 4)),
@@ -127,7 +135,7 @@ public class ModConfiguredFeatures {
                                 .build()
                 ),
                         ConstantInt.of(0), UniformInt.of(5, 6), 0.15F),
-                new TwoLayersFeatureSize(1, 0, 2), belowTrunkPlacer)
+                new TwoLayersFeatureSize(1, 0, 2))
                 .ignoreVines();
     }
 
@@ -138,7 +146,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
                 UniformInt.of(4,7))
                 .logDecorators(List.of(
-        new AttachedToLogsDecorator(0.1F, BlockStateProvider.simple(Blocks.BROWN_MUSHROOM),
-                List.of(Direction.UP)))).logDecorators(List.of(new ShelfMushroomDecorator(0.8F)));
+                        new AttachedToLogsDecorator(0.1F, BlockStateProvider.simple(Blocks.BROWN_MUSHROOM),
+                                List.of(Direction.UP)))).logDecorators(List.of(new ShelfMushroomDecorator(0.8F)));
     }
 }

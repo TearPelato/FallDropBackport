@@ -16,7 +16,6 @@ import net.minecraft.world.entity.decoration.BlockAttachedEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -29,6 +28,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModItems;
 import org.jspecify.annotations.Nullable;
 
@@ -75,10 +75,7 @@ public class Cushion extends BlockAttachedEntity {
             }
 
 
-            this.spawnAtLocation(
-                    level,
-                    (ItemLike) ModItems.CUSHION.pick(this.getColor())
-            );
+            this.spawnAtLocation(level, ModItems.WHITE_CUSHION);
         }
     }
 
@@ -126,10 +123,8 @@ public class Cushion extends BlockAttachedEntity {
 
 
     public ItemStack getPickResult() {
+        return new ItemStack(ModItems.getCushion(this.getColor()));
 
-        return new ItemStack(
-                (ItemLike) ModItems.CUSHION.pick(this.getColor())
-        );
     }
 
 
@@ -180,21 +175,18 @@ public class Cushion extends BlockAttachedEntity {
 
         if (var2 instanceof ServerLevel level) {
 
-            level.sendParticles(
-                    new BlockParticleOption(
-                            ParticleTypes.BLOCK,
-                            ((Block) Blocks.WOOL.pick(this.getColor()))
-                                    .defaultBlockState()
-                    ),
+            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.getWool(this.getColor()).defaultBlockState()),
                     this.getX(),
-                    this.getY(0.6666666666666666),
+                    this.getY(2.0 / 3.0),
                     this.getZ(),
                     10,
-                    (double) (this.getBbWidth() / 4.0F),
-                    (double) (this.getBbHeight() / 4.0F),
-                    (double) (this.getBbWidth() / 4.0F),
+                    this.getBbWidth() / 4.0,
+                    this.getBbHeight() / 4.0,
+                    this.getBbWidth() / 4.0,
                     0.05
             );
+
+
         }
     }
 
