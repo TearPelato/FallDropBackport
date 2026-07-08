@@ -41,7 +41,5 @@ public class FallDropBackportClient implements ClientModInitializer {
         BlockEntityRenderers.register(ModBlockEntities.HANGING_SIGN, HangingSignRenderer::new);
 
 
-        Sheets.createSignSprite(ModWoodType.POPLAR);
-        Sheets.createHangingSignSprite(ModWoodType.POPLAR);
     }
 }
