@@ -5,6 +5,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -162,6 +163,8 @@ public class ModBlocks {
             properties -> new ButtonBlock(BlockSetType.PALE_OAK, 20,
                     properties.strength(2f).noCollision().pushReaction(PushReaction.DESTROY)));
 
+    public static final Block STRAW_BED = registerBlock("straw_bed",
+            properties-> new StrawBedBlock(properties.strength(0.2f)));
 
     public static final Block POPLAR_SIGN = registerBlockWithoutBlockItem("poplar_sign",
             properties -> new ModStandingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
@@ -216,6 +219,26 @@ public class ModBlocks {
         Registry.register(BuiltInRegistries.ITEM, Constants.vanilla(name),
                 new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
                         .setId(ResourceKey.create(Registries.ITEM, Constants.vanilla(name)))));
+    }
+    public static Block getWool(DyeColor color) {
+        return switch (color) {
+            case WHITE -> Blocks.WHITE_WOOL;
+            case LIGHT_GRAY -> Blocks.LIGHT_GRAY_WOOL;
+            case GRAY -> Blocks.GRAY_WOOL;
+            case BLACK -> Blocks.BLACK_WOOL;
+            case BROWN -> Blocks.BROWN_WOOL;
+            case RED -> Blocks.RED_WOOL;
+            case ORANGE -> Blocks.ORANGE_WOOL;
+            case YELLOW -> Blocks.YELLOW_WOOL;
+            case LIME -> Blocks.LIME_WOOL;
+            case GREEN -> Blocks.GREEN_WOOL;
+            case CYAN -> Blocks.CYAN_WOOL;
+            case LIGHT_BLUE -> Blocks.LIGHT_BLUE_WOOL;
+            case BLUE -> Blocks.BLUE_WOOL;
+            case PURPLE -> Blocks.PURPLE_WOOL;
+            case MAGENTA -> Blocks.MAGENTA_WOOL;
+            case PINK -> Blocks.PINK_WOOL;
+        };
     }
 
     public static void registerModBlocks() {

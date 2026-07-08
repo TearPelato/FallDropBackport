@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -97,6 +98,10 @@ public class ModBlockLootableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.RED_SHRUB);
         dropSelf(ModBlocks.POPLAR_SAPLING);
+        add(ModBlocks.STRAW_BED,bed -> LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(bed).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.BED_PART, BedPart.FOOT))).add(LootItem.lootTableItem(bed))
+                ));
+
         add(ModBlocks.POPLAR_SAPLING_POTTED, createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING));
         add(ModBlocks.RED_SHRUB_POTTED, createPotFlowerItemTable(ModBlocks.RED_SHRUB));
         add(ModBlocks.SHELF_MUSHROOM, block ->

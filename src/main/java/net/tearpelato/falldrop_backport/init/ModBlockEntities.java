@@ -18,7 +18,7 @@ public class ModBlockEntities {
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("hanging_sign"),
                     FabricBlockEntityTypeBuilder.create(ModHangingSignBlockEntity::new, ModBlocks.POPLAR_HANGING_SIGN, ModBlocks.POPLAR_WALL_HANGING_SIGN).build());
     public static final BlockEntityType<ModShelfBlockEntity> SHELF =
-            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("crystallizer_be"),
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("shelf"),
                     FabricBlockEntityTypeBuilder.create(ModShelfBlockEntity::new, ModBlocks.POPLAR_SHELF).build());
 
 

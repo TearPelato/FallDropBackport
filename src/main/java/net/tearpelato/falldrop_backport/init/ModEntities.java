@@ -10,6 +10,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.vehicle.boat.Boat;
 import net.minecraft.world.entity.vehicle.boat.ChestBoat;
 import net.tearpelato.falldrop_backport.Constants;
+import net.tearpelato.falldrop_backport.entity.client.custom.Cushion;
 
 public class ModEntities {
 
@@ -18,6 +19,9 @@ public class ModEntities {
             Identifier.fromNamespaceAndPath(Constants.MOD_ID, "poplar_boat"));
     public static final ResourceKey<EntityType<?>> POPLAR_CHEST_BOAT_KEY = ResourceKey.create(Registries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(Constants.MOD_ID, "poplar_chest_boat"));
+    public static final ResourceKey<EntityType<?>> CUSHION_KEY = ResourceKey.create(Registries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(Constants.MOD_ID, "cushion"));
+
 
     public static final EntityType<Boat> POPLAR_BOAT = Registry.register(BuiltInRegistries.ENTITY_TYPE,
             Constants.vanilla( "poplar_boat"),
@@ -30,6 +34,10 @@ public class ModEntities {
                             MobCategory.MISC).sized(1.375f, 0.5625f)
                     .clientTrackingRange(10).build(POPLAR_CHEST_BOAT_KEY));
 
+    public static final EntityType<Cushion> CUSHION = Registry.register(BuiltInRegistries.ENTITY_TYPE,
+            Constants.vanilla( "cushion"),
+            EntityType.Builder.<Cushion>of((entityType, level) -> new Cushion(entityType,level),
+                    MobCategory.MISC).noLootTable().sized(1.0F, 0.25F).clientTrackingRange(10).updateInterval(Integer.MAX_VALUE).build(CUSHION_KEY));
 
 
 
