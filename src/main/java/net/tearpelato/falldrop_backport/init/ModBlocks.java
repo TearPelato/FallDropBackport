@@ -220,26 +220,6 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
                         .setId(ResourceKey.create(Registries.ITEM, Constants.vanilla(name)))));
     }
-    public static Block getWool(DyeColor color) {
-        return switch (color) {
-            case WHITE -> Blocks.WHITE_WOOL;
-            case LIGHT_GRAY -> Blocks.LIGHT_GRAY_WOOL;
-            case GRAY -> Blocks.GRAY_WOOL;
-            case BLACK -> Blocks.BLACK_WOOL;
-            case BROWN -> Blocks.BROWN_WOOL;
-            case RED -> Blocks.RED_WOOL;
-            case ORANGE -> Blocks.ORANGE_WOOL;
-            case YELLOW -> Blocks.YELLOW_WOOL;
-            case LIME -> Blocks.LIME_WOOL;
-            case GREEN -> Blocks.GREEN_WOOL;
-            case CYAN -> Blocks.CYAN_WOOL;
-            case LIGHT_BLUE -> Blocks.LIGHT_BLUE_WOOL;
-            case BLUE -> Blocks.BLUE_WOOL;
-            case PURPLE -> Blocks.PURPLE_WOOL;
-            case MAGENTA -> Blocks.MAGENTA_WOOL;
-            case PINK -> Blocks.PINK_WOOL;
-        };
-    }
 
     public static void registerModBlocks() {
         Constants.LOGGER.info("Registering Mod Blocks for " + Constants.MOD_ID);

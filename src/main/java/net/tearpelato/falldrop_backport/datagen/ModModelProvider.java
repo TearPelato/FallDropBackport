@@ -143,9 +143,26 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-        itemModelGenerators.generateFlatItem(ModItems.POPLAR_BOAT, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.POPLAR_CHEST_BOAT, ModelTemplates.FLAT_ITEM);
+    public void generateItemModels(ItemModelGenerators itemModels) {
+
+        itemModels.generateFlatItem(ModItems.POPLAR_BOAT, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.POPLAR_CHEST_BOAT, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.white(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lightGray(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.gray(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.black(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.brown(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.red(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.orange(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.yellow(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lime(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.green(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.cyan(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lightBlue(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.blue(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.purple(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.magenta(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.pink(), ModelTemplates.FLAT_ITEM);
 
     }
 
