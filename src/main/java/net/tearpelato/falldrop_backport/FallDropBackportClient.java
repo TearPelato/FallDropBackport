@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.minecraft.client.model.object.boat.BoatModel;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.ShelfRenderer;
@@ -13,6 +14,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.tearpelato.falldrop_backport.entity.client.CushionModel;
 import net.tearpelato.falldrop_backport.entity.client.ModModelLayerLocations;
 import net.tearpelato.falldrop_backport.entity.renderer.CushionRenderer;
+import net.tearpelato.falldrop_backport.init.ModWoodType;
 import net.tearpelato.falldrop_backport.particle.PoplarParticles;
 import net.tearpelato.falldrop_backport.init.ModBlockEntities;
 import net.tearpelato.falldrop_backport.init.ModEntities;
@@ -39,6 +41,7 @@ public class FallDropBackportClient implements ClientModInitializer {
         BlockEntityRenderers.register(ModBlockEntities.HANGING_SIGN, HangingSignRenderer::new);
 
 
-
+        Sheets.createSignSprite(ModWoodType.POPLAR);
+        Sheets.createHangingSignSprite(ModWoodType.POPLAR);
     }
 }
