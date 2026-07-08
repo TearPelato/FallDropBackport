@@ -1,4 +1,4 @@
-// 26.2	2026-07-07T21:01:47.9876683	
+// 26.2	2026-07-08T15:12:52.8786168	
 329cb32cdae8164febcdb932d8317ac919f5e6a9 data/minecraft/advancement/recipes/building_blocks/black_wool_slab.json
 7a9a3c400c197a170ab503e24b5e2fc2df26a982 data/minecraft/advancement/recipes/building_blocks/black_wool_stairs.json
 3e4354d991b819b4dcc542d77a307ef6f949262a data/minecraft/advancement/recipes/building_blocks/blue_wool_slab.json
@@ -56,6 +56,7 @@ c502410cb73eb56dd3c0e50369a488c2db86bedd data/minecraft/advancement/recipes/deco
 b211499ecff85940eae69f07a6801833defd7cd4 data/minecraft/advancement/recipes/decorations/red_cushion.json
 afd02ebdfc6d6b75cf03aeaa8d3cda6efcdb080e data/minecraft/advancement/recipes/decorations/white_cushion.json
 504411f13cb647068424ac87048c651c37df5f0c data/minecraft/advancement/recipes/decorations/yellow_cushion.json
+be9513f848abe97bd6dc4cc9af92976470e8a0c7 data/minecraft/advancement/recipes/misc/straw_bed.json
 0f26f5ff5261990713956db3c5bea745c5fc6931 data/minecraft/advancement/recipes/redstone/poplar_button.json
 babd89150557209d5816045375a7f9a9b2d72e86 data/minecraft/advancement/recipes/redstone/poplar_door.json
 755d22a2228502f8e3c5e5a491cbe6d5ef63b16c data/minecraft/advancement/recipes/redstone/poplar_fence_gate.json
@@ -120,6 +121,7 @@ f169da520835bf3d22ff4c4920a976621906c082 data/minecraft/recipe/purple_wool_slab.
 b8bc8ee46dd0a7793327e0e51402b3180e6959ea data/minecraft/recipe/red_cushion.json
 195af480d1c0404583fd34b7bf2a477720f7aaf7 data/minecraft/recipe/red_wool_slab.json
 d63c5610dcdc489882b2a38c7f9db3ab25650655 data/minecraft/recipe/red_wool_stairs.json
+1fdf24566c921ab46dde1cd7c1c1da1920b388fc data/minecraft/recipe/straw_bed.json
 ca6f9d487ee38145e1a65da7b38f9c0501219c04 data/minecraft/recipe/stripped_poplar_wood.json
 227580edf7d2d01a4e4760b675e60c2d431de2ef data/minecraft/recipe/white_cushion.json
 dd61300df6041169d85666b2f320733cae262a53 data/minecraft/recipe/white_wool_slab.json

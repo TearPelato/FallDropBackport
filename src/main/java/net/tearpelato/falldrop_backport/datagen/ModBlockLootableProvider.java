@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -98,6 +99,11 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
 
        dropSelf(ModBlocks.RED_SHRUB.get());
        dropSelf(ModBlocks.POPLAR_SAPLING.get());
+       dropSelf(ModBlocks.STRAW_BED.get());
+       add(ModBlocks.STRAW_BED.get(),bed -> LootTable.lootTable()
+               .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(bed).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.BED_PART, BedPart.FOOT))).add(LootItem.lootTableItem(bed))
+               ));
+
        add(ModBlocks.POPLAR_SAPLING_POTTED.get(), createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING.get()));
        add(ModBlocks.RED_SHRUB_POTTED.get(), createPotFlowerItemTable(ModBlocks.RED_SHRUB.get()));
         add(ModBlocks.SHELF_MUSHROOM.get(), block ->
@@ -126,6 +132,7 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
         );
 
     }
+
 
     @Override
     protected Iterable<Block> getKnownBlocks() {

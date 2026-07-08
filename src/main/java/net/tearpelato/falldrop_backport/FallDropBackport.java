@@ -27,8 +27,6 @@ public class FallDropBackport {
         ModFoliagePlacerTypes.init(modEventBus);
         ModTreeDecoratorType.init(modEventBus);
         ModStats.init(modEventBus);
-       // ModAttributeTypes.init(modEventBus);
-       // ModEnvironmentAttributes.init(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);

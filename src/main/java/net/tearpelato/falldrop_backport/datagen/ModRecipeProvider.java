@@ -152,7 +152,12 @@ public class ModRecipeProvider extends RecipeProvider {
         cushionRecipe(ModBlocks.PURPLE_WOOL_SLAB.asItem(), ModItems.CUSHION.purple().get());
         cushionRecipe(ModBlocks.MAGENTA_WOOL_SLAB.asItem(), ModItems.CUSHION.magenta().get());
         cushionRecipe(ModBlocks.PINK_WOOL_SLAB.asItem(), ModItems.CUSHION.pink().get());
+        shaped(RecipeCategory.MISC,ModBlocks.STRAW_BED.get(),4)
+                .pattern("###")
+                .define('#', Blocks.HAY_BLOCK)
+                .unlockedBy(getHasName(Blocks.HAY_BLOCK), this.has(Blocks.HAY_BLOCK))
 
+                .save(this.output);
 
     }
 

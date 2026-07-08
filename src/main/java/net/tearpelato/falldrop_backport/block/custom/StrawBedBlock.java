@@ -6,7 +6,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.attribute.BedRule;
 import net.minecraft.world.attribute.EnvironmentAttribute;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -14,16 +16,13 @@ import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.tearpelato.falldrop_backport.block.custom.util.AbstractBedBlock;
-import net.tearpelato.falldrop_backport.init.ModEnvironmentAttributes;
 import net.tearpelato.falldrop_backport.init.ModStats;
-import net.tearpelato.falldrop_backport.util.StrawBedRules;
 
 import java.util.Map;
 
@@ -53,8 +52,8 @@ public class StrawBedBlock extends AbstractBedBlock {
         return (VoxelShape)shapes.get(getConnectedDirection(state).getOpposite());
     }
 
-    protected EnvironmentAttribute<StrawBedRules> getBedEnvironmentAttribute() {
-        return ModEnvironmentAttributes.STRAW_BED_RULE.get();
+    protected EnvironmentAttribute<BedRule> getBedEnvironmentAttribute() {
+        return EnvironmentAttributes.BED_RULE;
     }
 
     public void spawnDestroyParticles(final Level level, final BlockPos pos, final BlockState state) {

@@ -30,7 +30,6 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.tearpelato.falldrop_backport.util.StrawBedRules;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jspecify.annotations.Nullable;
 
@@ -52,14 +51,14 @@ public abstract class AbstractBedBlock extends HorizontalDirectionalBlock {
         return blockState.getBlock() instanceof AbstractBedBlock ? (Direction)blockState.getValue(FACING) : null;
     }
 
-    protected abstract EnvironmentAttribute<StrawBedRules> getBedEnvironmentAttribute();
+    protected abstract EnvironmentAttribute<BedRule> getBedEnvironmentAttribute();
 
     protected abstract InteractionResult destroyOnUse(final BlockState state, final Level level, BlockPos pos, final Player player);
 
     protected abstract void destroyOnLeave(final Level level, BlockPos pos);
 
-    public StrawBedRules getBedRule(final Level level, final BlockPos pos) {
-        return (StrawBedRules) level.environmentAttributes().getValue(this.getBedEnvironmentAttribute(), pos);
+    public BedRule getBedRule(final Level level, final BlockPos pos) {
+        return (BedRule) level.environmentAttributes().getValue(this.getBedEnvironmentAttribute(), pos);
     }
 
     public Identifier getSleptInBedStatType() {
@@ -82,13 +81,14 @@ public abstract class AbstractBedBlock extends HorizontalDirectionalBlock {
                 }
             }
 
-            StrawBedRules bedRule = this.getBedRule(level, pos);
-            if (bedRule.destroyOnUse()) {
+            BedRule bedRule = this.getBedRule(level, pos);
+            /*if (bedRule.destroyOnUse()) {
                 Optional var10000 = bedRule.errorMessage();
                 Objects.requireNonNull(player);
                // var10000.ifPresent(player.sendOverlayMessage(null));
                 return this.destroyOnUse(state, level, pos, player);
-            } else if ((Boolean)state.getValue(OCCUPIED)) {
+            } else */
+                if ((Boolean)state.getValue(OCCUPIED)) {
                 if (!this.kickVillagerOutOfBed(level, pos)) {
                     player.sendOverlayMessage(Component.translatable("block.minecraft.bed.occupied"));
                 }
@@ -107,10 +107,10 @@ public abstract class AbstractBedBlock extends HorizontalDirectionalBlock {
     }
 
     public void onStopSleeping(final Level level, final BlockPos pos) {
-        StrawBedRules bedRule = this.getBedRule(level, pos);
-        if (bedRule.destroyOnLeave()) {
+        BedRule bedRule = this.getBedRule(level, pos);
+       /* if (bedRule.destroyOnLeave()) {
             this.destroyOnLeave(level, pos);
-        }
+        }*/
 
     }
 
