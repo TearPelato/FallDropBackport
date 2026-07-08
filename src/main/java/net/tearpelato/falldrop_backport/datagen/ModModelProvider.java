@@ -31,6 +31,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
+        
+        
+        
+        
+        
         blockModelGenerators.family(Blocks.WHITE_WOOL)
                 .stairs(ModBlocks.WHITE_WOOL_STAIRS)
                 .slab(ModBlocks.WHITE_WOOL_SLAB);
@@ -142,10 +147,26 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-        itemModelGenerators.generateFlatItem(ModItems.POPLAR_BOAT, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.POPLAR_CHEST_BOAT, ModelTemplates.FLAT_ITEM);
+    public void generateItemModels(ItemModelGenerators itemModels) {
+        itemModels.generateFlatItem(ModItems.POPLAR_BOAT, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.POPLAR_CHEST_BOAT, ModelTemplates.FLAT_ITEM);
 
+        itemModels.generateFlatItem(ModItems.WHITE_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.LIGHT_GRAY_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.GRAY_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BLACK_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BROWN_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RED_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.ORANGE_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.YELLOW_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.LIME_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.GREEN_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CYAN_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.LIGHT_BLUE_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BLUE_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.PURPLE_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.MAGENTA_CUSHION, ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.PINK_CUSHION, ModelTemplates.FLAT_ITEM);
     }
 
 
