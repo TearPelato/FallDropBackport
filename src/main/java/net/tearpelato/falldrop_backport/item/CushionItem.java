@@ -20,6 +20,8 @@ import net.tearpelato.falldrop_backport.entity.client.custom.Cushion;
 import net.tearpelato.falldrop_backport.init.ModEntities;
 import net.tearpelato.falldrop_backport.util.Vec3Util;
 
+import java.util.function.Consumer;
+
 public class CushionItem extends Item {
     private final DyeColor color;
 
@@ -48,7 +50,7 @@ public class CushionItem extends Item {
                         return InteractionResult.FAIL;
                     }
 
-                    PostSpawnProcessor<Cushion> entityConfig = EntityType.createDefaultStackConfig(serverLevel, itemStack, context.getPlayer());
+                    Consumer<Cushion> entityConfig = EntityType.createDefaultStackConfig(serverLevel, itemStack, context.getPlayer());
                     Cushion cushion = ModEntities.CUSHION.get().create(serverLevel, entityConfig, blockPos, EntitySpawnReason.SPAWN_ITEM_USE, true, true);
                     if (cushion == null) {
                         return InteractionResult.FAIL;
