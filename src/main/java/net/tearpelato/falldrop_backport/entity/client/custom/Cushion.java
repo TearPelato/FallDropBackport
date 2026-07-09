@@ -75,7 +75,7 @@ public class Cushion extends BlockAttachedEntity {
             }
 
 
-            this.spawnAtLocation(level, ModItems.getCushion(this.getColor()));
+            this.spawnAtLocation(level, ModItems.CUSHION.pick(this.getColor()));
         }
     }
 
@@ -123,7 +123,7 @@ public class Cushion extends BlockAttachedEntity {
 
 
     public ItemStack getPickResult() {
-        return new ItemStack(ModItems.getCushion(this.getColor()));
+        return new ItemStack((ItemLike) ModItems.CUSHION.pick(this.getColor()));
 
     }
 
@@ -175,7 +175,7 @@ public class Cushion extends BlockAttachedEntity {
 
         if (var2 instanceof ServerLevel level) {
 
-            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.getWool(this.getColor()).defaultBlockState()),
+            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, Blocks.WOOL.pick(this.getColor()).defaultBlockState()),
                     this.getX(),
                     this.getY(2.0 / 3.0),
                     this.getZ(),

@@ -27,101 +27,100 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.generateFlatItem(ModItems.POPLAR_BOAT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.POPLAR_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.WHITE_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.LIGHT_GRAY_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.GRAY_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.BLACK_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.BROWN_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.RED_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.ORANGE_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.YELLOW_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.LIME_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.GREEN_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.CYAN_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.LIGHT_BLUE_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.BLUE_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.PURPLE_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.MAGENTA_CUSHION.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.PINK_CUSHION.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.white().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lightGray().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.gray().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.black().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.brown().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.red().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.orange().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.yellow().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lime().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.green().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.cyan().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.lightBlue().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.blue().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.purple().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.magenta().get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CUSHION.pink().get(), ModelTemplates.FLAT_ITEM);
 
-        blockModels.family(Blocks.WHITE_WOOL)
+        blockModels.family(Blocks.WOOL.white())
                 .stairs(ModBlocks.WHITE_WOOL_STAIRS.get())
                 .slab(ModBlocks.WHITE_WOOL_SLAB.get());
 
-        blockModels.family(Blocks.LIGHT_GRAY_WOOL)
+        blockModels.family(Blocks.WOOL.lightGray())
                 .stairs(ModBlocks.LIGHT_GRAY_WOOL_STAIRS.get())
                 .slab(ModBlocks.LIGHT_GRAY_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.GRAY_WOOL)
+        blockModels.family(Blocks.WOOL.gray())
                 .stairs(ModBlocks.GRAY_WOOL_STAIRS.get())
                 .slab(ModBlocks.GRAY_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.BLACK_WOOL)
+        blockModels.family(Blocks.WOOL.black())
                 .stairs(ModBlocks.BLACK_WOOL_STAIRS.get())
                 .slab(ModBlocks.BLACK_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.BROWN_WOOL)
+        blockModels.family(Blocks.WOOL.brown())
                 .stairs(ModBlocks.BROWN_WOOL_STAIRS.get())
                 .slab(ModBlocks.BROWN_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.RED_WOOL)
+        blockModels.family(Blocks.WOOL.red())
                 .stairs(ModBlocks.RED_WOOL_STAIRS.get())
                 .slab(ModBlocks.RED_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.ORANGE_WOOL)
+        blockModels.family(Blocks.WOOL.orange())
                 .stairs(ModBlocks.ORANGE_WOOL_STAIRS.get())
                 .slab(ModBlocks.ORANGE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.YELLOW_WOOL)
+        blockModels.family(Blocks.WOOL.yellow())
                 .stairs(ModBlocks.YELLOW_WOOL_STAIRS.get())
                 .slab(ModBlocks.YELLOW_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.LIME_WOOL)
+        blockModels.family(Blocks.WOOL.lime())
                 .stairs(ModBlocks.LIME_WOOL_STAIRS.get())
                 .slab(ModBlocks.LIME_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.GREEN_WOOL)
+        blockModels.family(Blocks.WOOL.green())
                 .stairs(ModBlocks.GREEN_WOOL_STAIRS.get())
                 .slab(ModBlocks.GREEN_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.CYAN_WOOL)
+        blockModels.family(Blocks.WOOL.cyan())
                 .stairs(ModBlocks.CYAN_WOOL_STAIRS.get())
                 .slab(ModBlocks.CYAN_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.LIGHT_BLUE_WOOL)
+        blockModels.family(Blocks.WOOL.lightBlue())
                 .stairs(ModBlocks.LIGHT_BLUE_WOOL_STAIRS.get())
                 .slab(ModBlocks.LIGHT_BLUE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.BLUE_WOOL)
+        blockModels.family(Blocks.WOOL.blue())
                 .stairs(ModBlocks.BLUE_WOOL_STAIRS.get())
                 .slab(ModBlocks.BLUE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.PURPLE_WOOL)
+        blockModels.family(Blocks.WOOL.purple())
                 .stairs(ModBlocks.PURPLE_WOOL_STAIRS.get())
                 .slab(ModBlocks.PURPLE_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.MAGENTA_WOOL)
+        blockModels.family(Blocks.WOOL.magenta())
                 .stairs(ModBlocks.MAGENTA_WOOL_STAIRS.get())
                 .slab(ModBlocks.MAGENTA_WOOL_SLAB.get());
 
 
-        blockModels.family(Blocks.PINK_WOOL)
+        blockModels.family(Blocks.WOOL.pink())
                 .stairs(ModBlocks.PINK_WOOL_STAIRS.get())
                 .slab(ModBlocks.PINK_WOOL_SLAB.get());
-
 
 
         blockModels.woodProvider(ModBlocks.POPLAR_LOG.get()).logWithHorizontal(ModBlocks.POPLAR_LOG.get()).wood(ModBlocks.POPLAR_WOOD.get());
@@ -141,7 +140,6 @@ public class ModModelProvider extends ModelProvider {
 
 
         blockModels.family(ModBlocks.POPLAR_PLANKS.get()).generateFor(ModBlockFamilies.POPLAR_PLANKS);
-        blockModels.createHangingSign(ModBlocks.POPLAR_PLANKS.get(), ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_WALL_HANGING_SIGN.get());
 
         blockModels.createPlantWithDefaultItem(ModBlocks.RED_SHRUB.get(), ModBlocks.RED_SHRUB_POTTED.get(), BlockModelGenerators.PlantType.TINTED);
         blockModels.createPlantWithDefaultItem(ModBlocks.POPLAR_SAPLING.get(), ModBlocks.POPLAR_SAPLING_POTTED.get(), BlockModelGenerators.PlantType.TINTED);

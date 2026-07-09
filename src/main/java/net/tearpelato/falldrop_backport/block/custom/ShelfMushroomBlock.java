@@ -4,12 +4,9 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -86,15 +83,6 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock implements Bo
             super.fallOn(level, state, pos, entity, fallDistance);
         } else {
             entity.causeFallDamage(fallDistance, 0.0F, level.damageSources().fall());
-        }
-    }
-
-    @Override
-    public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
-        if (entity.isSuppressingBounce()) {
-            super.updateEntityMovementAfterFallOn(level, entity);
-        } else {
-            this.bounceUp(entity);
         }
     }
 
