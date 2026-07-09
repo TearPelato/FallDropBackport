@@ -10,14 +10,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.tearpelato.falldrop_backport.block.entity.StrawBedBlockEntity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -56,12 +54,4 @@ public class StrawBedBlock extends BedBlock {
         return result;
     }
 
-
-    @Override
-    public BlockEntity newBlockEntity(BlockPos worldPosition, BlockState blockState) {
-        if (blockState.getValue(BedBlock.PART) != BedPart.HEAD)
-            return null;
-
-        return new StrawBedBlockEntity(worldPosition, blockState);
-    }
 }
