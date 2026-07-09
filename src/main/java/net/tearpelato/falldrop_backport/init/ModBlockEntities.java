@@ -2,13 +2,13 @@ package net.tearpelato.falldrop_backport.init;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.ShelfBlockEntity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.block.entity.ModHangingSignBlockEntity;
 import net.tearpelato.falldrop_backport.block.entity.ModShelfBlockEntity;
 import net.tearpelato.falldrop_backport.block.entity.ModSignBlockEntity;
+import net.tearpelato.falldrop_backport.block.entity.StrawBedBlockEntity;
 
 import java.util.function.Supplier;
 
@@ -29,6 +29,9 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("shelf", () -> new BlockEntityType<>(
                     ModShelfBlockEntity::new, ModBlocks.POPLAR_SHELF.get()));
 
+    public static final Supplier<BlockEntityType<StrawBedBlockEntity>> BED_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("bed", () -> new BlockEntityType<>(
+                    StrawBedBlockEntity::new, ModBlocks.STRAW_BED.get()));
 
     public static void init(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

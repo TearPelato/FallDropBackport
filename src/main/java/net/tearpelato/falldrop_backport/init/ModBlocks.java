@@ -2,10 +2,7 @@ package net.tearpelato.falldrop_backport.init;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -273,7 +270,7 @@ public class ModBlocks {
             properties -> new ShelfMushroomBlock(properties.strength(1.0F).mapColor(MapColor.PLANT).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<StrawBedBlock> STRAW_BED = registerBlock("straw_bed",
-            properties-> new StrawBedBlock(properties.strength(0.2f).noOcclusion().sound(SoundType.GRASS)));
+            properties-> new StrawBedBlock(DyeColor.WHITE, properties.strength(0.2f).noOcclusion().sound(SoundType.GRASS)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
