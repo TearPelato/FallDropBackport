@@ -81,7 +81,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PINK_WOOL_SLAB);
                         output.accept(ModItems.PINK_CUSHION);
 
-                        output.accept(ModBlocks.STRAW_BED);
+
 
                         output.accept(ModBlocks.POPLAR_LOG);
                         output.accept(ModBlocks.POPLAR_WOOD);
@@ -107,6 +107,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.RED_SHRUB);
                         output.accept(ModBlocks.POPLAR_SAPLING);
                         output.accept(ModBlocks.SHELF_MUSHROOM);
+                        output.accept(ModBlocks.STRAW_BED);
 
                     }).build()
     );

@@ -72,7 +72,7 @@ public class Cushion extends BlockAttachedEntity {
             }
 
 
-            this.spawnAtLocation(level, ModItems.WHITE_CUSHION);
+            this.spawnAtLocation(level, ModItems.getCushion(this.getColor()));
         }
     }
 
