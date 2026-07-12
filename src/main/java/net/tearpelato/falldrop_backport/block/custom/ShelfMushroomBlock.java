@@ -30,6 +30,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.tearpelato.falldrop_backport.init.ModSounds;
 import org.jspecify.annotations.Nullable;
 
 import java.util.List;
@@ -100,9 +101,13 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock implements Bo
 
     private void bounceUp(Entity entity) {
         Vec3 deltaMovement = entity.getDeltaMovement();
+        Level level = entity.level();
+        BlockPos pos = entity.blockPosition();
         if (deltaMovement.y < 0.0) {
             double multiplier = entity instanceof LivingEntity ? 1.0 : 0.8;
             entity.setDeltaMovement(deltaMovement.x, -deltaMovement.y * multiplier, deltaMovement.z);
+            level.playSound(null, pos, ModSounds.SHELF_MUSHROOM_BOUNCE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+
         }
     }
 

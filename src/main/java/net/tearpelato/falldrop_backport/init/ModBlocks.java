@@ -267,7 +267,7 @@ public class ModBlocks {
                     properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> SHELF_MUSHROOM = registerBlock("shelf_mushroom",
-            properties -> new ShelfMushroomBlock(properties.strength(1.0F).mapColor(MapColor.PLANT).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.DESTROY)));
+            properties -> new ShelfMushroomBlock(properties.strength(1.0F).mapColor(MapColor.PLANT).sound(ModSounds.SHELF_MUSHROOM).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<StrawBedBlock> STRAW_BED = registerBlock("straw_bed",
             properties-> new StrawBedBlock(DyeColor.WHITE, properties.strength(0.2f).noOcclusion().sound(SoundType.GRASS)));

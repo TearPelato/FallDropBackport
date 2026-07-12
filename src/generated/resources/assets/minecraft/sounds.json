@@ -1,0 +1,51 @@
+{
+  "block.shelf_mushroom.bounce": {
+    "sounds": [
+      "block.shelf_mushroom.bounce1",
+      "block.shelf_mushroom.bounce2",
+      "block.shelf_mushroom.bounce3",
+      "block.shelf_mushroom.bounce4",
+      "block.shelf_mushroom.bounce5"
+    ],
+    "subtitle": "sounds.minecraft.shelf_mushroom.bounce"
+  },
+  "block.shelf_mushroom.break": {
+    "sounds": [
+      "block.shelf_mushroom.break1",
+      "block.shelf_mushroom.break2",
+      "block.shelf_mushroom.break3",
+      "block.shelf_mushroom.break4",
+      "block.shelf_mushroom.break5",
+      "block.shelf_mushroom.break6"
+    ],
+    "subtitle": "sounds.minecraft.shelf_mushroom.break"
+  },
+  "block.shelf_mushroom.fall": {
+    "sounds": [
+      "block.shelf_mushroom.fall"
+    ],
+    "subtitle": "sounds.minecraft.shelf_mushroom.bounce"
+  },
+  "block.shelf_mushroom.place": {
+    "sounds": [
+      "block.shelf_mushroom.place1",
+      "block.shelf_mushroom.place2",
+      "block.shelf_mushroom.place3",
+      "block.shelf_mushroom.place4",
+      "block.shelf_mushroom.place5",
+      "block.shelf_mushroom.place6"
+    ],
+    "subtitle": "sounds.minecraft.shelf_mushroom.bounce"
+  },
+  "block.shelf_mushroom.step": {
+    "sounds": [
+      "block.shelf_mushroom.step1",
+      "block.shelf_mushroom.step2",
+      "block.shelf_mushroom.step3",
+      "block.shelf_mushroom.step4",
+      "block.shelf_mushroom.step5",
+      "block.shelf_mushroom.step6"
+    ],
+    "subtitle": "sounds.minecraft.shelf_mushroom.bounce"
+  }
+}
