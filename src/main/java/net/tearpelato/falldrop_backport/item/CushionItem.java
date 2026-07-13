@@ -50,7 +50,7 @@ public class CushionItem extends Item {
                         return InteractionResult.FAIL;
                     }
 
-                    Consumer<Cushion> entityConfig = EntityType.createDefaultStackConfig(serverLevel, itemStack, context.getPlayer());
+                    PostSpawnProcessor<Cushion> entityConfig = EntityType.createDefaultStackConfig(serverLevel, itemStack, context.getPlayer());
                     Cushion cushion = ModEntities.CUSHION.get().create(serverLevel, entityConfig, blockPos, EntitySpawnReason.SPAWN_ITEM_USE, true, true);
                     if (cushion == null) {
                         return InteractionResult.FAIL;

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "cushion",
   "key": {
     "#": "minecraft:blue_wool_slab"

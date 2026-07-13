@@ -1,6 +1,9 @@
 package net.tearpelato.falldrop_backport.event;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BedBlock;
@@ -11,6 +14,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerWakeUpEvent;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.block.custom.StrawBedBlock;
+import net.tearpelato.falldrop_backport.init.ModSounds;
 
 @EventBusSubscriber(modid = Constants.MOD_ID)
 public class ModEvents {
@@ -31,7 +35,7 @@ public class ModEvents {
 
         if (state.getBlock() instanceof StrawBedBlock) {
             BlockPos footPos = headPos.relative(state.getValue(BedBlock.FACING).getOpposite());
-
+            level.playSound((Entity)null, headPos, ModSounds.STRAW_BED_BREAK_LEAVE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
             level.destroyBlock(headPos, false);
             level.destroyBlock(footPos, false);
         }
