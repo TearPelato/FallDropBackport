@@ -43,6 +43,12 @@ public class ModSounds {
     public static final DeferredSoundType POPLAR_LEAVES = new DeferredSoundType(1.0F,1.0F, POPLAR_LEAVES_BREAK, POPLAR_LEAVES_STEP, POPLAR_LEAVES_PLACE,POPLAR_LEAVES_HIT, POPLAR_LEAVES_FALL);
     public static final DeferredSoundType RED_SHRUB = new DeferredSoundType(1.0F,1.0F,RED_SHRUB_BREAK, EMPTY, RED_SHRUB_PLACE, EMPTY, EMPTY);
 
+
+    public static final Supplier<SoundEvent> CUSHION_BREAK = registerSoundEvent("entity.cushion.break");
+    public static final Supplier<SoundEvent> CUSHION_PLACE = registerSoundEvent("entity.cushion.place");
+    public static final Supplier<SoundEvent> CUSHION_SIT = registerSoundEvent("entity.cushion.sit");
+    public static final Supplier<SoundEvent> CUSHION_GET_UP = registerSoundEvent("entity.cushion.get_up");
+
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
         Identifier id = Constants.vanilla(name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
