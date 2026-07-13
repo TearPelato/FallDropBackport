@@ -17,9 +17,10 @@ public class FallDropBackportDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModBlockLootableProvider::new);
         pack.addProvider(ModBlockTagsProvider::new);
-        pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModRecipeProvider.Runner::new);
         pack.addProvider(ModItemsTagsProvider::new);
         pack.addProvider(ModRegistryDataProvider::new);
+        pack.addProvider(ModSoundsProvider::new);
 
 
     }

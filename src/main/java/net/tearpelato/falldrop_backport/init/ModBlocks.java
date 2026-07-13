@@ -164,7 +164,7 @@ public class ModBlocks {
                     properties.strength(2f).noCollision().pushReaction(PushReaction.DESTROY)));
 
     public static final Block STRAW_BED = registerBlock("straw_bed",
-            properties-> new StrawBedBlock(DyeColor.WHITE,properties.strength(0.2f)));
+            properties-> new StrawBedBlock(DyeColor.WHITE,properties.strength(0.2f).sound(ModSounds.STRAW_BED)));
 
     public static final Block POPLAR_SIGN = registerBlockWithoutBlockItem("poplar_sign",
             properties -> new ModStandingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));
@@ -182,10 +182,10 @@ public class ModBlocks {
             properties -> new ModShelfBlock(properties.strength(2f).sound(SoundType.SHELF)));
 
     public static final Block RED_SHRUB = registerBlock("red_shrub",
-            properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+            properties -> new BushBlock(properties.strength(0.2f).sound(ModSounds.RED_SHRUB).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final Block RED_SHRUB_POTTED = registerBlock("red_shrub_potted",
-            properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+            properties -> new BushBlock(properties.strength(0.2f).sound(ModSounds.RED_SHRUB).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
 
 
@@ -198,7 +198,7 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(POPLAR_SAPLING, properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final Block SHELF_MUSHROOM = registerBlock("shelf_mushroom",
-            properties -> new ShelfMushroomBlock(properties.strength(1.0F)));
+            properties -> new ShelfMushroomBlock(properties.strength(1.0F).sound(ModSounds.SHELF_MUSHROOM).bounceRestitution(0.75F)));
 
 
 

@@ -3,7 +3,9 @@ package net.tearpelato.falldrop_backport.item;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PostSpawnProcessor;
@@ -18,6 +20,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.tearpelato.falldrop_backport.entity.client.custom.Cushion;
 import net.tearpelato.falldrop_backport.init.ModEntities;
+import net.tearpelato.falldrop_backport.init.ModSounds;
 import net.tearpelato.falldrop_backport.util.Vec3Util;
 
 import java.util.function.Consumer;
@@ -59,7 +62,7 @@ public class CushionItem extends Item {
                     cushion.snapTo(entityPos, Direction.fromYRot((double)placeContext.getRotation()).toYRot(), 0.0F);
                     cushion.setColor(this.color);
                     serverLevel.addFreshEntity(cushion);
-                    //level.playSound((Entity)null, cushion.getX(), cushion.getY(), cushion.getZ(), SoundEvents.CUSHION_PLACE, SoundSource.BLOCKS, 0.75F, 0.8F);
+                    level.playSound((Entity)null, cushion.getX(), cushion.getY(), cushion.getZ(), ModSounds.CUSHION_PLACE, SoundSource.BLOCKS, 0.75F, 0.8F);
                     cushion.gameEvent(GameEvent.ENTITY_PLACE);
                     itemStack.consume(1, placeContext.getPlayer());
                 }
