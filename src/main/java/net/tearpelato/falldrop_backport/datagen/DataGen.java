@@ -29,5 +29,6 @@ public class DataGen {
         generator.addProvider(true, new ModItemsTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModBiomeTagsProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModSoundsProvider(packOutput));
     }
 }

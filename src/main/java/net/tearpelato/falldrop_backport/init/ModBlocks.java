@@ -112,7 +112,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> RED_POPLAR_LEAVES = registerBlock("red_poplar_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.RED_POPLAR_LEAVES.get(), properties.mapColor(MapColor.PLANT)
-                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false))
@@ -135,7 +135,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ORANGE_POPLAR_LEAVES = registerBlock("orange_poplar_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.ORANGE_POPLAR_LEAVES.get(), properties.mapColor(MapColor.PLANT)
-                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false))
@@ -159,7 +159,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> YELLOW_POPLAR_LEAVES = registerBlock("yellow_poplar_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.YELLOW_POPLAR_LEAVES.get(), properties.mapColor(MapColor.PLANT)
-                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false))
@@ -250,10 +250,10 @@ public class ModBlocks {
             properties -> new ModShelfBlock(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.SHELF)));
 
         public static final DeferredBlock<Block> RED_SHRUB = registerBlock("red_shrub",
-                properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+                properties -> new BushBlock(properties.strength(0.2f).sound(ModSounds.RED_SHRUB).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> RED_SHRUB_POTTED = registerBlock("red_shrub_potted",
-            properties -> new BushBlock(properties.strength(0.2f).sound(SoundType.GRASS).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
+            properties -> new BushBlock(properties.strength(0.2f).sound(ModSounds.RED_SHRUB).noCollision().instabreak().pushReaction(PushReaction.DESTROY)));
 
 
 
@@ -267,10 +267,10 @@ public class ModBlocks {
                     properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> SHELF_MUSHROOM = registerBlock("shelf_mushroom",
-            properties -> new ShelfMushroomBlock(properties.strength(1.0F).mapColor(MapColor.PLANT).sound(SoundType.WOOD).noOcclusion().pushReaction(PushReaction.DESTROY)));
+            properties -> new ShelfMushroomBlock(properties.strength(1.0F).bounceRestitution(0.75F).mapColor(MapColor.PLANT).sound(ModSounds.SHELF_MUSHROOM).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<StrawBedBlock> STRAW_BED = registerBlock("straw_bed",
-            properties-> new StrawBedBlock(DyeColor.WHITE, properties.strength(0.2f).noOcclusion().sound(SoundType.GRASS)));
+            properties-> new StrawBedBlock(DyeColor.WHITE, properties.strength(0.2f).noOcclusion().sound(ModSounds.STRAW_BED)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
