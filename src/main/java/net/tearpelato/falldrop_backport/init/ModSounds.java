@@ -38,6 +38,12 @@ public class ModSounds {
     public static final Supplier<SoundEvent> RED_SHRUB_BREAK = registerSoundEvent("block.red_shrub.break");
     public static final Supplier<SoundEvent> RED_SHRUB_PLACE = registerSoundEvent("block.red_shrub.place");
 
+    public static final Supplier<SoundEvent> CUSHION_BREAK = registerSoundEvent("entity.cushion.break");
+    public static final Supplier<SoundEvent> CUSHION_PLACE = registerSoundEvent("entity.cushion.place");
+    public static final Supplier<SoundEvent> CUSHION_SIT = registerSoundEvent("entity.cushion.sit");
+    public static final Supplier<SoundEvent> CUSHION_GET_UP = registerSoundEvent("entity.cushion.get_up");
+
+
     public static final DeferredSoundType SHELF_MUSHROOM = new DeferredSoundType(1.0f, 1.0f,SHELF_MUSHROOM_BREAK, SHELF_MUSHROOM_STEP,SHELF_MUSHROOM_PLACE, EMPTY, SHELF_MUSHROOM_FALL);
     public static final DeferredSoundType STRAW_BED = new DeferredSoundType(1.0F,1.0F, STRAW_BED_BREAK, STRAW_BED_STEP, STRAW_BED_PLACE,STRAW_BED_HIT, STRAW_BED_FALL);
     public static final DeferredSoundType POPLAR_LEAVES = new DeferredSoundType(1.0F,1.0F, POPLAR_LEAVES_BREAK, POPLAR_LEAVES_STEP, POPLAR_LEAVES_PLACE,POPLAR_LEAVES_HIT, POPLAR_LEAVES_FALL);

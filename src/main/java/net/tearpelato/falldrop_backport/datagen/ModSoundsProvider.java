@@ -90,12 +90,28 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
                         sound(Constants.vanilla("block/straw_bed/step5")),
                         sound(Constants.vanilla("block/straw_bed/step6"))));
 
+        add(ModSounds.CUSHION_BREAK.get(), definition().subtitle("sounds.minecraft.cushion.break")
+                .with(sound(Constants.vanilla("entity/cushion/break1")),
+                        sound(Constants.vanilla("entity/cushion/break2")),
+                        sound(Constants.vanilla("entity/cushion/break3"))));
 
+        add(ModSounds.CUSHION_GET_UP.get(), definition().subtitle("sounds.minecraft.cushion.break")
+                .with(sound(Constants.vanilla("entity/cushion/get_up1")),
+                        sound(Constants.vanilla("entity/cushion/get_up2")),
+                        sound(Constants.vanilla("entity/cushion/get_up3"))));
 
+        add(ModSounds.CUSHION_PLACE.get(), definition().subtitle("sounds.minecraft.cushion.break")
+                .with(sound(Constants.vanilla("entity/cushion/place1")),
+                        sound(Constants.vanilla("entity/cushion/place2")),
+                        sound(Constants.vanilla("entity/cushion/place3")),
+                        sound(Constants.vanilla("entity/cushion/place4")),
+                        sound(Constants.vanilla("entity/cushion/place5")),
+                        sound(Constants.vanilla("entity/cushion/place6"))));
 
-
-
-
+        add(ModSounds.CUSHION_SIT.get(), definition().subtitle("sounds.minecraft.cushion.break")
+                .with(sound(Constants.vanilla("entity/cushion/sit1")),
+                        sound(Constants.vanilla("entity/cushion/sit2")),
+                        sound(Constants.vanilla("entity/cushion/sit3"))));
 
 
 

@@ -8,6 +8,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.tearpelato.falldrop_backport.Constants;
+import net.tearpelato.falldrop_backport.init.ModSounds;
 
 import java.util.Collections;
 import java.util.List;
@@ -29,6 +30,6 @@ public class DataGen {
         generator.addProvider(true, new ModItemsTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModBiomeTagsProvider(packOutput, lookupProvider));
-        generator.addProvider(true, new ModSoundProvider(packOutput));
+        generator.addProvider(true, new ModSoundsProvider(packOutput));
     }
 }
