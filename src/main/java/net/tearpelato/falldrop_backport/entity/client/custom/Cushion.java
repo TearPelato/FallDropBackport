@@ -18,8 +18,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.material.FluidState;
@@ -30,6 +28,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModItems;
+import net.tearpelato.falldrop_backport.init.ModSounds;
 import org.jspecify.annotations.Nullable;
 
 public class Cushion extends BlockAttachedEntity {
@@ -61,7 +60,7 @@ public class Cushion extends BlockAttachedEntity {
 
     public void dropItem(final ServerLevel level, final @Nullable Entity causedBy) {
 
-        //this.playSound(SoundEvents.CUSHION_BREAK, 1.0F, 1.0F);
+        this.playSound(ModSounds.CUSHION_BREAK.get(), 1.0F, 1.0F);
 
         this.showBreakingParticles();
 
@@ -94,7 +93,7 @@ public class Cushion extends BlockAttachedEntity {
 
             if (!this.level().isClientSide()) {
 
-                //this.playSound(SoundEvents.CUSHION_SIT, 1.0F, 1.0F);
+                this.playSound(ModSounds.CUSHION_SIT.get(), 1.0F, 1.0F);
 
                 return InteractionResult.CONSUME;
 
@@ -117,7 +116,7 @@ public class Cushion extends BlockAttachedEntity {
         if (!this.level().isClientSide()
                 && this.getRemovalReason() == null) {
 
-            //this.playSound(SoundEvents.CUSHION_GET_UP, 1.0F, 1.0F);
+            this.playSound(ModSounds.CUSHION_GET_UP.get(), 1.0F, 1.0F);
         }
     }
 
