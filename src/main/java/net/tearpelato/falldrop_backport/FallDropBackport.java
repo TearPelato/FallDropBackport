@@ -20,6 +20,7 @@ public class FallDropBackport implements ModInitializer, TerraBlenderApi {
         ModEntities.registerModEntities();
         ModBlockEntities.registerBlockEntities();
         ModStats.registerStats();
+        ModSounds.registerSounds();
 
         ModFlammableBlocks.registerFlammableBlocks();
         ModStrippableBlocks.registerStrippableBlocks();

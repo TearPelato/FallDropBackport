@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,6 +27,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.tearpelato.falldrop_backport.init.ModSounds;
 import org.jspecify.annotations.Nullable;
 
 import java.util.List;
@@ -75,6 +77,37 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock implements Bo
         return null;
     }
 
+
+    @Override
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
+        if (entity.isSuppressingBounce()) {
+            super.fallOn(level, state, pos, entity, fallDistance);
+        } else {
+            entity.causeFallDamage(fallDistance, 0.0F, level.damageSources().fall());
+        }
+    }
+
+    @Override
+    public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
+        if (entity.isSuppressingBounce()) {
+            super.updateEntityMovementAfterFallOn(level, entity);
+        } else {
+            this.bounceUp(entity);
+        }
+    }
+
+    private void bounceUp(Entity entity) {
+        Vec3 deltaMovement = entity.getDeltaMovement();
+        Level level = entity.level();
+        BlockPos pos = entity.blockPosition();
+        if (deltaMovement.y < 0.0) {
+            double multiplier = entity instanceof LivingEntity ? 1.0 : 0.8;
+            entity.setDeltaMovement(deltaMovement.x, -deltaMovement.y * multiplier, deltaMovement.z);
+            level.playSound(null, pos, ModSounds.SHELF_MUSHROOM_BOUNCE, SoundSource.BLOCKS, 1.0F, 1.0F);
+
+        }
+    }
+
     protected BlockState updateShape(final BlockState state, final LevelReader level, final ScheduledTickAccess ticks, final BlockPos pos, final Direction directionToNeighbour, final BlockPos neighbourPos, final BlockState neighbourState, final RandomSource random) {
         return directionToNeighbour == ((Direction)state.getValue(FACING)).getOpposite() && !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
     }
@@ -97,30 +130,6 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock implements Bo
 
     protected boolean isPathfindable(final BlockState state, final PathComputationType type) {
         return false;
-    }
-
-    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
-        if (entity.isSuppressingBounce()) {
-            super.fallOn(level, state, pos, entity, fallDistance);
-        } else {
-            entity.causeFallDamage(fallDistance, 0.0F, level.damageSources().fall());
-        }
-    }
-
-    public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
-        if (entity.isSuppressingBounce()) {
-            super.updateEntityMovementAfterFallOn(level, entity);
-        } else {
-            this.bounceUp(entity);
-        }
-    }
-
-    private void bounceUp(Entity entity) {
-        Vec3 deltaMovement = entity.getDeltaMovement();
-        if (deltaMovement.y < 0.0) {
-            double multiplier = entity instanceof LivingEntity ? 1.0 : 0.8;
-            entity.setDeltaMovement(deltaMovement.x, -deltaMovement.y * multiplier, deltaMovement.z);
-        }
     }
 
     static {
