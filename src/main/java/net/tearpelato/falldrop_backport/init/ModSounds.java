@@ -20,7 +20,6 @@ public class ModSounds {
     public static final SoundEvent POPLAR_LEAVES_FALL = registerSoundEvent("block.poplar_leaves.fall");
     public static final SoundEvent POPLAR_LEAVES_PLACE = registerSoundEvent("block.poplar_leaves.place");
     public static final SoundEvent POPLAR_LEAVES_STEP = registerSoundEvent("block.poplar_leaves.step");
-    public static final SoundEvent POPLAR_LEAVES_AMBIENT = registerSoundEvent("block.poplar_leaves.ambient");
     public static final SoundEvent STRAW_BED_BREAK = registerSoundEvent("block.straw_bed.break");
     public static final SoundEvent STRAW_BED_BREAK_LEAVE = registerSoundEvent("block.straw_bed.break_leave");
     public static final SoundEvent STRAW_BED_STEP = registerSoundEvent("block.straw_bed.step");
