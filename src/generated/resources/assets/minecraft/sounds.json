@@ -1,4 +1,57 @@
 {
+  "block.poplar_leaves.break": {
+    "sounds": [
+      "block/leaf_litter/break1",
+      "block/leaf_litter/break2",
+      "block/leaf_litter/break3",
+      "block/leaf_litter/break4",
+      "block/leaf_litter/break5"
+    ],
+    "subtitle": "sounds.block.generic.break"
+  },
+  "block.poplar_leaves.fall": {
+    "sounds": [
+      "block/leaf_litter/step1",
+      "block/leaf_litter/step2",
+      "block/leaf_litter/step3",
+      "block/leaf_litter/step4",
+      "block/leaf_litter/step5",
+      "block/leaf_litter/step6"
+    ],
+    "subtitle": "sounds.block.generic.fall"
+  },
+  "block.poplar_leaves.hit": {
+    "sounds": [
+      "block/leaf_litter/step1",
+      "block/leaf_litter/step2",
+      "block/leaf_litter/step3",
+      "block/leaf_litter/step4",
+      "block/leaf_litter/step5",
+      "block/leaf_litter/step6"
+    ],
+    "subtitle": "sounds.block.generic.hit"
+  },
+  "block.poplar_leaves.place": {
+    "sounds": [
+      "block/leaf_litter/place1",
+      "block/leaf_litter/place2",
+      "block/leaf_litter/place3",
+      "block/leaf_litter/place4",
+      "block/leaf_litter/place5"
+    ],
+    "subtitle": "sounds.block.generic.place"
+  },
+  "block.poplar_leaves.step": {
+    "sounds": [
+      "block/leaf_litter/step1",
+      "block/leaf_litter/step2",
+      "block/leaf_litter/step3",
+      "block/leaf_litter/step4",
+      "block/leaf_litter/step5",
+      "block/leaf_litter/step6"
+    ],
+    "subtitle": "sounds.block.generic.footsteps"
+  },
   "block.red_shrub.break": {
     "sounds": [
       "block/red_shrub/break1",

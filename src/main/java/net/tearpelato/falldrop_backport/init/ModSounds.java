@@ -3,7 +3,6 @@ package net.tearpelato.falldrop_backport.init;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.bus.api.IEventBus;
@@ -28,7 +27,6 @@ public class ModSounds {
     public static final Supplier<SoundEvent> POPLAR_LEAVES_FALL = registerSoundEvent("block.poplar_leaves.fall");
     public static final Supplier<SoundEvent> POPLAR_LEAVES_PLACE = registerSoundEvent("block.poplar_leaves.place");
     public static final Supplier<SoundEvent> POPLAR_LEAVES_STEP = registerSoundEvent("block.poplar_leaves.step");
-    public static final Supplier<SoundEvent> POPLAR_LEAVES_AMBIENT = registerSoundEvent("block.poplar_leaves.ambient");
     public static final Supplier<SoundEvent> STRAW_BED_BREAK = registerSoundEvent("block.straw_bed.break");
     public static final Supplier<SoundEvent> STRAW_BED_BREAK_LEAVE = registerSoundEvent("block.straw_bed.break_leave");
     public static final Supplier<SoundEvent> STRAW_BED_STEP = registerSoundEvent("block.straw_bed.step");

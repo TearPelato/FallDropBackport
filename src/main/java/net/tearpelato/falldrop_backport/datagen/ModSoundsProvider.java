@@ -113,9 +113,43 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
                         sound(Constants.vanilla("entity/cushion/sit2")),
                         sound(Constants.vanilla("entity/cushion/sit3"))));
 
+        add(ModSounds.POPLAR_LEAVES_BREAK.get(), definition().subtitle("sounds.block.generic.break")
+                .with(sound(Constants.vanilla("block/leaf_litter/break1")),
+                        sound(Constants.vanilla("block/leaf_litter/break2")),
+                        sound(Constants.vanilla("block/leaf_litter/break3")),
+                        sound(Constants.vanilla("block/leaf_litter/break4")),
+                        sound(Constants.vanilla("block/leaf_litter/break5"))));
 
+        add(ModSounds.POPLAR_LEAVES_FALL.get(), definition().subtitle("sounds.block.generic.fall")
+                .with(sound(Constants.vanilla("block/leaf_litter/step1")),
+                        sound(Constants.vanilla("block/leaf_litter/step2")),
+                        sound(Constants.vanilla("block/leaf_litter/step3")),
+                        sound(Constants.vanilla("block/leaf_litter/step4")),
+                        sound(Constants.vanilla("block/leaf_litter/step5")),
+                        sound(Constants.vanilla("block/leaf_litter/step6"))));
 
+        add(ModSounds.POPLAR_LEAVES_HIT.get(), definition().subtitle("sounds.block.generic.hit")
+                .with(sound(Constants.vanilla("block/leaf_litter/step1")),
+                        sound(Constants.vanilla("block/leaf_litter/step2")),
+                        sound(Constants.vanilla("block/leaf_litter/step3")),
+                        sound(Constants.vanilla("block/leaf_litter/step4")),
+                        sound(Constants.vanilla("block/leaf_litter/step5")),
+                        sound(Constants.vanilla("block/leaf_litter/step6"))));
 
+        add(ModSounds.POPLAR_LEAVES_PLACE.get(), definition().subtitle("sounds.block.generic.place")
+                .with(sound(Constants.vanilla("block/leaf_litter/place1")),
+                        sound(Constants.vanilla("block/leaf_litter/place2")),
+                        sound(Constants.vanilla("block/leaf_litter/place3")),
+                        sound(Constants.vanilla("block/leaf_litter/place4")),
+                        sound(Constants.vanilla("block/leaf_litter/place5"))));
+
+        add(ModSounds.POPLAR_LEAVES_STEP.get(), definition().subtitle("sounds.block.generic.footsteps")
+                .with(sound(Constants.vanilla("block/leaf_litter/step1")),
+                        sound(Constants.vanilla("block/leaf_litter/step2")),
+                        sound(Constants.vanilla("block/leaf_litter/step3")),
+                        sound(Constants.vanilla("block/leaf_litter/step4")),
+                        sound(Constants.vanilla("block/leaf_litter/step5")),
+                        sound(Constants.vanilla("block/leaf_litter/step6"))));
 
     }
 }
