@@ -131,6 +131,48 @@ public class ModSoundsProvider extends FabricSoundsProvider {
                 .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("entity/cushion/sit1")))
                 .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("entity/cushion/sit2")))
                 .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("entity/cushion/sit3"))));
+
+        exporter.add(ModSounds.POPLAR_LEAVES_BREAK, SoundTypeBuilder.of().subtitle("sounds.block.generic.break")
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/break1")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/break2")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/break3")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/break4")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/break5"))));
+
+        exporter.add(ModSounds.POPLAR_LEAVES_FALL, SoundTypeBuilder.of().subtitle("sounds.block.generic.fall")
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step1")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step2")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step3")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step4")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step5")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step6"))));
+
+        exporter.add(ModSounds.POPLAR_LEAVES_HIT, SoundTypeBuilder.of().subtitle("sounds.block.generic.hit")
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step1")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step2")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step3")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step4")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step5")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step6"))));
+
+        exporter.add(ModSounds.POPLAR_LEAVES_PLACE, SoundTypeBuilder.of().subtitle("sounds.block.generic.place")
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/place1")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/place2")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/place3")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/place4")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/place5"))));
+
+        exporter.add(ModSounds.POPLAR_LEAVES_STEP, SoundTypeBuilder.of().subtitle("sounds.block.generic.footsteps")
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step1")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step2")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step3")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step4")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step5")))
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Constants.vanilla("block/leaf_litter/step6"))));
+
+
+
+
     }
 
     @Override

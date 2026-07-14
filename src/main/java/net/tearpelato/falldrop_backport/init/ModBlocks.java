@@ -104,14 +104,14 @@ public class ModBlocks {
 
     public static final Block RED_POPLAR_LEAVES = registerBlock("red_poplar_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.RED_POPLAR_LEAVES, properties.mapColor(MapColor.PLANT)
-                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false)));
 
     public static final Block ORANGE_POPLAR_LEAVES = registerBlock("orange_poplar_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.ORANGE_POPLAR_LEAVES, properties.mapColor(MapColor.PLANT)
-                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false)));
@@ -119,7 +119,7 @@ public class ModBlocks {
 
     public static final Block YELLOW_POPLAR_LEAVES = registerBlock("yellow_poplar_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f,ModParticleTypes.YELLOW_POPLAR_LEAVES, properties.mapColor(MapColor.PLANT)
-                    .strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion()
+                    .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false)));
@@ -198,7 +198,7 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(POPLAR_SAPLING, properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final Block SHELF_MUSHROOM = registerBlock("shelf_mushroom",
-            properties -> new ShelfMushroomBlock(properties.strength(1.0F).sound(ModSounds.SHELF_MUSHROOM).bounceRestitution(0.75F)));
+            properties -> new ShelfMushroomBlock(properties.strength(1.0F).sound(ModSounds.SHELF_MUSHROOM)));
 
 
 
