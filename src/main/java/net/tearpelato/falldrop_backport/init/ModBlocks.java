@@ -198,7 +198,7 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(POPLAR_SAPLING, properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)));
 
     public static final Block SHELF_MUSHROOM = registerBlock("shelf_mushroom",
-            properties -> new ShelfMushroomBlock(properties.strength(1.0F).sound(ModSounds.SHELF_MUSHROOM)));
+            properties -> new ShelfMushroomBlock(properties.strength(1.0F).sound(ModSounds.SHELF_MUSHROOM).bounceRestitution(0.75F)));
 
 
 

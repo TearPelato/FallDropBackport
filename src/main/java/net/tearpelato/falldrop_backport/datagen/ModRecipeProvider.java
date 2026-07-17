@@ -154,9 +154,8 @@ public class ModRecipeProvider extends RecipeProvider {
         shaped(RecipeCategory.MISC,ModBlocks.STRAW_BED,4)
                 .pattern("###")
                 .define('#', Blocks.HAY_BLOCK)
-                .unlockedBy(getHasName(Blocks.HAY_BLOCK), this.has(Blocks.HAY_BLOCK))
-
-                .save(this.output);
+                .unlockedBy(getHasName(Blocks.HAY_BLOCK), has(Blocks.HAY_BLOCK))
+                .save(output);
 
 
     }
