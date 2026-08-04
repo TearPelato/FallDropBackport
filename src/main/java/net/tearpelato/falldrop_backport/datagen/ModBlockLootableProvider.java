@@ -138,7 +138,7 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
         add( ModBlocks.STRAW_BED.get(), LootTable.lootTable().withPool(
                 LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .when(ExplosionCondition.survivesExplosion())
-                        .add( LootItem.lootTableItem(ModBlocks.STRAW_BED.get()))));
+                        .add(LootItem.lootTableItem(ModBlocks.STRAW_BED.get()))));
 
        add(ModBlocks.POPLAR_SAPLING_POTTED.get(), createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING.get()));
        add(ModBlocks.RED_SHRUB_POTTED.get(), createPotFlowerItemTable(ModBlocks.RED_SHRUB.get()));
