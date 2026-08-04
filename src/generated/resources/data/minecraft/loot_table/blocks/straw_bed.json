@@ -4,11 +4,7 @@
     {
       "conditions": [
         {
-          "block": "minecraft:straw_bed",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "part": "foot"
-          }
+          "condition": "minecraft:survives_explosion"
         }
       ],
       "entries": [

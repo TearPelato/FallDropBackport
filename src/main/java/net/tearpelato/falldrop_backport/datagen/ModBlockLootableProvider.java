@@ -13,6 +13,7 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
@@ -134,15 +135,10 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
 
        dropSelf(ModBlocks.RED_SHRUB.get());
        dropSelf(ModBlocks.POPLAR_SAPLING.get());
-        add(ModBlocks.STRAW_BED.get(), bed -> LootTable.lootTable()
-                .withPool(LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(bed)
-                                .setProperties(StatePropertiesPredicate.Builder.properties()
-                                        .hasProperty(BlockStateProperties.BED_PART, BedPart.FOOT)))
-                        .add(LootItem.lootTableItem(bed))
-                )
-        );
+        add( ModBlocks.STRAW_BED.get(), LootTable.lootTable().withPool(
+                LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .when(ExplosionCondition.survivesExplosion())
+                        .add( LootItem.lootTableItem(ModBlocks.STRAW_BED.get()))));
 
        add(ModBlocks.POPLAR_SAPLING_POTTED.get(), createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING.get()));
        add(ModBlocks.RED_SHRUB_POTTED.get(), createPotFlowerItemTable(ModBlocks.RED_SHRUB.get()));

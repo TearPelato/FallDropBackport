@@ -53,32 +53,5 @@ public class FallDropBackportClient {
         event.registerSpriteSet(ModParticleTypes.YELLOW_POPLAR_LEAVES.get(), PoplarParticles.PoplarProvider::new);
     }
 
-   /* @SubscribeEvent
-    public static void onSetSpawn(PlayerSetSpawnEvent event) {
-        BlockPos pos = event.getNewSpawn();
-        if (pos == null) return;
-
-        Player player = event.getEntity();
-        if (player.level().getBlockState(pos).getBlock() instanceof TestBedBlock) {
-            event.setCanceled(true);
-        }
-    }
-
-    @SubscribeEvent
-    public static void onWakeUp(PlayerWakeUpEvent event) {
-        Player player = event.getEntity();
-        if (player.level().isClientSide()) return;
-
-        BlockPos headPos = TestBedBlock.SLEEPERS.remove(player.getUUID());
-        if (headPos == null) return;
-
-        Level level = player.level();
-        BlockState state = level.getBlockState(headPos);
-        if (state.getBlock() instanceof TestBedBlock) {
-            BlockPos footPos = headPos.relative(state.getValue(BedBlock.FACING).getOpposite());
-            level.destroyBlock(headPos, false);
-            level.destroyBlock(footPos, false);
-        }
-    }*/
 
 }
