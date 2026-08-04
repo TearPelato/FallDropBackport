@@ -12,7 +12,6 @@ public class ModBlockFamilies {
             .pressurePlate(ModBlocks.POPLAR_PRESSURE_PLATE.get())
             .button(ModBlocks.POPLAR_BUTTON.get())
             .sign(ModBlocks.POPLAR_SIGN.get(), ModBlocks.POPLAR_WALL_SIGN.get())
-            .hangingSign(ModBlocks.POPLAR_HANGING_SIGN.get(), ModBlocks.POPLAR_WALL_HANGING_SIGN.get())
             .door(ModBlocks.POPLAR_DOOR.get())
             .trapdoor(ModBlocks.POPLAR_TRAPDOOR.get())
             .getFamily();
