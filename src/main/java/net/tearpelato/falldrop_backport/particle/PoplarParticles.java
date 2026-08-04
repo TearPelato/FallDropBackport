@@ -13,6 +13,7 @@ public class PoplarParticles extends FallingLeavesParticle {
     public PoplarParticles(ClientLevel level, double x, double y, double z, TextureAtlasSprite sprite, float fallAcceleration, float sideAcceleration, boolean swirl, boolean flowAway, float scale, float startVelocity) {
         super(level, x, y, z, sprite, fallAcceleration, sideAcceleration, swirl, flowAway, scale, startVelocity);
     }
+
     public static class PoplarProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 
@@ -21,7 +22,7 @@ public class PoplarParticles extends FallingLeavesParticle {
         }
 
         public Particle createParticle(final SimpleParticleType options, final ClientLevel level, final double x, final double y, final double z, final double xAux, final double yAux, final double zAux, final RandomSource random) {
-            return new FallingLeavesParticle(level, x, y, z, this.sprites.get(random), 0.07F, 10.0F, true, false, 2.0F, 0.021F);
+            return new FallingLeavesParticle(level, x, y, z, this.sprites.get(random), 0.05F, 10.0F, true, false, 2.0F, 0.021F);
         }
     }
 }

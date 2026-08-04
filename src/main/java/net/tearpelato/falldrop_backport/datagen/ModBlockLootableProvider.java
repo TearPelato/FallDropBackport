@@ -6,6 +6,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -62,6 +63,41 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
         add(ModBlocks.MAGENTA_WOOL_SLAB.get(), this::createSlabItemTable);
         add(ModBlocks.PINK_WOOL_SLAB.get(), this::createSlabItemTable);
 
+        dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.GRAY_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.BLACK_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.BROWN_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.RED_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.LIME_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.GREEN_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.CYAN_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.BLUE_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
+        dropSelf(ModBlocks.PINK_CONCRETE_STAIRS.get());
+
+
+        add(ModBlocks.WHITE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.GRAY_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.BLACK_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.BROWN_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.RED_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.ORANGE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.YELLOW_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.LIME_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.GREEN_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.CYAN_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.BLUE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.PURPLE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.MAGENTA_CONCRETE_SLAB.get(), this::createSlabItemTable);
+        add(ModBlocks.PINK_CONCRETE_SLAB.get(), this::createSlabItemTable);
+
 
 
         dropSelf(ModBlocks.POPLAR_LOG.get());
@@ -99,10 +135,15 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
 
        dropSelf(ModBlocks.RED_SHRUB.get());
        dropSelf(ModBlocks.POPLAR_SAPLING.get());
-       dropSelf(ModBlocks.STRAW_BED.get());
-       add(ModBlocks.STRAW_BED.get(),bed -> LootTable.lootTable()
-               .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(bed).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.BED_PART, BedPart.FOOT))).add(LootItem.lootTableItem(bed))
-               ));
+        add(ModBlocks.STRAW_BED.get(), bed -> LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(bed)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(BlockStateProperties.BED_PART, BedPart.FOOT)))
+                        .add(LootItem.lootTableItem(bed))
+                )
+        );
 
        add(ModBlocks.POPLAR_SAPLING_POTTED.get(), createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING.get()));
        add(ModBlocks.RED_SHRUB_POTTED.get(), createPotFlowerItemTable(ModBlocks.RED_SHRUB.get()));

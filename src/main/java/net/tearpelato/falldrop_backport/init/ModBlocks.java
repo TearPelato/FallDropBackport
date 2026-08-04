@@ -96,6 +96,75 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PINK_WOOL_SLAB = registerBlock("pink_wool_slab",
             properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
+    //Concrete variants
+    public static final DeferredBlock<Block> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> LIGHT_GRAY_CONCRETE_STAIRS = registerBlock("light_gray_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> GRAY_CONCRETE_STAIRS = registerBlock("gray_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BLACK_CONCRETE_STAIRS = registerBlock("black_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BROWN_CONCRETE_STAIRS = registerBlock("brown_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> RED_CONCRETE_STAIRS = registerBlock("red_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ORANGE_CONCRETE_STAIRS = registerBlock("orange_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> YELLOW_CONCRETE_STAIRS = registerBlock("yellow_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> LIME_CONCRETE_STAIRS = registerBlock("lime_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> GREEN_CONCRETE_STAIRS = registerBlock("green_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> CYAN_CONCRETE_STAIRS = registerBlock("cyan_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> LIGHT_BLUE_CONCRETE_STAIRS = registerBlock("light_blue_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BLUE_CONCRETE_STAIRS = registerBlock("blue_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> PURPLE_CONCRETE_STAIRS = registerBlock("purple_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> MAGENTA_CONCRETE_STAIRS = registerBlock("magenta_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> PINK_CONCRETE_STAIRS = registerBlock("pink_concrete_stairs",
+            properties -> new StairBlock(Blocks.WHITE_CONCRETE.defaultBlockState(), properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava().requiresCorrectToolForDrops()));
+
+
+    public static final DeferredBlock<Block> WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> LIGHT_GRAY_CONCRETE_SLAB = registerBlock("light_gray_concrete_slab",
+            properties -> new SlabBlock(properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> GRAY_CONCRETE_SLAB = registerBlock("gray_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> BLACK_CONCRETE_SLAB = registerBlock("black_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> BROWN_CONCRETE_SLAB = registerBlock("brown_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> RED_CONCRETE_SLAB = registerBlock("red_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> ORANGE_CONCRETE_SLAB = registerBlock("orange_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> YELLOW_CONCRETE_SLAB = registerBlock("yellow_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> LIME_CONCRETE_SLAB = registerBlock("lime_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> GREEN_CONCRETE_SLAB = registerBlock("green_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> CYAN_CONCRETE_SLAB = registerBlock("cyan_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> LIGHT_BLUE_CONCRETE_SLAB = registerBlock("light_blue_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> BLUE_CONCRETE_SLAB = registerBlock("blue_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> PURPLE_CONCRETE_SLAB = registerBlock("purple_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> MAGENTA_CONCRETE_SLAB = registerBlock("magenta_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+    public static final DeferredBlock<Block> PINK_CONCRETE_SLAB = registerBlock("pink_concrete_slab",
+            properties -> new SlabBlock( properties.strength(0.8F).sound(SoundType.STONE).ignitedByLava()));
+
+
 
     public static final DeferredBlock<Block> POPLAR_LOG = registerBlock("poplar_log",
             properties -> new ModFlammablePillars(properties.sound(SoundType.WOOD).strength(2.0F).ignitedByLava()));

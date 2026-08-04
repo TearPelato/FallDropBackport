@@ -122,6 +122,85 @@ public class ModModelProvider extends ModelProvider {
                 .stairs(ModBlocks.PINK_WOOL_STAIRS.get())
                 .slab(ModBlocks.PINK_WOOL_SLAB.get());
 
+        blockModels.family(Blocks.WHITE_CONCRETE)
+                .stairs(ModBlocks.WHITE_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.WHITE_CONCRETE_SLAB.get());
+
+        blockModels.family(Blocks.LIGHT_GRAY_CONCRETE)
+                .stairs(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.GRAY_CONCRETE)
+                .stairs(ModBlocks.GRAY_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.GRAY_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.BLACK_CONCRETE)
+                .stairs(ModBlocks.BLACK_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.BLACK_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.BROWN_CONCRETE)
+                .stairs(ModBlocks.BROWN_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.BROWN_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.RED_CONCRETE)
+                .stairs(ModBlocks.RED_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.RED_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.ORANGE_CONCRETE)
+                .stairs(ModBlocks.ORANGE_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.ORANGE_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.YELLOW_CONCRETE)
+                .stairs(ModBlocks.YELLOW_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.YELLOW_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.LIME_CONCRETE)
+                .stairs(ModBlocks.LIME_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.LIME_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.GREEN_CONCRETE)
+                .stairs(ModBlocks.GREEN_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.GREEN_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.CYAN_CONCRETE)
+                .stairs(ModBlocks.CYAN_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.CYAN_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.LIGHT_BLUE_CONCRETE)
+                .stairs(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.BLUE_CONCRETE)
+                .stairs(ModBlocks.BLUE_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.BLUE_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.PURPLE_CONCRETE)
+                .stairs(ModBlocks.PURPLE_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.PURPLE_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.MAGENTA_CONCRETE)
+                .stairs(ModBlocks.MAGENTA_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.MAGENTA_CONCRETE_SLAB.get());
+
+
+        blockModels.family(Blocks.PINK_CONCRETE)
+                .stairs(ModBlocks.PINK_CONCRETE_STAIRS.get())
+                .slab(ModBlocks.PINK_CONCRETE_SLAB.get());
+
+
 
 
         blockModels.woodProvider(ModBlocks.POPLAR_LOG.get()).logWithHorizontal(ModBlocks.POPLAR_LOG.get()).wood(ModBlocks.POPLAR_WOOD.get());

@@ -8,6 +8,7 @@ import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.block.entity.ModHangingSignBlockEntity;
 import net.tearpelato.falldrop_backport.block.entity.ModShelfBlockEntity;
 import net.tearpelato.falldrop_backport.block.entity.ModSignBlockEntity;
+import net.tearpelato.falldrop_backport.block.entity.StrawBedBlockEntity;
 
 import java.util.function.Supplier;
 
@@ -27,6 +28,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<ModShelfBlockEntity>> SHELF =
             BLOCK_ENTITIES.register("shelf", () -> new BlockEntityType<>(
                     ModShelfBlockEntity::new, ModBlocks.POPLAR_SHELF.get()));
+
+    public static final Supplier<BlockEntityType<StrawBedBlockEntity>> STRAW_BED =
+            BLOCK_ENTITIES.register("straw_bed", () -> new BlockEntityType<>(
+                    StrawBedBlockEntity::new, ModBlocks.STRAW_BED.get()));
 
     public static void init(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

@@ -34,6 +34,41 @@
   "block.minecraft.magenta_wool_slab": "Magenta Wool Slab",
   "block.minecraft.pink_wool_slab": "Pink Wool Slab",
 
+
+  "block.minecraft.white_concrete_stairs": "White Concrete Stairs",
+  "block.minecraft.light_gray_concrete_stairs": "Light Gray Concrete Stairs",
+  "block.minecraft.gray_concrete_stairs": "Gray Concrete Stairs",
+  "block.minecraft.black_concrete_stairs": "Black Concrete Stairs",
+  "block.minecraft.brown_concrete_stairs": "Brown Concrete Stairs",
+  "block.minecraft.red_concrete_stairs": "Red Concrete Stairs",
+  "block.minecraft.orange_concrete_stairs": "Orange Concrete Stairs",
+  "block.minecraft.yellow_concrete_stairs": "Yellow Concrete Stairs",
+  "block.minecraft.lime_concrete_stairs": "Lime Concrete Stairs",
+  "block.minecraft.green_concrete_stairs": "Green Concrete Stairs",
+  "block.minecraft.cyan_concrete_stairs": "Cyan Concrete Stairs",
+  "block.minecraft.light_blue_concrete_stairs": "Light Blue Concrete Stairs",
+  "block.minecraft.blue_concrete_stairs": "Blue Concrete Stairs",
+  "block.minecraft.purple_concrete_stairs": "Purple Concrete Stairs",
+  "block.minecraft.magenta_concrete_stairs": "Magenta Concrete Stairs",
+  "block.minecraft.pink_concrete_stairs": "Pink Concrete Stairs",
+
+  "block.minecraft.white_concrete_slab": "White Concrete Slab",
+  "block.minecraft.light_gray_concrete_slab": "Light Gray Concrete Slab",
+  "block.minecraft.gray_concrete_slab": "Gray Concrete Slab",
+  "block.minecraft.black_concrete_slab": "Black Concrete Slab",
+  "block.minecraft.brown_concrete_slab": "Brown Concrete Slab",
+  "block.minecraft.red_concrete_slab": "Red Concrete Slab",
+  "block.minecraft.orange_concrete_slab": "Orange Concrete Slab",
+  "block.minecraft.yellow_concrete_slab": "Yellow Concrete Slab",
+  "block.minecraft.lime_concrete_slab": "Lime Concrete Slab",
+  "block.minecraft.green_concrete_slab": "Green Concrete Slab",
+  "block.minecraft.cyan_concrete_slab": "Cyan Concrete Slab",
+  "block.minecraft.light_blue_concrete_slab": "Light Blue Concrete Slab",
+  "block.minecraft.blue_concrete_slab": "Blue Concrete Slab",
+  "block.minecraft.purple_concrete_slab": "Purple Concrete Slab",
+  "block.minecraft.magenta_concrete_slab": "Magenta Concrete Slab",
+  "block.minecraft.pink_concrete_slab": "Pink Concrete Slab",
+
   "block.minecraft.poplar_log": "Poplar Log",
   "block.minecraft.poplar_wood": "Poplar Wood",
   "block.minecraft.red_poplar_leaves": "Red Poplar Leaves",
@@ -78,5 +113,6 @@
   "item.minecraft.magenta_cushion": "Magenta Cushion",
   "item.minecraft.pink_cushion": "Pink Cushion",
 
-  "entity.falldrop_backport.poplar_chest_boat": "Poplar Boat with Chest"
+  "entity.falldrop_backport.poplar_chest_boat": "Poplar Boat with Chest",
+  "stat.falldrop_backport.sleep_in_straw_bed": "Times Slept in a Straw Bed"
 }

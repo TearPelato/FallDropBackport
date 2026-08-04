@@ -17,6 +17,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.tearpelato.falldrop_backport.block.entity.StrawBedBlockEntity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -55,4 +56,8 @@ public class StrawBedBlock extends BedBlock {
         return result;
     }
 
+    @Override
+    public BlockEntity newBlockEntity(BlockPos worldPosition, BlockState blockState) {
+        return new StrawBedBlockEntity(worldPosition, blockState);
+    }
 }
