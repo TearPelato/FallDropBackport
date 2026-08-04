@@ -24,97 +24,97 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.WHITE_CONCRETE_SLAB);
                         output.accept(ModBlocks.WHITE_WOOL_STAIRS);
                         output.accept(ModBlocks.WHITE_WOOL_SLAB);
-                        output.accept(ModItems.WHITE_CUSHION);
+                        output.accept(ModItems.CUSHION.white());
 
                         output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
                         output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB);
                         output.accept(ModBlocks.LIGHT_GRAY_WOOL_STAIRS);
                         output.accept(ModBlocks.LIGHT_GRAY_WOOL_SLAB);
-                        output.accept(ModItems.LIGHT_GRAY_CUSHION);
+                        output.accept(ModItems.CUSHION.lightGray());
 
                         output.accept(ModBlocks.GRAY_CONCRETE_STAIRS);
                         output.accept(ModBlocks.GRAY_CONCRETE_SLAB);
                         output.accept(ModBlocks.GRAY_WOOL_STAIRS);
                         output.accept(ModBlocks.GRAY_WOOL_SLAB);
-                        output.accept(ModItems.GRAY_CUSHION);
+                        output.accept(ModItems.CUSHION.gray());
 
                         output.accept(ModBlocks.BLACK_CONCRETE_STAIRS);
                         output.accept(ModBlocks.BLACK_CONCRETE_SLAB);
                         output.accept(ModBlocks.BLACK_WOOL_STAIRS);
                         output.accept(ModBlocks.BLACK_WOOL_SLAB);
-                        output.accept(ModItems.BLACK_CUSHION);
+                        output.accept(ModItems.CUSHION.black());
 
                         output.accept(ModBlocks.BROWN_CONCRETE_STAIRS);
                         output.accept(ModBlocks.BROWN_CONCRETE_SLAB);
                         output.accept(ModBlocks.BROWN_WOOL_STAIRS);
                         output.accept(ModBlocks.BROWN_WOOL_SLAB);
-                        output.accept(ModItems.BROWN_CUSHION);
+                        output.accept(ModItems.CUSHION.brown());
 
                         output.accept(ModBlocks.RED_CONCRETE_STAIRS);
                         output.accept(ModBlocks.RED_CONCRETE_SLAB);
                         output.accept(ModBlocks.RED_WOOL_STAIRS);
                         output.accept(ModBlocks.RED_WOOL_SLAB);
-                        output.accept(ModItems.RED_CUSHION);
+                        output.accept(ModItems.CUSHION.red());
 
                         output.accept(ModBlocks.ORANGE_CONCRETE_STAIRS);
                         output.accept(ModBlocks.ORANGE_CONCRETE_SLAB);
                         output.accept(ModBlocks.ORANGE_WOOL_STAIRS);
                         output.accept(ModBlocks.ORANGE_WOOL_SLAB);
-                        output.accept(ModItems.ORANGE_CUSHION);
+                        output.accept(ModItems.CUSHION.orange());
 
                         output.accept(ModBlocks.YELLOW_CONCRETE_STAIRS);
                         output.accept(ModBlocks.YELLOW_CONCRETE_SLAB);
                         output.accept(ModBlocks.YELLOW_WOOL_STAIRS);
                         output.accept(ModBlocks.YELLOW_WOOL_SLAB);
-                        output.accept(ModItems.YELLOW_CUSHION);
+                        output.accept(ModItems.CUSHION.yellow());
 
                         output.accept(ModBlocks.LIME_CONCRETE_STAIRS);
                         output.accept(ModBlocks.LIME_CONCRETE_SLAB);
                         output.accept(ModBlocks.LIME_WOOL_STAIRS);
                         output.accept(ModBlocks.LIME_WOOL_SLAB);
-                        output.accept(ModItems.LIME_CUSHION);
+                        output.accept(ModItems.CUSHION.lime());
 
                         output.accept(ModBlocks.GREEN_CONCRETE_STAIRS);
                         output.accept(ModBlocks.GREEN_CONCRETE_SLAB);
                         output.accept(ModBlocks.GREEN_WOOL_STAIRS);
                         output.accept(ModBlocks.GREEN_WOOL_SLAB);
-                        output.accept(ModItems.GREEN_CUSHION);
+                        output.accept(ModItems.CUSHION.green());
 
                         output.accept(ModBlocks.CYAN_CONCRETE_STAIRS);
                         output.accept(ModBlocks.CYAN_CONCRETE_SLAB);
                         output.accept(ModBlocks.CYAN_WOOL_STAIRS);
                         output.accept(ModBlocks.CYAN_WOOL_SLAB);
-                        output.accept(ModItems.CYAN_CUSHION);
+                        output.accept(ModItems.CUSHION.cyan());
 
                         output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
                         output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB);
                         output.accept(ModBlocks.LIGHT_BLUE_WOOL_STAIRS);
                         output.accept(ModBlocks.LIGHT_BLUE_WOOL_SLAB);
-                        output.accept(ModItems.LIGHT_BLUE_CUSHION);
+                        output.accept(ModItems.CUSHION.lightBlue());
 
                         output.accept(ModBlocks.BLUE_CONCRETE_STAIRS);
                         output.accept(ModBlocks.BLUE_CONCRETE_SLAB);
                         output.accept(ModBlocks.BLUE_WOOL_STAIRS);
                         output.accept(ModBlocks.BLUE_WOOL_SLAB);
-                        output.accept(ModItems.BLUE_CUSHION);
+                        output.accept(ModItems.CUSHION.blue());
 
                         output.accept(ModBlocks.PURPLE_CONCRETE_STAIRS);
                         output.accept(ModBlocks.PURPLE_CONCRETE_SLAB);
                         output.accept(ModBlocks.PURPLE_WOOL_STAIRS);
                         output.accept(ModBlocks.PURPLE_WOOL_SLAB);
-                        output.accept(ModItems.PURPLE_CUSHION);
+                        output.accept(ModItems.CUSHION.purple());
 
                         output.accept(ModBlocks.MAGENTA_CONCRETE_STAIRS);
                         output.accept(ModBlocks.MAGENTA_CONCRETE_SLAB);
                         output.accept(ModBlocks.MAGENTA_WOOL_STAIRS);
                         output.accept(ModBlocks.MAGENTA_WOOL_SLAB);
-                        output.accept(ModItems.MAGENTA_CUSHION);
+                        output.accept(ModItems.CUSHION.magenta());
 
                         output.accept(ModBlocks.PINK_CONCRETE_STAIRS);
                         output.accept(ModBlocks.PINK_CONCRETE_SLAB);
                         output.accept(ModBlocks.PINK_WOOL_STAIRS);
                         output.accept(ModBlocks.PINK_WOOL_SLAB);
-                        output.accept(ModItems.PINK_CUSHION);
+                        output.accept(ModItems.CUSHION.pink());
 
 
                         output.accept(ModBlocks.POPLAR_LOG);

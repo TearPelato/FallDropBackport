@@ -90,26 +90,6 @@ public class ShelfMushroomBlock extends HorizontalDirectionalBlock implements Bo
         }
     }
 
-    @Override
-    public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
-        if (entity.isSuppressingBounce()) {
-            super.updateEntityMovementAfterFallOn(level, entity);
-        } else {
-            this.bounceUp(entity);
-        }
-    }
-
-    private void bounceUp(Entity entity) {
-        Vec3 deltaMovement = entity.getDeltaMovement();
-        Level level = entity.level();
-        BlockPos pos = entity.blockPosition();
-        if (deltaMovement.y < 0.0) {
-            double multiplier = entity instanceof LivingEntity ? 1.0 : 0.8;
-            entity.setDeltaMovement(deltaMovement.x, -deltaMovement.y * multiplier, deltaMovement.z);
-            level.playSound(null, pos, ModSounds.SHELF_MUSHROOM_BOUNCE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
-
-        }
-    }
 
     protected BlockState updateShape(final BlockState state, final LevelReader level, final ScheduledTickAccess ticks, final BlockPos pos, final Direction directionToNeighbour, final BlockPos neighbourPos, final BlockState neighbourState, final RandomSource random) {
         return directionToNeighbour == ((Direction)state.getValue(FACING)).getOpposite() && !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);

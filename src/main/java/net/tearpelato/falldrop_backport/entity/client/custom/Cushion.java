@@ -18,6 +18,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.material.FluidState;
@@ -74,7 +75,7 @@ public class Cushion extends BlockAttachedEntity {
             }
 
 
-            this.spawnAtLocation(level, ModItems.getCushion(this.getColor()));
+            this.spawnAtLocation(level, ModItems.CUSHION.pick(this.getColor()));
         }
     }
 
@@ -122,7 +123,7 @@ public class Cushion extends BlockAttachedEntity {
 
 
     public ItemStack getPickResult() {
-        return new ItemStack((ItemLike) ModItems.getCushion(this.getColor()));
+        return new ItemStack((ItemLike) ModItems.CUSHION.pick(this.getColor()));
 
     }
 
@@ -174,7 +175,7 @@ public class Cushion extends BlockAttachedEntity {
 
         if (var2 instanceof ServerLevel level) {
 
-            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, ModBlocks.getWool(this.getColor()).defaultBlockState()),
+            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, Blocks.WOOL.pick(this.getColor()).defaultBlockState()),
                     this.getX(),
                     this.getY(2.0 / 3.0),
                     this.getZ(),
