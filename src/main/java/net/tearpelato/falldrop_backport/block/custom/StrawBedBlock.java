@@ -17,6 +17,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.block.entity.StrawBedBlockEntity;
 
 import java.util.HashMap;
@@ -49,6 +50,9 @@ public class StrawBedBlock extends BedBlock {
             BlockPos headPos = state.getValue(PART) == BedPart.HEAD
                     ? pos
                     : pos.relative(state.getValue(FACING));
+
+            Constants.LOGGER.info("[DEBUG] useWithoutItem: part={}, pos={}, headPos calcolato={}",
+                    state.getValue(PART), pos, headPos);
 
             SLEEPERS.put(player.getUUID(), headPos);
         }

@@ -30,23 +30,17 @@ public class FallDropBackport {
         ModSounds.init(modEventBus);
 
 
-        modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::commonSetup);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RED_SHRUB.getId(), ModBlocks.RED_SHRUB_POTTED);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.POPLAR_SAPLING.getId(), ModBlocks.POPLAR_SAPLING_POTTED);
             ModBiomes.registerBiomes();
         });
 
     }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RED_SHRUB.getId(), ModBlocks.RED_SHRUB_POTTED);
-        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.POPLAR_SAPLING.getId(), ModBlocks.POPLAR_SAPLING_POTTED);
-    }
-
 
 }

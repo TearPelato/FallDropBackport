@@ -1,4 +1,4 @@
-// 26.1.2	2026-08-04T18:23:00.2292821	Loot Tables
+// 26.1.2	2026-08-05T00:03:18.0372002	Loot Tables
 7385d356257562d1c41502b38c311d04edfcb1cf data/minecraft/loot_table/blocks/black_concrete_slab.json
 fe4d3af49e614d177bf04ceb08767dcbb1434019 data/minecraft/loot_table/blocks/black_concrete_stairs.json
 f0233c6a4e76ea7838e39b521616c883712fe536 data/minecraft/loot_table/blocks/black_wool_slab.json
@@ -78,7 +78,7 @@ ad10159c978171a45ddd3a85d741e30a31b7c3e0 data/minecraft/loot_table/blocks/red_sh
 1cfcbcc970c00eebc65279bc6d4b09ddbed3b137 data/minecraft/loot_table/blocks/red_wool_slab.json
 d5c0d787b0f6f1f2d59f52a3e6abcdd3862c5b9f data/minecraft/loot_table/blocks/red_wool_stairs.json
 134925477c7850339a8e8a1d62d6263714664a8f data/minecraft/loot_table/blocks/shelf_mushroom.json
-934d6236aaffe9997721574f7383ddf574af98dd data/minecraft/loot_table/blocks/straw_bed.json
+86e489736c1ae7a7464bb30cc1b4b38d7ef43d95 data/minecraft/loot_table/blocks/straw_bed.json
 103ef39650208bae88c27d70ddf1bf98168e591f data/minecraft/loot_table/blocks/stripped_poplar_log.json
 bdb318c74c19d2c73c6321e6b3590541593aaa51 data/minecraft/loot_table/blocks/stripped_poplar_wood.json
 91514aee11e05ec8ed3ec43c07c0ab54e056d0ca data/minecraft/loot_table/blocks/white_concrete_slab.json

@@ -1,4 +1,7 @@
-// 26.1.2	2026-07-13T17:09:11.7471049	Registries
+// 26.1.2	2026-08-04T21:49:14.4023232	Registries
+9fc463b9a4cbc58700bcc522b9e657f4f6c6e9b8 data/minecraft/villager_trade/wandering_trader/emerald_poplar_log.json
+f250a5a743d8a5498fd44c1e6faa0f6ce4d55051 data/minecraft/villager_trade/wandering_trader/emerald_poplar_sapling.json
+aa9f2977f2d9952fd7a3ea9e019acaba3d247485 data/minecraft/villager_trade/wandering_trader/emerald_shelf_mushroom.json
 7ebdb67034d348f9b659a6e3b08933486711bcc5 data/minecraft/worldgen/biome/dappled_forest.json
 aa970fb4e962612cfd39c3e233acafb5c0e37e0d data/minecraft/worldgen/configured_feature/fallen_poplar.json
 90b504c68b11be3354cfcabfdbcdd7069ad62474 data/minecraft/worldgen/configured_feature/orange_poplar_leaf_litter.json

@@ -10,8 +10,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.item.CushionItem;
 
-import java.util.function.BiFunction;
-
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Constants.NAMESPACE);
 
@@ -58,6 +56,8 @@ public class ModItems {
             properties -> new CushionItem(properties.stacksTo(16), DyeColor.MAGENTA));
     public static final DeferredItem<Item> PINK_CUSHION = ITEMS.registerItem("pink_cushion",
             properties -> new CushionItem(properties.stacksTo(16), DyeColor.PINK));
+
+
 
     public static Item getCushion(DyeColor color) {
         return switch (color) {
