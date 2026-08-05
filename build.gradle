@@ -83,7 +83,7 @@ processResources {
             "loader_version": loader_version,
             "minecraft_version_range": minecraft_version_range,
             "minecraft_version": minecraft_version,
-            "terrablender_version": terrablender_version
+            "terrablender_version":terrablender_version
     ]
     inputs.properties(props)
 

@@ -23,5 +23,6 @@ public class ModStats {
 
     public static void registerStats() {
         Constants.LOGGER.info("Registering Stats for " + Constants.MOD_ID);
+
     }
 }

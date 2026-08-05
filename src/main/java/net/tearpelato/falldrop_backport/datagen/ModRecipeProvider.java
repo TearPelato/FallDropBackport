@@ -18,90 +18,170 @@ public class ModRecipeProvider extends RecipeProvider {
     public ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         super(registries, output);
     }
+
     @Override
     public void buildRecipes() {
-        stairBuilder(ModBlocks.WHITE_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.white()))
-                .unlockedBy(getHasName(Blocks.WOOL.white()), has(Blocks.WOOL.white()))
+        stairBuilder(ModBlocks.WHITE_WOOL_STAIRS, Ingredient.of(Blocks.WHITE_WOOL))
+                .unlockedBy(getHasName(Blocks.WHITE_WOOL), has(Blocks.WHITE_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.LIGHT_GRAY_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.lightGray()))
-                .unlockedBy(getHasName(Blocks.WOOL.lightGray()), has(Blocks.WOOL.lightGray()))
+        stairBuilder(ModBlocks.LIGHT_GRAY_WOOL_STAIRS, Ingredient.of(Blocks.LIGHT_GRAY_WOOL))
+                .unlockedBy(getHasName(Blocks.LIGHT_GRAY_WOOL), has(Blocks.LIGHT_GRAY_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.GRAY_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.gray()))
-                .unlockedBy(getHasName(Blocks.WOOL.gray()), has(Blocks.WOOL.gray()))
+        stairBuilder(ModBlocks.GRAY_WOOL_STAIRS, Ingredient.of(Blocks.GRAY_WOOL))
+                .unlockedBy(getHasName(Blocks.GRAY_WOOL), has(Blocks.GRAY_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.BLACK_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.black()))
-                .unlockedBy(getHasName(Blocks.WOOL.black()), has(Blocks.WOOL.black()))
+        stairBuilder(ModBlocks.BLACK_WOOL_STAIRS, Ingredient.of(Blocks.BLACK_WOOL))
+                .unlockedBy(getHasName(Blocks.BLACK_WOOL), has(Blocks.BLACK_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.BROWN_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.brown()))
-                .unlockedBy(getHasName(Blocks.WOOL.brown()), has(Blocks.WOOL.brown()))
+        stairBuilder(ModBlocks.BROWN_WOOL_STAIRS, Ingredient.of(Blocks.BROWN_WOOL))
+                .unlockedBy(getHasName(Blocks.BROWN_WOOL), has(Blocks.BROWN_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.RED_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.red()))
-                .unlockedBy(getHasName(Blocks.WOOL.red()), has(Blocks.WOOL.red()))
+        stairBuilder(ModBlocks.RED_WOOL_STAIRS, Ingredient.of(Blocks.RED_WOOL))
+                .unlockedBy(getHasName(Blocks.RED_WOOL), has(Blocks.RED_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.ORANGE_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.orange()))
-                .unlockedBy(getHasName(Blocks.WOOL.orange()), has(Blocks.WOOL.orange()))
+        stairBuilder(ModBlocks.ORANGE_WOOL_STAIRS, Ingredient.of(Blocks.ORANGE_WOOL))
+                .unlockedBy(getHasName(Blocks.ORANGE_WOOL), has(Blocks.ORANGE_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.YELLOW_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.yellow()))
-                .unlockedBy(getHasName(Blocks.WOOL.yellow()), has(Blocks.WOOL.yellow()))
+        stairBuilder(ModBlocks.YELLOW_WOOL_STAIRS, Ingredient.of(Blocks.YELLOW_WOOL))
+                .unlockedBy(getHasName(Blocks.YELLOW_WOOL), has(Blocks.YELLOW_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.LIME_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.lime()))
-                .unlockedBy(getHasName(Blocks.WOOL.lime()), has(Blocks.WOOL.lime()))
+        stairBuilder(ModBlocks.LIME_WOOL_STAIRS, Ingredient.of(Blocks.LIME_WOOL))
+                .unlockedBy(getHasName(Blocks.LIME_WOOL), has(Blocks.LIME_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.GREEN_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.green()))
-                .unlockedBy(getHasName(Blocks.WOOL.green()), has(Blocks.WOOL.green()))
+        stairBuilder(ModBlocks.GREEN_WOOL_STAIRS, Ingredient.of(Blocks.GREEN_WOOL))
+                .unlockedBy(getHasName(Blocks.GREEN_WOOL), has(Blocks.GREEN_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.CYAN_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.cyan()))
-                .unlockedBy(getHasName(Blocks.WOOL.cyan()), has(Blocks.WOOL.cyan()))
+        stairBuilder(ModBlocks.CYAN_WOOL_STAIRS, Ingredient.of(Blocks.CYAN_WOOL))
+                .unlockedBy(getHasName(Blocks.CYAN_WOOL), has(Blocks.CYAN_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.LIGHT_BLUE_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.lightBlue()))
-                .unlockedBy(getHasName(Blocks.WOOL.lightBlue()), has(Blocks.WOOL.lightBlue()))
+        stairBuilder(ModBlocks.LIGHT_BLUE_WOOL_STAIRS, Ingredient.of(Blocks.LIGHT_BLUE_WOOL))
+                .unlockedBy(getHasName(Blocks.LIGHT_BLUE_WOOL), has(Blocks.LIGHT_BLUE_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.BLUE_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.blue()))
-                .unlockedBy(getHasName(Blocks.WOOL.blue()), has(Blocks.WOOL.blue()))
+        stairBuilder(ModBlocks.BLUE_WOOL_STAIRS, Ingredient.of(Blocks.BLUE_WOOL))
+                .unlockedBy(getHasName(Blocks.BLUE_WOOL), has(Blocks.BLUE_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.PURPLE_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.purple()))
-                .unlockedBy(getHasName(Blocks.WOOL.purple()), has(Blocks.WOOL.purple()))
+        stairBuilder(ModBlocks.PURPLE_WOOL_STAIRS, Ingredient.of(Blocks.PURPLE_WOOL))
+                .unlockedBy(getHasName(Blocks.PURPLE_WOOL), has(Blocks.PURPLE_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.MAGENTA_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.magenta()))
-                .unlockedBy(getHasName(Blocks.WOOL.magenta()), has(Blocks.WOOL.magenta()))
+        stairBuilder(ModBlocks.MAGENTA_WOOL_STAIRS, Ingredient.of(Blocks.MAGENTA_WOOL))
+                .unlockedBy(getHasName(Blocks.MAGENTA_WOOL), has(Blocks.MAGENTA_WOOL))
                 .save(output);
 
-        stairBuilder(ModBlocks.PINK_WOOL_STAIRS, Ingredient.of(Blocks.WOOL.pink()))
-                .unlockedBy(getHasName(Blocks.WOOL.pink()), has(Blocks.WOOL.pink()))
+        stairBuilder(ModBlocks.PINK_WOOL_STAIRS, Ingredient.of(Blocks.PINK_WOOL))
+                .unlockedBy(getHasName(Blocks.PINK_WOOL), has(Blocks.PINK_WOOL))
                 .save(output);
 
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_WOOL_SLAB, Blocks.WOOL.white());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_WOOL_SLAB, Blocks.WOOL.lightGray());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_WOOL_SLAB, Blocks.WOOL.gray());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_WOOL_SLAB, Blocks.WOOL.black());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_WOOL_SLAB, Blocks.WOOL.brown());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_WOOL_SLAB, Blocks.WOOL.red());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_WOOL_SLAB, Blocks.WOOL.orange());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_WOOL_SLAB, Blocks.WOOL.yellow());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_WOOL_SLAB, Blocks.WOOL.lime());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_WOOL_SLAB, Blocks.WOOL.green());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_WOOL_SLAB, Blocks.WOOL.cyan());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_WOOL_SLAB, Blocks.WOOL.lightBlue());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_WOOL_SLAB, Blocks.WOOL.blue());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_WOOL_SLAB, Blocks.WOOL.purple());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_WOOL_SLAB, Blocks.WOOL.magenta());
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_WOOL_SLAB, Blocks.WOOL.pink());
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_WOOL_SLAB, Blocks.LIGHT_GRAY_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_WOOL_SLAB, Blocks.GRAY_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_WOOL_SLAB, Blocks.BLACK_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_WOOL_SLAB, Blocks.BROWN_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_WOOL_SLAB, Blocks.RED_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_WOOL_SLAB, Blocks.ORANGE_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_WOOL_SLAB, Blocks.YELLOW_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_WOOL_SLAB, Blocks.LIME_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_WOOL_SLAB, Blocks.GREEN_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_WOOL_SLAB, Blocks.CYAN_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_WOOL_SLAB, Blocks.LIGHT_BLUE_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_WOOL_SLAB, Blocks.BLUE_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_WOOL_SLAB, Blocks.PURPLE_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_WOOL_SLAB, Blocks.MAGENTA_WOOL);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_WOOL_SLAB, Blocks.PINK_WOOL);
 
+        stairBuilder(ModBlocks.WHITE_CONCRETE_STAIRS, Ingredient.of(Blocks.WHITE_CONCRETE))
+                .unlockedBy(getHasName(Blocks.WHITE_CONCRETE), has(Blocks.WHITE_CONCRETE))
+                .save(output);
 
+        stairBuilder(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, Ingredient.of(Blocks.LIGHT_GRAY_CONCRETE))
+                .unlockedBy(getHasName(Blocks.LIGHT_GRAY_CONCRETE), has(Blocks.LIGHT_GRAY_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.GRAY_CONCRETE_STAIRS, Ingredient.of(Blocks.GRAY_CONCRETE))
+                .unlockedBy(getHasName(Blocks.GRAY_CONCRETE), has(Blocks.GRAY_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.BLACK_CONCRETE_STAIRS, Ingredient.of(Blocks.BLACK_CONCRETE))
+                .unlockedBy(getHasName(Blocks.BLACK_CONCRETE), has(Blocks.BLACK_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.BROWN_CONCRETE_STAIRS, Ingredient.of(Blocks.BROWN_CONCRETE))
+                .unlockedBy(getHasName(Blocks.BROWN_CONCRETE), has(Blocks.BROWN_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.RED_CONCRETE_STAIRS, Ingredient.of(Blocks.RED_CONCRETE))
+                .unlockedBy(getHasName(Blocks.RED_CONCRETE), has(Blocks.RED_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.ORANGE_CONCRETE_STAIRS, Ingredient.of(Blocks.ORANGE_CONCRETE))
+                .unlockedBy(getHasName(Blocks.ORANGE_CONCRETE), has(Blocks.ORANGE_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.YELLOW_CONCRETE_STAIRS, Ingredient.of(Blocks.YELLOW_CONCRETE))
+                .unlockedBy(getHasName(Blocks.YELLOW_CONCRETE), has(Blocks.YELLOW_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.LIME_CONCRETE_STAIRS, Ingredient.of(Blocks.LIME_CONCRETE))
+                .unlockedBy(getHasName(Blocks.LIME_CONCRETE), has(Blocks.LIME_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.GREEN_CONCRETE_STAIRS, Ingredient.of(Blocks.GREEN_CONCRETE))
+                .unlockedBy(getHasName(Blocks.GREEN_CONCRETE), has(Blocks.GREEN_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.CYAN_CONCRETE_STAIRS, Ingredient.of(Blocks.CYAN_CONCRETE))
+                .unlockedBy(getHasName(Blocks.CYAN_CONCRETE), has(Blocks.CYAN_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, Ingredient.of(Blocks.LIGHT_BLUE_CONCRETE))
+                .unlockedBy(getHasName(Blocks.LIGHT_BLUE_CONCRETE), has(Blocks.LIGHT_BLUE_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.BLUE_CONCRETE_STAIRS, Ingredient.of(Blocks.BLUE_CONCRETE))
+                .unlockedBy(getHasName(Blocks.BLUE_CONCRETE), has(Blocks.BLUE_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.PURPLE_CONCRETE_STAIRS, Ingredient.of(Blocks.PURPLE_CONCRETE))
+                .unlockedBy(getHasName(Blocks.PURPLE_CONCRETE), has(Blocks.PURPLE_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.MAGENTA_CONCRETE_STAIRS, Ingredient.of(Blocks.MAGENTA_CONCRETE))
+                .unlockedBy(getHasName(Blocks.MAGENTA_CONCRETE), has(Blocks.MAGENTA_CONCRETE))
+                .save(output);
+
+        stairBuilder(ModBlocks.PINK_CONCRETE_STAIRS, Ingredient.of(Blocks.PINK_CONCRETE))
+                .unlockedBy(getHasName(Blocks.PINK_CONCRETE), has(Blocks.PINK_CONCRETE))
+                .save(output);
+
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CONCRETE_SLAB, Blocks.WHITE_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, Blocks.LIGHT_GRAY_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CONCRETE_SLAB, Blocks.GRAY_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CONCRETE_SLAB, Blocks.BLACK_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CONCRETE_SLAB, Blocks.BROWN_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CONCRETE_SLAB, Blocks.RED_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CONCRETE_SLAB, Blocks.ORANGE_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CONCRETE_SLAB, Blocks.YELLOW_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CONCRETE_SLAB, Blocks.LIME_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CONCRETE_SLAB, Blocks.GREEN_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CONCRETE_SLAB, Blocks.CYAN_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, Blocks.LIGHT_BLUE_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CONCRETE_SLAB, Blocks.BLUE_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CONCRETE_SLAB, Blocks.PURPLE_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CONCRETE_SLAB, Blocks.MAGENTA_CONCRETE);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CONCRETE_SLAB, Blocks.PINK_CONCRETE);
 
         woodFromLogs(ModBlocks.POPLAR_WOOD, ModBlocks.POPLAR_LOG);
         planksFromLogs(ModBlocks.POPLAR_PLANKS, ModTags.Items.POPLAR_LOGS, 4);
@@ -128,34 +208,35 @@ public class ModRecipeProvider extends RecipeProvider {
         signBuilder(ModBlocks.POPLAR_SIGN, Ingredient.of(ModBlocks.POPLAR_PLANKS))
                 .unlockedBy(getHasName(ModBlocks.POPLAR_PLANKS), has(ModBlocks.POPLAR_PLANKS))
                 .save(output);
-        hangingSignBuilder(ModBlocks.POPLAR_HANGING_SIGN, Ingredient.of(ModBlocks.STRIPPED_POPLAR_LOG)).unlockedBy(getHasName(ModBlocks.STRIPPED_POPLAR_LOG), has(ModBlocks.STRIPPED_POPLAR_LOG)).save(output);
+        hangingSign(ModBlocks.POPLAR_HANGING_SIGN, ModBlocks.STRIPPED_POPLAR_LOG);
         woodenBoat(ModItems.POPLAR_BOAT, ModBlocks.POPLAR_PLANKS);
         chestBoat(ModItems.POPLAR_CHEST_BOAT, ModItems.POPLAR_BOAT);
         shelf(ModBlocks.POPLAR_SHELF, ModBlocks.STRIPPED_POPLAR_LOG);
         woodFromLogs(ModBlocks.STRIPPED_POPLAR_WOOD, ModBlocks.STRIPPED_POPLAR_LOG);
 
 
-        cushionRecipe(ModBlocks.WHITE_WOOL_SLAB.asItem(), ModItems.CUSHION.white());
-        cushionRecipe(ModBlocks.LIGHT_GRAY_WOOL_SLAB.asItem(), ModItems.CUSHION.lightGray());
-        cushionRecipe(ModBlocks.GRAY_WOOL_SLAB.asItem(), ModItems.CUSHION.gray());
-        cushionRecipe(ModBlocks.BLACK_WOOL_SLAB.asItem(), ModItems.CUSHION.black());
-        cushionRecipe(ModBlocks.BROWN_WOOL_SLAB.asItem(), ModItems.CUSHION.brown());
-        cushionRecipe(ModBlocks.RED_WOOL_SLAB.asItem(), ModItems.CUSHION.red());
-        cushionRecipe(ModBlocks.ORANGE_WOOL_SLAB.asItem(), ModItems.CUSHION.orange());
-        cushionRecipe(ModBlocks.YELLOW_WOOL_SLAB.asItem(), ModItems.CUSHION.yellow());
-        cushionRecipe(ModBlocks.LIME_WOOL_SLAB.asItem(), ModItems.CUSHION.lime());
-        cushionRecipe(ModBlocks.GREEN_WOOL_SLAB.asItem(), ModItems.CUSHION.green());
-        cushionRecipe(ModBlocks.CYAN_WOOL_SLAB.asItem(), ModItems.CUSHION.cyan());
-        cushionRecipe(ModBlocks.LIGHT_BLUE_WOOL_SLAB.asItem(), ModItems.CUSHION.lightBlue());
-        cushionRecipe(ModBlocks.BLUE_WOOL_SLAB.asItem(), ModItems.CUSHION.blue());
-        cushionRecipe(ModBlocks.PURPLE_WOOL_SLAB.asItem(), ModItems.CUSHION.purple());
-        cushionRecipe(ModBlocks.MAGENTA_WOOL_SLAB.asItem(), ModItems.CUSHION.magenta());
-        cushionRecipe(ModBlocks.PINK_WOOL_SLAB.asItem(), ModItems.CUSHION.pink());
+        cushionRecipe(ModBlocks.WHITE_WOOL_SLAB.asItem(), ModItems.WHITE_CUSHION);
+        cushionRecipe(ModBlocks.LIGHT_GRAY_WOOL_SLAB.asItem(), ModItems.LIGHT_GRAY_CUSHION);
+        cushionRecipe(ModBlocks.GRAY_WOOL_SLAB.asItem(), ModItems.GRAY_CUSHION);
+        cushionRecipe(ModBlocks.BLACK_WOOL_SLAB.asItem(), ModItems.BLACK_CUSHION);
+        cushionRecipe(ModBlocks.BROWN_WOOL_SLAB.asItem(), ModItems.BROWN_CUSHION);
+        cushionRecipe(ModBlocks.RED_WOOL_SLAB.asItem(), ModItems.RED_CUSHION);
+        cushionRecipe(ModBlocks.ORANGE_WOOL_SLAB.asItem(), ModItems.ORANGE_CUSHION);
+        cushionRecipe(ModBlocks.YELLOW_WOOL_SLAB.asItem(), ModItems.YELLOW_CUSHION);
+        cushionRecipe(ModBlocks.LIME_WOOL_SLAB.asItem(), ModItems.LIME_CUSHION);
+        cushionRecipe(ModBlocks.GREEN_WOOL_SLAB.asItem(), ModItems.GREEN_CUSHION);
+        cushionRecipe(ModBlocks.CYAN_WOOL_SLAB.asItem(), ModItems.CYAN_CUSHION);
+        cushionRecipe(ModBlocks.LIGHT_BLUE_WOOL_SLAB.asItem(), ModItems.LIGHT_BLUE_CUSHION);
+        cushionRecipe(ModBlocks.BLUE_WOOL_SLAB.asItem(), ModItems.BLUE_CUSHION);
+        cushionRecipe(ModBlocks.PURPLE_WOOL_SLAB.asItem(), ModItems.PURPLE_CUSHION);
+        cushionRecipe(ModBlocks.MAGENTA_WOOL_SLAB.asItem(), ModItems.MAGENTA_CUSHION);
+        cushionRecipe(ModBlocks.PINK_WOOL_SLAB.asItem(), ModItems.PINK_CUSHION);
         shaped(RecipeCategory.MISC,ModBlocks.STRAW_BED,4)
                 .pattern("###")
                 .define('#', Blocks.HAY_BLOCK)
-                .unlockedBy(getHasName(Blocks.HAY_BLOCK), has(Blocks.HAY_BLOCK))
-                .save(output);
+                .unlockedBy(getHasName(Blocks.HAY_BLOCK), this.has(Blocks.HAY_BLOCK))
+
+                .save(this.output);
 
 
     }
@@ -165,7 +246,6 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     public static class Runner extends RecipeProvider.Runner {
-
         public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
             super(packOutput, registries);
         }

@@ -9,6 +9,8 @@ import net.minecraft.world.level.block.Block;
 import org.slf4j.Logger;
 
 public class Constants {
+    private Constants() {}
+
     public static final String MOD_ID = "falldrop_backport";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final String NAMESPACE ="minecraft";
