@@ -15,6 +15,7 @@ public class StrawBedBlockEntity extends BedBlockEntity {
     public BlockEntityType<?> getType() {
         return ModBlockEntities.BED_BLOCK_ENTITY;
     }
+
     @Override
     public boolean isValidBlockState(BlockState blockState) {
         return ModBlockEntities.BED_BLOCK_ENTITY.isValid(blockState);

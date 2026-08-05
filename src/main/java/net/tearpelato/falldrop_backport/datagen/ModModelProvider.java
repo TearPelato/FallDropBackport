@@ -114,7 +114,86 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.PINK_WOOL_STAIRS)
                 .slab(ModBlocks.PINK_WOOL_SLAB);
 
+        blockModelGenerators.family(Blocks.WHITE_CONCRETE)
+                .stairs(ModBlocks.WHITE_CONCRETE_STAIRS)
+                .slab(ModBlocks.WHITE_CONCRETE_SLAB);
 
+        blockModelGenerators.family(Blocks.LIGHT_GRAY_CONCRETE)
+                .stairs(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS)
+                .slab(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.GRAY_CONCRETE)
+                .stairs(ModBlocks.GRAY_CONCRETE_STAIRS)
+                .slab(ModBlocks.GRAY_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.BLACK_CONCRETE)
+                .stairs(ModBlocks.BLACK_CONCRETE_STAIRS)
+                .slab(ModBlocks.BLACK_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.BROWN_CONCRETE)
+                .stairs(ModBlocks.BROWN_CONCRETE_STAIRS)
+                .slab(ModBlocks.BROWN_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.RED_CONCRETE)
+                .stairs(ModBlocks.RED_CONCRETE_STAIRS)
+                .slab(ModBlocks.RED_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.ORANGE_CONCRETE)
+                .stairs(ModBlocks.ORANGE_CONCRETE_STAIRS)
+                .slab(ModBlocks.ORANGE_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.YELLOW_CONCRETE)
+                .stairs(ModBlocks.YELLOW_CONCRETE_STAIRS)
+                .slab(ModBlocks.YELLOW_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.LIME_CONCRETE)
+                .stairs(ModBlocks.LIME_CONCRETE_STAIRS)
+                .slab(ModBlocks.LIME_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.GREEN_CONCRETE)
+                .stairs(ModBlocks.GREEN_CONCRETE_STAIRS)
+                .slab(ModBlocks.GREEN_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.CYAN_CONCRETE)
+                .stairs(ModBlocks.CYAN_CONCRETE_STAIRS)
+                .slab(ModBlocks.CYAN_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.LIGHT_BLUE_CONCRETE)
+                .stairs(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS)
+                .slab(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.BLUE_CONCRETE)
+                .stairs(ModBlocks.BLUE_CONCRETE_STAIRS)
+                .slab(ModBlocks.BLUE_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.PURPLE_CONCRETE)
+                .stairs(ModBlocks.PURPLE_CONCRETE_STAIRS)
+                .slab(ModBlocks.PURPLE_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.MAGENTA_CONCRETE)
+                .stairs(ModBlocks.MAGENTA_CONCRETE_STAIRS)
+                .slab(ModBlocks.MAGENTA_CONCRETE_SLAB);
+
+
+        blockModelGenerators.family(Blocks.PINK_CONCRETE)
+                .stairs(ModBlocks.PINK_CONCRETE_STAIRS)
+                .slab(ModBlocks.PINK_CONCRETE_SLAB);
+        
+        
+        
         blockModelGenerators.woodProvider(ModBlocks.POPLAR_LOG).logWithHorizontal(ModBlocks.POPLAR_LOG).wood(ModBlocks.POPLAR_WOOD);
         blockModelGenerators.woodProvider(ModBlocks.STRIPPED_POPLAR_LOG).logWithHorizontal(ModBlocks.STRIPPED_POPLAR_LOG).wood(ModBlocks.STRIPPED_POPLAR_WOOD);
         blockModelGenerators.createTrivialBlock(ModBlocks.RED_POPLAR_LEAVES, TexturedModel.LEAVES);

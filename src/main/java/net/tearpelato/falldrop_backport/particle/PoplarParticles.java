@@ -21,7 +21,7 @@ public class PoplarParticles extends FallingLeavesParticle {
         }
 
         public Particle createParticle(final SimpleParticleType options, final ClientLevel level, final double x, final double y, final double z, final double xAux, final double yAux, final double zAux, final RandomSource random) {
-            return new PoplarParticles(level, x, y, z, this.sprites.get(random), 0.07F, 10.0F, true, false, 2.0F, 0.021F);
+            return new PoplarParticles(level, x, y, z, this.sprites.get(random), 0.01F, 10.0F, true, false, 2.0F, 0.021F);
         }
     }
 }

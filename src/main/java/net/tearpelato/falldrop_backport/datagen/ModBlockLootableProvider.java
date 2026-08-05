@@ -11,6 +11,7 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
@@ -61,6 +62,40 @@ public class ModBlockLootableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.MAGENTA_WOOL_SLAB, this::createSlabItemTable);
         add(ModBlocks.PINK_WOOL_SLAB, this::createSlabItemTable);
 
+        dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.GRAY_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.BLACK_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.BROWN_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.RED_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.ORANGE_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.YELLOW_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.LIME_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.GREEN_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.CYAN_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.BLUE_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.PURPLE_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.MAGENTA_CONCRETE_STAIRS);
+        dropSelf(ModBlocks.PINK_CONCRETE_STAIRS);
+
+
+        add(ModBlocks.WHITE_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.GRAY_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.BLACK_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.BROWN_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.RED_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.ORANGE_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.YELLOW_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.LIME_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.GREEN_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.CYAN_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.BLUE_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.PURPLE_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.MAGENTA_CONCRETE_SLAB, this::createSlabItemTable);
+        add(ModBlocks.PINK_CONCRETE_SLAB, this::createSlabItemTable);
 
 
         dropSelf(ModBlocks.POPLAR_LOG);
@@ -98,9 +133,10 @@ public class ModBlockLootableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.RED_SHRUB);
         dropSelf(ModBlocks.POPLAR_SAPLING);
-        add(ModBlocks.STRAW_BED,bed -> LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(bed).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.BED_PART, BedPart.FOOT))).add(LootItem.lootTableItem(bed))
-                ));
+        add( ModBlocks.STRAW_BED, LootTable.lootTable().withPool(
+                LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .when(ExplosionCondition.survivesExplosion())
+                        .add( LootItem.lootTableItem(ModBlocks.STRAW_BED))));
 
         add(ModBlocks.POPLAR_SAPLING_POTTED, createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING));
         add(ModBlocks.RED_SHRUB_POTTED, createPotFlowerItemTable(ModBlocks.RED_SHRUB));

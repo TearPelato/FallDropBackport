@@ -9,8 +9,8 @@ e8e8ba97bbb8b6c596ade5a7f8c40941cd62640d data/minecraft/tags/block/logs.json
 22842b6f1bcaebbd2d2a80269d7fe5180877ae6f data/minecraft/tags/block/logs_that_burn.json
 abe12e1c414442635659291d652b03dfe66497f7 data/minecraft/tags/block/saplings.json
 582180645ac62287d1ae462e855704d12b3e51ee data/minecraft/tags/block/signs.json
-d56ee86b8a52557579c7161b04217f37d0d36f16 data/minecraft/tags/block/slabs.json
-a3162514208e2aa3b72c30d23dab70e3149ebba2 data/minecraft/tags/block/stairs.json
+a00cfc9ac81f2fe6da4fa44435b87b5621c45ce6 data/minecraft/tags/block/slabs.json
+f38f26005fc6266427778d1deb3ed48d05ac5635 data/minecraft/tags/block/stairs.json
 c08bc05f9b91b34499e79c2fa3e67a61186cb1b8 data/minecraft/tags/block/standing_signs.json
 3241456cdab4e9ce272381869ebd1d787445488b data/minecraft/tags/block/wall_signs.json
 7afa4440e408512b99d62db10b26df113b77514e data/minecraft/tags/block/wooden_buttons.json
