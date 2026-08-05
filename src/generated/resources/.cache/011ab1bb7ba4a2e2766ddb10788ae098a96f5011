@@ -1,18 +1,14 @@
-// 26.1.2	-999999999-01-01T00:00:00	FallDropBackport/Tags for minecraft:block
-6a917e1a949f02917dd998a4facf2eb8b2055530 data/minecraft/tags/block/all_hanging_signs.json
+// 26.2	-999999999-01-01T00:00:00	FallDropBackport/Tags for minecraft:block
 6b032efcd276b288b7aa5a3975b74938608c6242 data/minecraft/tags/block/doors.json
 8d92f7061b7f50dee74ad4a33138fed6812019cd data/minecraft/tags/block/fence_gates.json
 f446a5b2ec37a9b24827411263080c50858d5520 data/minecraft/tags/block/fences.json
 8929c78b8ddfb67e347de782ac6a9f08007ec793 data/minecraft/tags/block/flower_pots.json
 72c44315c1e1e7aae7c24aa8a4f46383dfad3894 data/minecraft/tags/block/leaves.json
 e8e8ba97bbb8b6c596ade5a7f8c40941cd62640d data/minecraft/tags/block/logs.json
-22842b6f1bcaebbd2d2a80269d7fe5180877ae6f data/minecraft/tags/block/logs_that_burn.json
-abe12e1c414442635659291d652b03dfe66497f7 data/minecraft/tags/block/saplings.json
-582180645ac62287d1ae462e855704d12b3e51ee data/minecraft/tags/block/signs.json
-a00cfc9ac81f2fe6da4fa44435b87b5621c45ce6 data/minecraft/tags/block/slabs.json
-f38f26005fc6266427778d1deb3ed48d05ac5635 data/minecraft/tags/block/stairs.json
-c08bc05f9b91b34499e79c2fa3e67a61186cb1b8 data/minecraft/tags/block/standing_signs.json
-3241456cdab4e9ce272381869ebd1d787445488b data/minecraft/tags/block/wall_signs.json
+8b32754302afc062f813e50ffbbb7e561da99ec8 data/minecraft/tags/block/mineable/axe.json
+3c97f0ffc77d554cf9fbb20265b83bfc76b4314d data/minecraft/tags/block/slabs.json
+567eb9586619f03247d2e090a150806af0ad6a73 data/minecraft/tags/block/stairs.json
+f0a9d5f18a595f122cf147d0c5a20aa566924fb3 data/minecraft/tags/block/trapdoors.json
 7afa4440e408512b99d62db10b26df113b77514e data/minecraft/tags/block/wooden_buttons.json
 6b032efcd276b288b7aa5a3975b74938608c6242 data/minecraft/tags/block/wooden_doors.json
 f446a5b2ec37a9b24827411263080c50858d5520 data/minecraft/tags/block/wooden_fences.json
