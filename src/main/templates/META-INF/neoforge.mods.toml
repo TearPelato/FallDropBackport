@@ -9,8 +9,9 @@ version = "${mod_version}"
 displayName = "${mod_name}"
 authors = "${mod_authors}"
 description = '''${mod_description}'''
-logoFile = "logo_mod.png"
-credits = "LiukRast(Contributor)"
+bannerFile = "logo_mod.png"
+iconFile = "logo_mod.png"
+credits = "LiukRast"
 
 
 [[mixins]]
