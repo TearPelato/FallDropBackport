@@ -23,17 +23,28 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> RED_SHRUB = registerKey("red_shrub");
-    public static final ResourceKey<PlacedFeature> POPLAR = registerKey("poplar");
+    public static final ResourceKey<PlacedFeature> RED_POPLAR = registerKey("red_poplar");
+    public static final ResourceKey<PlacedFeature> YELLOW_POPLAR = registerKey("yellow_poplar");
+    public static final ResourceKey<PlacedFeature> ORANGE_POPLAR = registerKey("orange_poplar");
     public static final ResourceKey<PlacedFeature> SHELF_MUSHROOM = registerKey("shelf_mushroom");
     public static final ResourceKey<PlacedFeature> FALLEN_POPLAR = registerKey("fallen_poplar");
     public static final ResourceKey<PlacedFeature> BROWN_MUSHROOM_DAPPLED_FOREST = registerKey("brow_mushroom_dappled_forest");
+    public static final ResourceKey<PlacedFeature> BAMBOO_IN_STRUCTURE = registerKey("bamboo_in_structure");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB), List.of(new PlacementModifier[]{InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome(), CountPlacement.of(6), RandomOffsetPlacement.ofTriangle(7, 3), BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)}));
 
-        register(context, POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.POPLAR_TREE),
+        register(context, RED_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_POPLAR_LEAF_LITTER),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
+                        ModBlocks.POPLAR_SAPLING.get()));
+
+        register(context, YELLOW_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.YELLOW_POPLAR_LEAF_LITTER),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
+                        ModBlocks.POPLAR_SAPLING.get()));
+
+        register(context, ORANGE_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_POPLAR_LEAF_LITTER),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
                         ModBlocks.POPLAR_SAPLING.get()));
 
@@ -54,12 +65,20 @@ public class ModPlacedFeatures {
                         BiomeFilter.biome()));
     register(context, BROWN_MUSHROOM_DAPPLED_FOREST, configuredFeatures.getOrThrow(VegetationFeatures.BROWN_MUSHROOM), VegetationPlacementsUtils.getMushroomPlacement(2, (PlacementModifier)null));
 
-
+        register(context, BAMBOO_IN_STRUCTURE,
+                configuredFeatures.getOrThrow(
+                        ResourceKey.create(Registries.CONFIGURED_FEATURE,
+                                Identifier.withDefaultNamespace("bamboo_no_podzol"))
+                ),
+                List.of(
+                        BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)
+                )
+        );
     }
 
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, Constants.vanilla(name));
     }
 
     private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,

@@ -34,5 +34,39 @@ public class ModItemsTagsProvider extends ItemTagsProvider {
         tag(ItemTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.POPLAR_PRESSURE_PLATE.asItem());
         tag(ItemTags.WOODEN_STAIRS).add(ModBlocks.POPLAR_STAIRS.asItem());
         tag(ItemTags.WOODEN_TRAPDOORS).add(ModBlocks.POPLAR_TRAPDOOR.asItem());
+
+        tag(ModTags.Items.WOOL_SET)
+                .add(ModBlocks.WHITE_WOOL_STAIRS.asItem())
+                .add(ModBlocks.LIGHT_GRAY_WOOL_STAIRS.asItem())
+                .add(ModBlocks.GRAY_WOOL_STAIRS.asItem())
+                .add(ModBlocks.BLACK_WOOL_STAIRS.asItem())
+                .add(ModBlocks.BROWN_WOOL_STAIRS.asItem())
+                .add(ModBlocks.RED_WOOL_STAIRS.asItem())
+                .add(ModBlocks.ORANGE_WOOL_STAIRS.asItem())
+                .add(ModBlocks.YELLOW_WOOL_STAIRS.asItem())
+                .add(ModBlocks.LIME_WOOL_STAIRS.asItem())
+                .add(ModBlocks.GREEN_WOOL_STAIRS.asItem())
+                .add(ModBlocks.CYAN_WOOL_STAIRS.asItem())
+                .add(ModBlocks.LIGHT_BLUE_WOOL_STAIRS.asItem())
+                .add(ModBlocks.BLUE_WOOL_STAIRS.asItem())
+                .add(ModBlocks.PURPLE_WOOL_STAIRS.asItem())
+                .add(ModBlocks.MAGENTA_WOOL_STAIRS.asItem())
+                .add(ModBlocks.PINK_WOOL_STAIRS.asItem())
+                .add(ModBlocks.WHITE_WOOL_SLAB.asItem())
+                .add(ModBlocks.LIGHT_GRAY_WOOL_SLAB.asItem())
+                .add(ModBlocks.GRAY_WOOL_SLAB.asItem())
+                .add(ModBlocks.BLACK_WOOL_SLAB.asItem())
+                .add(ModBlocks.BROWN_WOOL_SLAB.asItem())
+                .add(ModBlocks.RED_WOOL_SLAB.asItem())
+                .add(ModBlocks.ORANGE_WOOL_SLAB.asItem())
+                .add(ModBlocks.YELLOW_WOOL_SLAB.asItem())
+                .add(ModBlocks.LIME_WOOL_SLAB.asItem())
+                .add(ModBlocks.GREEN_WOOL_SLAB.asItem())
+                .add(ModBlocks.CYAN_WOOL_SLAB.asItem())
+                .add(ModBlocks.LIGHT_BLUE_WOOL_SLAB.asItem())
+                .add(ModBlocks.BLUE_WOOL_SLAB.asItem())
+                .add(ModBlocks.PURPLE_WOOL_SLAB.asItem())
+                .add(ModBlocks.MAGENTA_WOOL_SLAB.asItem())
+                .add(ModBlocks.PINK_WOOL_SLAB.asItem());
     }
 }

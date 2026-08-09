@@ -28,6 +28,7 @@ public class FallDropBackport {
         ModTreeDecoratorType.init(modEventBus);
         ModStats.init(modEventBus);
         ModSounds.init(modEventBus);
+        ModMapDecorationTypes.init(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

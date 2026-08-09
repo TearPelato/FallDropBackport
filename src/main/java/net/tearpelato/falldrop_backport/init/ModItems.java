@@ -1,9 +1,6 @@
 package net.tearpelato.falldrop_backport.init;
 
-import net.minecraft.world.item.BoatItem;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -56,7 +53,6 @@ public class ModItems {
             properties -> new CushionItem(properties.stacksTo(16), DyeColor.MAGENTA));
     public static final DeferredItem<Item> PINK_CUSHION = ITEMS.registerItem("pink_cushion",
             properties -> new CushionItem(properties.stacksTo(16), DyeColor.PINK));
-
 
 
     public static Item getCushion(DyeColor color) {

@@ -57,6 +57,24 @@ public class ModConfiguredFeatures {
         PlaceOnGroundDecorator thickLeafLitter = new PlaceOnGroundDecorator(150, 2, 2, new WeightedStateProvider(VegetationFeatures.leafLitterPatchBuilder(1, 4)));
         var lookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(
+                        BlockStateProvider.simple(ModBlocks.SHELF_MUSHROOM.get())
+                )
+        ));
+
+        context.register(FALLEN_POPLAR, new ConfiguredFeature<>(Feature.FALLEN_TREE,
+                createFallenPoplar().build()));
+
+        context.register(RED_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.RED_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+        context.register(ORANGE_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+        context.register(YELLOW_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+
+
+
         register(context, RED_SHRUB, Feature.SIMPLE_RANDOM_SELECTOR,
                 new SimpleRandomFeatureConfiguration(
                         HolderSet.direct(PlacementUtils.inlinePlaced(
@@ -95,27 +113,12 @@ public class ModConfiguredFeatures {
                         PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_YELLOW)))));
 
 
-        context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(
-                        BlockStateProvider.simple(ModBlocks.SHELF_MUSHROOM.get())
-                )
-        ));
-
-        context.register(FALLEN_POPLAR, new ConfiguredFeature<>(Feature.FALLEN_TREE,
-                createFallenPoplar().build()));
-
-        context.register(RED_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.RED_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
-        context.register(ORANGE_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
-        context.register(YELLOW_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES.get()).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
 
     }
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Constants.NAMESPACE, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Constants.vanilla(name));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,

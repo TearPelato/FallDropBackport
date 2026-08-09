@@ -21,6 +21,7 @@ public class ModModelProvider extends ModelProvider {
         super(output, Constants.MOD_ID);
     }
 
+
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 

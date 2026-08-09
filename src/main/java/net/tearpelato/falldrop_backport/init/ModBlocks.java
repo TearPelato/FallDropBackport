@@ -339,7 +339,7 @@ public class ModBlocks {
             properties -> new ShelfMushroomBlock(properties.strength(1.0F).mapColor(MapColor.PLANT).sound(ModSounds.SHELF_MUSHROOM).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<StrawBedBlock> STRAW_BED = registerBlock("straw_bed",
-            properties-> new StrawBedBlock(DyeColor.WHITE, properties.strength(0.2f).noOcclusion().sound(ModSounds.STRAW_BED)));
+            properties-> new StrawBedBlock(properties.strength(0.2f).noOcclusion().sound(ModSounds.STRAW_BED)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
