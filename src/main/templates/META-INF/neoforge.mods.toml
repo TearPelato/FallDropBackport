@@ -12,8 +12,8 @@ description = '''${mod_description}'''
 bannerFile = "logo_mod.png"
 iconFile = "logo_mod.png"
 credits = "LiukRast"
-displayURL="https://github.com/TearPelato/BetterDeco"
-issueTrackerURL="https://github.com/TearPelato/BetterDeco/issues"
+displayURL="https://github.com/TearPelato/FallDropBackport"
+issueTrackerURL="https://github.com/TearPelato/FallDropBackport/issues"
 
 
 [[mixins]]

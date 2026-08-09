@@ -34,5 +34,40 @@ public class ModItemsTagsProvider extends ItemTagsProvider {
         tag(ItemTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_PRESSURE_PLATE.asItem()));
         tag(ItemTags.WOODEN_STAIRS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_STAIRS.asItem()));
         tag(ItemTags.WOODEN_TRAPDOORS).add(ModBlocks.getResourceKeyItem(ModBlocks.POPLAR_TRAPDOOR.asItem()));
+
+        tag(ModTags.Items.WOOL_SET)
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.WHITE_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.LIGHT_GRAY_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.GRAY_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.BLACK_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.BROWN_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.RED_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.ORANGE_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.YELLOW_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.LIME_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.GREEN_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.CYAN_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.LIGHT_BLUE_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.BLUE_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.PURPLE_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.MAGENTA_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.PINK_WOOL_STAIRS.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.WHITE_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.LIGHT_GRAY_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.GRAY_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.BLACK_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.BROWN_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.RED_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.ORANGE_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.YELLOW_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.LIME_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.GREEN_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.CYAN_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.LIGHT_BLUE_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.BLUE_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.PURPLE_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.MAGENTA_WOOL_SLAB.asItem()))
+                .add(ModBlocks.getResourceKeyItem(ModBlocks.PINK_WOOL_SLAB.asItem()));
+
     }
 }

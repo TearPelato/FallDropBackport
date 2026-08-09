@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.datafixers.util.Either;
-import net.minecraft.advancements.criterion.PlayerTrigger;
+import net.minecraft.advancements.triggers.PlayerTrigger;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
@@ -46,7 +46,7 @@ public abstract class ServerPlayerMixin {
         else original.call(player, identifier);
     }
 
-    @WrapOperation(method = "lambda$startSleepInBed$2", at = @At(value = "INVOKE", target = "Lnet/minecraft/advancements/criterion/PlayerTrigger;trigger(Lnet/minecraft/server/level/ServerPlayer;)V"))
+    @WrapOperation(method = "lambda$startSleepInBed$2", at = @At(value = "INVOKE", target = "Lnet/minecraft/advancements/triggers/PlayerTrigger;trigger(Lnet/minecraft/server/level/ServerPlayer;)V "))
     private void checkSleepingTrigger(PlayerTrigger trigger, ServerPlayer player, Operation<Void> original) {
         if (this.level().getBlockState(this.bedPos).getBlock() instanceof AbstractBedBlock bed && !bed.canSetSpawn()) return;
         original.call(trigger, player);
