@@ -21,7 +21,6 @@ public class ModBlockEntities {
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.id("shelf"),
                     FabricBlockEntityTypeBuilder.create(ModShelfBlockEntity::new, ModBlocks.POPLAR_SHELF).build());
 
-
     public static void registerBlockEntities() {
         Constants.LOGGER.info("Registering Block Entities for " + Constants.MOD_ID);
 

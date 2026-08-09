@@ -57,14 +57,23 @@ public class ModRegistryDataProvider extends FabricDynamicRegistryProvider {
 
         entries.add(ModPlacedFeatures.BROWN_MUSHROOM_DAPPLED_FOREST,
                 placedFeatures.getOrThrow(ModPlacedFeatures.BROWN_MUSHROOM_DAPPLED_FOREST).value());
-        entries.add(ModPlacedFeatures.POPLAR,
-                placedFeatures.getOrThrow(ModPlacedFeatures.POPLAR).value());
+
+        entries.add(ModPlacedFeatures.RED_POPLAR,
+                placedFeatures.getOrThrow(ModPlacedFeatures.RED_POPLAR).value());
+        entries.add(ModPlacedFeatures.ORANGE_POPLAR,
+                placedFeatures.getOrThrow(ModPlacedFeatures.ORANGE_POPLAR).value());
+        entries.add(ModPlacedFeatures.YELLOW_POPLAR,
+                placedFeatures.getOrThrow(ModPlacedFeatures.YELLOW_POPLAR).value());
+
+
         entries.add(ModPlacedFeatures.FALLEN_POPLAR,
                 placedFeatures.getOrThrow(ModPlacedFeatures.FALLEN_POPLAR).value());
         entries.add(ModPlacedFeatures.RED_SHRUB,
                 placedFeatures.getOrThrow(ModPlacedFeatures.RED_SHRUB).value());
         entries.add(ModPlacedFeatures.SHELF_MUSHROOM,
                 placedFeatures.getOrThrow(ModPlacedFeatures.SHELF_MUSHROOM).value());
+        entries.add(ModPlacedFeatures.BAMBOO_IN_STRUCTURE,
+                placedFeatures.getOrThrow(ModPlacedFeatures.BAMBOO_IN_STRUCTURE).value());
 
 
         HolderLookup.RegistryLookup<Biome> biomes =

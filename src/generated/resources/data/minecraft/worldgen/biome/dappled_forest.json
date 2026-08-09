@@ -76,7 +76,9 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:poplar",
+      "minecraft:red_poplar",
+      "minecraft:orange_poplar",
+      "minecraft:yellow_poplar",
       "minecraft:brow_mushroom_dappled_forest",
       "minecraft:red_shrub",
       "minecraft:patch_grass_forest"

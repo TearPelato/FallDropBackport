@@ -9,10 +9,10 @@ import net.minecraft.stats.Stats;
 import net.tearpelato.falldrop_backport.Constants;
 
 public class ModStats {
-    public static Stat<?> SLEEP_IN_STRAW_BED = makeCustomStat("sleep_in_straw_bed");
+    public static Stat<Identifier> SLEEP_IN_STRAW_BED = makeCustomStat("sleep_in_straw_bed");
 
 
-    private static Stat<?> makeCustomStat(String key) {
+    private static Stat<Identifier> makeCustomStat(String key) {
         Identifier identifier = Identifier.fromNamespaceAndPath(Constants.MOD_ID, key);
         Identifier newStat = Registry.register(BuiltInRegistries.CUSTOM_STAT, key, identifier);
 

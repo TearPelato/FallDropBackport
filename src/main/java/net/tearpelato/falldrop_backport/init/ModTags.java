@@ -21,6 +21,7 @@ public class ModTags {
     public static class Items{
 
         public static final TagKey<Item> POPLAR_LOGS = createTag("poplar_logs");
+        public static final TagKey<Item> WOOL_SET = createTag("wool_set");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.create(Registries.ITEM, Constants.vanilla(name));
