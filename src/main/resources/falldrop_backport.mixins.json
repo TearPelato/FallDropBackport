@@ -4,8 +4,12 @@
   "package": "net.tearpelato.falldrop_backport.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "LivingEntityMixin",
+    "MapItemSavedDataMixin",
+    "ServerPlayerMixin"
   ],
   "client": [
+    "ItemModelsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

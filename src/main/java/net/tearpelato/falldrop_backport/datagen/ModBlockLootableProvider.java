@@ -1,11 +1,13 @@
 package net.tearpelato.falldrop_backport.datagen;
 
 
-import net.minecraft.advancements.predicates.StatePropertiesPredicate;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -135,11 +137,7 @@ public class ModBlockLootableProvider extends BlockLootSubProvider {
 
        dropSelf(ModBlocks.RED_SHRUB.get());
        dropSelf(ModBlocks.POPLAR_SAPLING.get());
-        add( ModBlocks.STRAW_BED.get(), LootTable.lootTable().withPool(
-                LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .when(ExplosionCondition.survivesExplosion())
-                        .add(LootItem.lootTableItem(ModBlocks.STRAW_BED.get()))));
-
+       add(ModBlocks.STRAW_BED.get(), block -> createSinglePropConditionTable(block, BedBlock.PART, BedPart.HEAD));
        add(ModBlocks.POPLAR_SAPLING_POTTED.get(), createPotFlowerItemTable(ModBlocks.POPLAR_SAPLING.get()));
        add(ModBlocks.RED_SHRUB_POTTED.get(), createPotFlowerItemTable(ModBlocks.RED_SHRUB.get()));
         add(ModBlocks.SHELF_MUSHROOM.get(), block ->

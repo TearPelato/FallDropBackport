@@ -1,4 +1,4 @@
-// 26.2	2026-08-04T19:01:41.9866574	Tags for minecraft:item mod id minecraft
+// 26.1.2	2026-08-07T12:34:12.5392807	Tags for minecraft:item mod id minecraft
 4e73c4427d5a72d129be1d401938a2467d3bea54 data/minecraft/tags/item/planks.json
 22842b6f1bcaebbd2d2a80269d7fe5180877ae6f data/minecraft/tags/item/poplar_logs.json
 7afa4440e408512b99d62db10b26df113b77514e data/minecraft/tags/item/wooden_buttons.json
@@ -9,3 +9,4 @@ e74cb691347d6589f80d34382866b25a0f6f279a data/minecraft/tags/item/wooden_slabs.j
 5760b837ad84a6bdcc6c0e138154bc3d98bb101d data/minecraft/tags/item/wooden_stairs.json
 4e73c4427d5a72d129be1d401938a2467d3bea54 data/minecraft/tags/item/wooden_tool_materials.json
 f0a9d5f18a595f122cf147d0c5a20aa566924fb3 data/minecraft/tags/item/wooden_trapdoors.json
+47b0d57018175976a2e67ae1456a24fad1d909b6 data/minecraft/tags/item/wool_set.json
