@@ -236,7 +236,7 @@ public class ModBlocks {
                     properties.strength(2f).noCollision().pushReaction(PushReaction.DESTROY)));
 
     public static final Block STRAW_BED = registerBlock("straw_bed",
-            properties-> new StrawBedBlock(DyeColor.WHITE,properties.strength(0.2f).sound(ModSounds.STRAW_BED)));
+            properties-> new StrawBedBlock(properties.strength(0.2f).sound(ModSounds.STRAW_BED)));
 
     public static final Block POPLAR_SIGN = registerBlockWithoutBlockItem("poplar_sign",
             properties -> new ModStandingSignBlock(ModWoodType.POPLAR, properties.strength(2f).ignitedByLava()));

@@ -6,7 +6,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -55,6 +54,24 @@ public class ModConfiguredFeatures {
         PlaceOnGroundDecorator thickLeafLitter = new PlaceOnGroundDecorator(150, 2, 2, new WeightedStateProvider(VegetationFeatures.leafLitterPatchBuilder(1, 4)));
         var lookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
+
+        context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(
+                        BlockStateProvider.simple(ModBlocks.SHELF_MUSHROOM)
+                )
+        ));
+
+        context.register(FALLEN_POPLAR, new ConfiguredFeature<>(Feature.FALLEN_TREE,
+                createFallenPoplar().build()));
+
+        context.register(RED_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.RED_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+        context.register(ORANGE_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+        context.register(YELLOW_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
+                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
+
+
         register(context, RED_SHRUB, Feature.SIMPLE_RANDOM_SELECTOR,
                 new SimpleRandomFeatureConfiguration(
                         HolderSet.direct(PlacementUtils.inlinePlaced(
@@ -92,22 +109,6 @@ public class ModConfiguredFeatures {
                                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_ORANGE)), 0.33f)),
                         PlacementUtils.inlinePlaced(lookup.getOrThrow(POPLAR_YELLOW)))));
 
-
-        context.register(SHELF_MUSHROOM, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(
-                        BlockStateProvider.simple(ModBlocks.SHELF_MUSHROOM)
-                )
-        ));
-
-        context.register(FALLEN_POPLAR, new ConfiguredFeature<>(Feature.FALLEN_TREE,
-                createFallenPoplar().build()));
-
-        context.register(RED_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.RED_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
-        context.register(ORANGE_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.ORANGE_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
-        context.register(YELLOW_POPLAR_LEAF_LITTER, new ConfiguredFeature<>(Feature.TREE,
-                createPoplar(ModBlocks.YELLOW_POPLAR_LEAVES).decorators(List.of(sparseLeafLitter, thickLeafLitter, new ShelfMushroomDecorator(0.4F))).build()));
 
     }
 
