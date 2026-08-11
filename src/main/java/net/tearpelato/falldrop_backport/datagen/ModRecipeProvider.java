@@ -6,18 +6,28 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModItems;
 import net.tearpelato.falldrop_backport.init.ModTags;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
     protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         super(registries, output);
     }
+
+    private static final List<Item> DYE_ITEMS = List.of(
+            Items.WHITE_DYE, Items.LIGHT_GRAY_DYE, Items.GRAY_DYE, Items.BLACK_DYE,
+            Items.BROWN_DYE, Items.RED_DYE, Items.ORANGE_DYE, Items.YELLOW_DYE,
+            Items.LIME_DYE, Items.GREEN_DYE, Items.CYAN_DYE, Items.LIGHT_BLUE_DYE,
+            Items.BLUE_DYE, Items.PURPLE_DYE, Items.MAGENTA_DYE, Items.PINK_DYE
+    );
+
 
     @Override
     protected void buildRecipes() {
@@ -235,14 +245,36 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .define('#', Blocks.HAY_BLOCK)
                 .unlockedBy(getHasName(Blocks.HAY_BLOCK), this.has(Blocks.HAY_BLOCK))
-
                 .save(this.output);
 
+        colorItemWithDye(DYE_ITEMS, List.of(
+                ModBlocks.WHITE_WOOL_STAIRS.asItem(), ModBlocks.LIGHT_GRAY_WOOL_STAIRS.asItem(), ModBlocks.GRAY_WOOL_STAIRS.asItem(), ModBlocks.BLACK_WOOL_STAIRS.asItem(),
+                ModBlocks.BROWN_WOOL_STAIRS.asItem(), ModBlocks.RED_WOOL_STAIRS.asItem(), ModBlocks.ORANGE_WOOL_STAIRS.asItem(), ModBlocks.YELLOW_WOOL_STAIRS.asItem(),
+                ModBlocks.LIME_WOOL_STAIRS.asItem(), ModBlocks.GREEN_WOOL_STAIRS.asItem(), ModBlocks.CYAN_WOOL_STAIRS.asItem(), ModBlocks.LIGHT_BLUE_WOOL_STAIRS.asItem(),
+                ModBlocks.BLUE_WOOL_STAIRS.asItem(), ModBlocks.PURPLE_WOOL_STAIRS.asItem(), ModBlocks.MAGENTA_WOOL_STAIRS.asItem(), ModBlocks.PINK_WOOL_STAIRS.asItem()
+        ), "wool_stairs_dye", RecipeCategory.BUILDING_BLOCKS);
+
+        colorItemWithDye(DYE_ITEMS, List.of(
+                ModBlocks.WHITE_WOOL_SLAB.asItem(), ModBlocks.LIGHT_GRAY_WOOL_SLAB.asItem(), ModBlocks.GRAY_WOOL_SLAB.asItem(), ModBlocks.BLACK_WOOL_SLAB.asItem(),
+                ModBlocks.BROWN_WOOL_SLAB.asItem(), ModBlocks.RED_WOOL_SLAB.asItem(), ModBlocks.ORANGE_WOOL_SLAB.asItem(), ModBlocks.YELLOW_WOOL_SLAB.asItem(),
+                ModBlocks.LIME_WOOL_SLAB.asItem(), ModBlocks.GREEN_WOOL_SLAB.asItem(), ModBlocks.CYAN_WOOL_SLAB.asItem(), ModBlocks.LIGHT_BLUE_WOOL_SLAB.asItem(),
+                ModBlocks.BLUE_WOOL_SLAB.asItem(), ModBlocks.PURPLE_WOOL_SLAB.asItem(), ModBlocks.MAGENTA_WOOL_SLAB.asItem(), ModBlocks.PINK_WOOL_SLAB.asItem()
+        ), "wool_slab_dye", RecipeCategory.BUILDING_BLOCKS);
+
+        colorItemWithDye(DYE_ITEMS, List.of(
+                ModItems.WHITE_CUSHION.get(), ModItems.LIGHT_GRAY_CUSHION.get(), ModItems.GRAY_CUSHION.get(), ModItems.BLACK_CUSHION.get(),
+                ModItems.BROWN_CUSHION.get(), ModItems.RED_CUSHION.get(), ModItems.ORANGE_CUSHION.get(), ModItems.YELLOW_CUSHION.get(),
+                ModItems.LIME_CUSHION.get(), ModItems.GREEN_CUSHION.get(), ModItems.CYAN_CUSHION.get(), ModItems.LIGHT_BLUE_CUSHION.get(),
+                ModItems.BLUE_CUSHION.get(), ModItems.PURPLE_CUSHION.get(), ModItems.MAGENTA_CUSHION.get(), ModItems.PINK_CUSHION.get()
+        ), "cushion_dye", RecipeCategory.DECORATIONS);
+
     }
+
 
     protected void cushionRecipe(final Item woolSlab, final Item result) {
         this.shaped(RecipeCategory.DECORATIONS, result, 1).define('#', woolSlab).group("cushion").unlockedBy(getHasName(woolSlab), this.has(woolSlab)).pattern("###").save(this.output);
     }
+
 
 
     public static class Runner extends RecipeProvider.Runner {
