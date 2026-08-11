@@ -1,5 +1,6 @@
 package net.tearpelato.falldrop_backport.worldgen;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -36,16 +37,37 @@ public class ModPlacedFeatures {
         register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB), List.of(new PlacementModifier[]{InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome(), CountPlacement.of(6), RandomOffsetPlacement.ofTriangle(7, 3), BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)}));
 
         register(context, RED_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_POPLAR_LEAF_LITTER),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
-                        ModBlocks.POPLAR_SAPLING));
+                List.of(
+                        PlacementUtils.countExtra(10, 0.1f, 2),
+                        InSquarePlacement.spread(),
+                        SurfaceWaterDepthFilter.forMaxDepth(0),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                        BlockPredicateFilter.forPredicate(
+                                BlockPredicate.wouldSurvive(ModBlocks.POPLAR_SAPLING.defaultBlockState(), BlockPos.ZERO)
+                        )
+                ));
 
         register(context, YELLOW_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.YELLOW_POPLAR_LEAF_LITTER),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
-                        ModBlocks.POPLAR_SAPLING));
+                List.of(
+                        PlacementUtils.countExtra(10, 0.1f, 2),
+                        InSquarePlacement.spread(),
+                        SurfaceWaterDepthFilter.forMaxDepth(0),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                        BlockPredicateFilter.forPredicate(
+                                BlockPredicate.wouldSurvive(ModBlocks.POPLAR_SAPLING.defaultBlockState(), BlockPos.ZERO)
+                        )
+                ));
 
         register(context, ORANGE_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_POPLAR_LEAF_LITTER),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
-                        ModBlocks.POPLAR_SAPLING));
+                List.of(
+                        PlacementUtils.countExtra(10, 0.1f, 2),
+                        InSquarePlacement.spread(),
+                        SurfaceWaterDepthFilter.forMaxDepth(0),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                        BlockPredicateFilter.forPredicate(
+                                BlockPredicate.wouldSurvive(ModBlocks.POPLAR_SAPLING.defaultBlockState(), BlockPos.ZERO)
+                        )
+                ));
 
         register(context, FALLEN_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_POPLAR),
                List.of(new PlacementModifier[]{PlacementUtils.filteredByBlockSurvival(ModBlocks.POPLAR_SAPLING)}));
