@@ -3,7 +3,7 @@
   "category": "building",
   "group": "wool_slab_dye",
   "ingredients": [
-    "minecraft:green_dye",
+    "minecraft:gray_dye",
     [
       "minecraft:white_wool_slab",
       "minecraft:light_gray_wool_slab",

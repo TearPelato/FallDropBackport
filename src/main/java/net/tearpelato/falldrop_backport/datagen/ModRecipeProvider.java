@@ -22,10 +22,10 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     private static final List<Item> DYE_ITEMS = List.of(
-            Items.WHITE_DYE, Items.LIGHT_GRAY_DYE, Items.GRAY_DYE, Items.BLACK_DYE,
-            Items.BROWN_DYE, Items.RED_DYE, Items.ORANGE_DYE, Items.YELLOW_DYE,
-            Items.LIME_DYE, Items.GREEN_DYE, Items.CYAN_DYE, Items.LIGHT_BLUE_DYE,
-            Items.BLUE_DYE, Items.PURPLE_DYE, Items.MAGENTA_DYE, Items.PINK_DYE
+            Items.DYE.white(), Items.DYE.lightGray(), Items.DYE.gray(), Items.DYE.black(),
+            Items.DYE.brown(), Items.DYE.red(), Items.DYE.orange(), Items.DYE.yellow(),
+            Items.DYE.lime(), Items.DYE.green(), Items.DYE.cyan(), Items.DYE.lightBlue(),
+            Items.DYE.blue(), Items.DYE.purple(), Items.DYE.magenta(), Items.DYE.pink()
     );
 
 
@@ -262,10 +262,10 @@ public class ModRecipeProvider extends RecipeProvider {
         ), "wool_slab_dye", RecipeCategory.BUILDING_BLOCKS);
 
         colorItemWithDye(DYE_ITEMS, List.of(
-                ModItems.WHITE_CUSHION.get(), ModItems.LIGHT_GRAY_CUSHION.get(), ModItems.GRAY_CUSHION.get(), ModItems.BLACK_CUSHION.get(),
-                ModItems.BROWN_CUSHION.get(), ModItems.RED_CUSHION.get(), ModItems.ORANGE_CUSHION.get(), ModItems.YELLOW_CUSHION.get(),
-                ModItems.LIME_CUSHION.get(), ModItems.GREEN_CUSHION.get(), ModItems.CYAN_CUSHION.get(), ModItems.LIGHT_BLUE_CUSHION.get(),
-                ModItems.BLUE_CUSHION.get(), ModItems.PURPLE_CUSHION.get(), ModItems.MAGENTA_CUSHION.get(), ModItems.PINK_CUSHION.get()
+                ModItems.CUSHION.white().asItem(), ModItems.CUSHION.lightGray().asItem(), ModItems.CUSHION.gray().asItem(), ModItems.CUSHION.black().asItem(),
+                ModItems.CUSHION.brown().asItem(), ModItems.CUSHION.red().asItem(), ModItems.CUSHION.orange().asItem(), ModItems.CUSHION.yellow().asItem(),
+                ModItems.CUSHION.lime().asItem(), ModItems.CUSHION.green().asItem(), ModItems.CUSHION.cyan().asItem(), ModItems.CUSHION.lightBlue().asItem(),
+                ModItems.CUSHION.blue().asItem(), ModItems.CUSHION.purple().asItem(), ModItems.CUSHION.magenta().asItem(), ModItems.CUSHION.pink().asItem()
         ), "cushion_dye", RecipeCategory.DECORATIONS);
 
     }
