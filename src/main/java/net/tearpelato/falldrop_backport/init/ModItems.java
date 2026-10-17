@@ -54,6 +54,9 @@ public class ModItems {
     public static final DeferredItem<Item> PINK_CUSHION = ITEMS.registerItem("pink_cushion",
             properties -> new CushionItem(properties.stacksTo(16), DyeColor.PINK));
 
+    public static final DeferredItem<BlockItem> STRAW_BED = ITEMS.registerSimpleBlockItem("straw_bed",
+            ModBlocks.STRAW_BED, properties -> properties.stacksTo(16));
+
 
     public static Item getCushion(DyeColor color) {
         return switch (color) {

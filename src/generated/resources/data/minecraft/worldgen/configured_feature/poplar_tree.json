@@ -2,29 +2,88 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "minecraft:yellow_poplar_leaf_litter",
+      "feature": "minecraft:fallen_poplar",
       "placement": []
     },
     "features": [
       {
-        "chance": 0.33,
+        "chance": 0.29542097,
         "feature": {
           "feature": "minecraft:red_poplar_leaf_litter",
-          "placement": []
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:poplar_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
         }
       },
       {
-        "chance": 0.33,
+        "chance": 0.5031447,
         "feature": {
           "feature": "minecraft:orange_poplar_leaf_litter",
-          "placement": []
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:poplar_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
         }
       },
       {
-        "chance": 0.3,
+        "chance": 0.37974682,
         "feature": {
-          "feature": "minecraft:fallen_poplar",
-          "placement": []
+          "feature": "minecraft:yellow_poplar_leaf_litter",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:poplar_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.18367347,
+        "feature": {
+          "feature": "minecraft:spruce",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:spruce_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
         }
       }
     ]

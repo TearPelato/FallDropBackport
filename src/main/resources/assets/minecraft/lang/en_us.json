@@ -88,6 +88,11 @@
   "block.minecraft.poplar_shelf": "Poplar Shelf",
   "block.minecraft.red_shrub": "Red Shrub",
   "block.minecraft.poplar_sapling": "Poplar Sapling",
+  "block.minecraft.poplar_hanging_sign": "Poplar Hanging Sign",
+  "block.minecraft.poplar_wall_hanging_sign": "Poplar Wall Hanging Sign",
+  "block.minecraft.poplar_sign": "Poplar Sign",
+  "block.minecraft.poplar_wall_sign": "Poplar Wall Sign",
+  "block.minecraft.potted_poplar_sapling": "Potted Poplar Sapling",
   "block.minecraft.shelf_mushroom": "Shelf Mushroom",
   "block.minecraft.straw_bed": "Straw Bed",
 
@@ -114,5 +119,19 @@
   "item.minecraft.pink_cushion": "Pink Cushion",
 
   "entity.falldrop_backport.poplar_chest_boat": "Poplar Boat with Chest",
+  "entity.falldrop_backport.poplar_boat": "Poplar Boat",
+  "entity.falldrop_backport.cushion": "Cushion",
+  "mount.sit": "Press %1$s to get up",
+
+  "biome.minecraft.dappled_forest": "Dappled Forest",
+
+  "subtitles.block.poplar_leaves.ambient": "Leaves rustling",
+  "subtitles.block.shelf_mushroom.bounce": "Something bounces on a Shelf Mushroom",
+  "subtitles.block.straw_bed.break_leave": "Straw Bed breaks",
+  "subtitles.entity.cushion.break": "Cushion breaks",
+  "subtitles.entity.cushion.get_up": "Gets up from Cushion",
+  "subtitles.entity.cushion.place": "Cushion placed",
+  "subtitles.entity.cushion.sit": "Sits on Cushion",
+
   "stat.falldrop_backport.sleep_in_straw_bed": "Times Slept in a Straw Bed"
 }

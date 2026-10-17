@@ -20,7 +20,7 @@ import net.tearpelato.falldrop_backport.entity.client.custom.Cushion;
 import java.util.EnumMap;
 
 public class CushionRenderer extends EntityRenderer<Cushion, CushionRenderState> {
-    private static final EnumMap<DyeColor, Identifier> TEXTURES_BY_COLOR = (EnumMap) Util.make(new EnumMap(DyeColor.class), (textures) -> {
+    private static final EnumMap<DyeColor, Identifier> TEXTURES_BY_COLOR = (EnumMap)Util.make(new EnumMap(DyeColor.class), (textures) -> {
         for(DyeColor color : DyeColor.values()) {
             textures.put(color, Constants.vanilla("textures/entity/cushion/" + color.getName() + "_cushion.png"));
         }

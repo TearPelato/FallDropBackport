@@ -1,6 +1,5 @@
 package net.tearpelato.falldrop_backport.worldgen.placer;
 
-import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
@@ -11,7 +10,6 @@ import net.minecraft.util.valueproviders.IntProviders;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
@@ -45,23 +43,25 @@ public class PoplarTrunkPlacer extends TrunkPlacer {
 
         for(int y = 0; y < treeHeight; ++y) {
             this.placeLog(level, trunkSetter, random, origin.above(y), tree);
-            List<Direction> getListOfDirections = getRandomBranchDirection(random);
+            List<Direction> directions = getShuffledBranchDirections(random);
             if (trunkHeightUpToFoliageBranches - 1 == y) {
-                for(int x = 0; x < this.branchAmount.sample(random); ++x) {
-                    Direction branchDirection = (Direction)getListOfDirections.get(x);
+                int branches = this.branchAmount.sample(random);
+
+                for(int x = 0; x < branches; ++x) {
+                    Direction branchDirection = (Direction)directions.get(x);
                     this.placeLog(level, trunkSetter, random, origin.above(y).relative(branchDirection, 1), tree, getSidewaysStateModifier(branchDirection));
                 }
             }
         }
 
-        return ImmutableList.of(new FoliagePlacer.FoliageAttachment(origin.above(trunkHeightUpToFoliageBranches), 0, false));
+        return List.of(new FoliagePlacer.FoliageAttachment(origin.above(trunkHeightUpToFoliageBranches), 0, false));
     }
 
     private static Function<BlockState, BlockState> getSidewaysStateModifier(final Direction branchDirection) {
         return (state) -> (BlockState)state.trySetValue(RotatedPillarBlock.AXIS, branchDirection.getAxis());
     }
 
-    private static List<Direction> getRandomBranchDirection(final RandomSource random) {
+    private static List<Direction> getShuffledBranchDirections(final RandomSource random) {
         return (List)Direction.allShuffled(random).stream().filter((direction) -> !direction.getAxis().isVertical()).collect(Collectors.toList());
     }
 }

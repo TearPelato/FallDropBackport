@@ -7,7 +7,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.tearpelato.falldrop_backport.client.item.ExplorerMapItemModel;
 import net.tearpelato.falldrop_backport.init.*;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -15,7 +15,7 @@ import net.tearpelato.falldrop_backport.init.*;
 public class FallDropBackport {
 
     public FallDropBackport(IEventBus modEventBus, ModContainer modContainer) {
-
+        ExplorerMapItemModel.init();
 
         ModItems.init(modEventBus);
         ModBlocks.init(modEventBus);
@@ -29,6 +29,7 @@ public class FallDropBackport {
         ModStats.init(modEventBus);
         ModSounds.init(modEventBus);
         ModMapDecorationTypes.init(modEventBus);
+        ModEntityDataSerializer.init(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

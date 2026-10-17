@@ -14,9 +14,7 @@ public class ModBiomes {
 
     public static final ResourceKey<Biome> DAPPLED_FOREST = registerBiomeKey("dappled_forest");
 
-
-
-    public static void registerBiomes() {
+        public static void registerBiomes() {
         Regions.register(new OverworldRegion(Constants.id("overworld"), 20));
 
     }
