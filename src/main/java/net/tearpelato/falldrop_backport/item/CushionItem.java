@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PostSpawnProcessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -25,8 +26,6 @@ import net.tearpelato.falldrop_backport.init.ModEntities;
 import net.tearpelato.falldrop_backport.init.ModSounds;
 import net.tearpelato.falldrop_backport.init.ModTags;
 import net.tearpelato.falldrop_backport.util.Vec3Util;
-
-import java.util.function.Consumer;
 
 public class CushionItem extends Item {
     private static final double COLLISION_SHAPE_RAYCAST_EPSILON = 0.001;
@@ -58,7 +57,7 @@ public class CushionItem extends Item {
                         return InteractionResult.FAIL;
                     }
 
-                    Consumer<Cushion> entityConfig = EntityType.createDefaultStackConfig(serverLevel, itemStack, context.getPlayer());
+                    PostSpawnProcessor<Cushion> entityConfig = EntityType.createDefaultStackConfig(serverLevel, itemStack, context.getPlayer());
                     Cushion cushion = (Cushion) ModEntities.CUSHION.get().create(serverLevel, entityConfig, blockPos, EntitySpawnReason.SPAWN_ITEM_USE, true, true);
                     if (cushion == null) {
                         return InteractionResult.FAIL;
