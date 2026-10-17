@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(MapItemSavedData.class)
 public abstract class MapItemSavedDataMixin {
+
     @Shadow
     private byte calculateRotation(LevelAccessor level, double yRot) {
         throw new AssertionError();

@@ -210,11 +210,11 @@ public class ExplorerMapItemModel implements ItemModel {
     }
 
     public static void init() {
-        registerDecorationModel(ModMapDecorationTypes.ANCIENT_CITY, Constants.vanilla("ancient_city_map"));
-        registerDecorationModel(ModMapDecorationTypes.ABANDONED_CAMP, Constants.vanilla("abandoned_campsite_map"));
+        registerDecorationModel(ModMapDecorationTypes.ANCIENT_CITY, Constants.vanilla("buried_ancient_city_map"));
+        registerDecorationModel(ModMapDecorationTypes.ABANDONED_CAMP, Constants.vanilla("abandoned_camp_map"));
         registerDecorationModel(ModMapDecorationTypes.DESERT_PYRAMID, Constants.vanilla("desert_pyramid_map"));
-        registerDecorationModel(ModMapDecorationTypes.MINESHAFT, Constants.vanilla("mineshaft_map"));
-        registerDecorationModel(ModMapDecorationTypes.WARM_OCEAN_RUINS, Constants.vanilla("warm_ocean_ruins_map"));
+        registerDecorationModel(ModMapDecorationTypes.MINESHAFT, Constants.vanilla("buried_mineshaft_map"));
+        registerDecorationModel(ModMapDecorationTypes.OCEAN_RUIN_WARM, Constants.vanilla("warm_ocean_ruins_map"));
         registerDecorationModel(MapDecorationTypes.RED_X, Constants.vanilla("buried_treasure_map"));
         registerDecorationModel(MapDecorationTypes.DESERT_VILLAGE, Constants.vanilla("desert_village_map"));
         registerDecorationModel(MapDecorationTypes.JUNGLE_TEMPLE, Constants.vanilla("jungle_temple_map"));

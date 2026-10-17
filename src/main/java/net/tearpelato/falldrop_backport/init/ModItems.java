@@ -29,6 +29,9 @@ public class ModItems {
 
     public static final ColorCollection<DeferredItem<Item>> CUSHION = registerColoredItems(ColorCollection.prefixWithColor(ColorCollection.create("cushion")), (id, color) -> ITEMS.registerItem(id, properties -> new CushionItem(properties.stacksTo(16), color)));
 
+    public static final DeferredItem<BlockItem> STRAW_BED = ITEMS.registerSimpleBlockItem("straw_bed",
+            ModBlocks.STRAW_BED, properties -> properties.stacksTo(16));
+
 
 
 

@@ -9,6 +9,7 @@
     "ServerPlayerMixin"
   ],
   "client": [
+    "ItemModelResolverMixin",
     "ItemModelsMixin"
   ],
   "injectors": {

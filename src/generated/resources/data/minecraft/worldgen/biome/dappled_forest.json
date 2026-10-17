@@ -4,7 +4,7 @@
       "default": {
         "max_delay": 24000,
         "min_delay": 12000,
-        "sound": "minecraft:music.overworld.flower_forest"
+        "sound": "minecraft:music.overworld.forest"
       }
     },
     "minecraft:visual/fog_color": "#ccd8e2",
@@ -76,9 +76,7 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:red_poplar",
-      "minecraft:orange_poplar",
-      "minecraft:yellow_poplar",
+      "minecraft:trees_dappled_forest",
       "minecraft:brow_mushroom_dappled_forest",
       "minecraft:red_shrub",
       "minecraft:patch_grass_forest"

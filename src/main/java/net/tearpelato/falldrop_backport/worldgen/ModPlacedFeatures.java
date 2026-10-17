@@ -9,7 +9,6 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -30,11 +29,14 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> FALLEN_POPLAR = registerKey("fallen_poplar");
     public static final ResourceKey<PlacedFeature> BROWN_MUSHROOM_DAPPLED_FOREST = registerKey("brow_mushroom_dappled_forest");
     public static final ResourceKey<PlacedFeature> BAMBOO_IN_STRUCTURE = registerKey("bamboo_in_structure");
+    public static final ResourceKey<PlacedFeature> TREES_DAPPLED_FOREST = registerKey("trees_dappled_forest");
+
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB), List.of(new PlacementModifier[]{InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome(), CountPlacement.of(6), RandomOffsetPlacement.ofTriangle(7, 3), BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)}));
+
+        register(context, RED_SHRUB, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SHRUB), List.of(new PlacementModifier[]{InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome(), CountPlacement.of(8), RandomOffsetPlacement.ofTriangle(7, 3), BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)}));
 
         register(context, RED_POPLAR, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_POPLAR_LEAF_LITTER),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2),
@@ -63,6 +65,14 @@ public class ModPlacedFeatures {
                                 12
                         ),
                         BiomeFilter.biome()));
+
+        register(context, TREES_DAPPLED_FOREST, configuredFeatures.getOrThrow(ModConfiguredFeatures.TREES_DAPPLED_FOREST),
+                List.of(CountPlacement.of(6),
+                        InSquarePlacement.spread(),
+                        SurfaceWaterDepthFilter.forMaxDepth(0),
+                        PlacementUtils.HEIGHTMAP_NO_LEAVES,
+                        BiomeFilter.biome()));
+
     register(context, BROWN_MUSHROOM_DAPPLED_FOREST, configuredFeatures.getOrThrow(VegetationFeatures.BROWN_MUSHROOM), VegetationPlacementsUtils.getMushroomPlacement(2, (PlacementModifier)null));
 
         register(context, BAMBOO_IN_STRUCTURE,
