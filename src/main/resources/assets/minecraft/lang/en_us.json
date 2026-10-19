@@ -118,6 +118,33 @@
   "item.minecraft.magenta_cushion": "Magenta Cushion",
   "item.minecraft.pink_cushion": "Pink Cushion",
 
+  "item.minecraft.abandoned_camp_map": "Abandoned Camp Map",
+  "item.minecraft.buried_ancient_city_map": "Buried Ancient City Map",
+  "item.minecraft.buried_treasure_map": "Buried Treasure Map",
+  "item.minecraft.desert_pyramid_map": "Desert Pyramid Map",
+  "item.minecraft.desert_village_map": "Desert Village Map",
+  "item.minecraft.jungle_pyramid_map": "Jungle Pyramid Explorer Map",
+  "item.minecraft.buried_mineshaft_map": "Buried Mineshaft Map",
+  "item.minecraft.ocean_monument_map": "Ocean Monument Explorer Map",
+  "item.minecraft.plains_village_map": "Plains Village Map",
+  "item.minecraft.savanna_village_map": "Savanna Village Map",
+  "item.minecraft.snowy_village_map": "Snowy Village Map",
+  "item.minecraft.swamp_hut_map": "Swamp Hut Explorer Map",
+  "item.minecraft.taiga_village_map": "Taiga Village Map",
+  "item.minecraft.buried_trial_chambers_map": "Buried Trial Chambers Map",
+  "item.minecraft.warm_ocean_ruins_map": "Warm Ocean Ruins Map",
+  "item.minecraft.woodland_mansion_map": "Woodland Mansion Map",
+
+  "filled_map.bamboo_jungle_camp": "Bamboo Jungle Camp Map",
+  "filled_map.birch_forest_camp": "Birch Forest Camp Map",
+  "filled_map.cherry_grove_camp": "Cherry Grove Camp Map",
+  "filled_map.flower_forest_camp": "Flower Forest Camp Map",
+  "filled_map.pale_garden_camp": "Pale Garden Camp Map",
+  "filled_map.swamp_camp": "Swamp Camp Map",
+  "filled_map.windswept_forest_camp": "Windswept Forest Camp Map",
+
+
+
   "entity.falldrop_backport.poplar_chest_boat": "Poplar Boat with Chest",
   "entity.falldrop_backport.poplar_boat": "Poplar Boat",
   "entity.falldrop_backport.cushion": "Cushion",
