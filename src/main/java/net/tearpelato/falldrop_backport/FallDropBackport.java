@@ -5,7 +5,6 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.tearpelato.falldrop_backport.client.item.ExplorerMapItemModel;
 import net.tearpelato.falldrop_backport.init.*;
@@ -33,7 +32,6 @@ public class FallDropBackport {
 
 
         modEventBus.addListener(this::commonSetup);
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

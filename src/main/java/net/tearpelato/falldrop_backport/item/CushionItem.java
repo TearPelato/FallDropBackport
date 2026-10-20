@@ -29,7 +29,7 @@ import net.tearpelato.falldrop_backport.util.Vec3Util;
 
 public class CushionItem extends Item {
     private static final double COLLISION_SHAPE_RAYCAST_EPSILON = 0.001;
-    private final DyeColor color;
+    public final DyeColor color;
 
     public CushionItem(final Item.Properties properties, final DyeColor color) {
         super(properties);
@@ -63,6 +63,7 @@ public class CushionItem extends Item {
                         return InteractionResult.FAIL;
                     }
 
+                    cushion.setColor(this.color);
                     cushion.snapTo(entityPos, Direction.fromYRot((double)placeContext.getRotation()).toYRot(), 0.0F);
                     serverLevel.addFreshEntity(cushion);
                     level.playSound((Entity)null, cushion.getX(), cushion.getY(), cushion.getZ(), ModSounds.CUSHION_PLACE.get(), SoundSource.BLOCKS, 0.75F, 0.8F);
