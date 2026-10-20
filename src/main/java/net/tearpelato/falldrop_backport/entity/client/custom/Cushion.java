@@ -41,7 +41,7 @@ public class Cushion extends BlockAttachedEntity {
     }
 
     public DyeColor getColor() {
-        return (DyeColor)this.entityData.get(DATA_COLOR);
+        return this.entityData.get(DATA_COLOR);
     }
 
     public void setColor(final DyeColor color) {
@@ -55,7 +55,7 @@ public class Cushion extends BlockAttachedEntity {
     public void dropItem(final ServerLevel level, final @Nullable Entity causedBy) {
         this.playSound(ModSounds.CUSHION_BREAK.get(), 1.0F, 1.0F);
         this.showBreakingParticles();
-        if ((Boolean)level.getGameRules().get(GameRules.ENTITY_DROPS)) {
+        if (level.getGameRules().get(GameRules.ENTITY_DROPS)) {
             if (causedBy instanceof Player) {
                 Player player = (Player)causedBy;
                 if (player.hasInfiniteMaterials()) {
@@ -63,7 +63,7 @@ public class Cushion extends BlockAttachedEntity {
                 }
             }
 
-            this.spawnAtLocation(level, (ItemLike) ModItems.getCushion(this.getColor()));
+            this.spawnAtLocation(level, ModItems.getCushion(this.getColor()));
         }
     }
 
