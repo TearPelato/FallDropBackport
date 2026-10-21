@@ -18,7 +18,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.material.FluidState;
@@ -27,6 +26,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.tearpelato.falldrop_backport.init.ModBlocks;
 import net.tearpelato.falldrop_backport.init.ModEntityDataSerializer;
 import net.tearpelato.falldrop_backport.init.ModItems;
 import net.tearpelato.falldrop_backport.init.ModSounds;
@@ -41,7 +41,7 @@ public class Cushion extends BlockAttachedEntity {
     }
 
     public DyeColor getColor() {
-        return (DyeColor)this.entityData.get(DATA_COLOR);
+        return this.entityData.get(DATA_COLOR);
     }
 
     public void setColor(final DyeColor color) {
@@ -63,7 +63,7 @@ public class Cushion extends BlockAttachedEntity {
                 }
             }
 
-            this.spawnAtLocation(level, (ItemLike) ModItems.CUSHION.pick(this.getColor()));
+            this.spawnAtLocation(level, ModItems.getCushion(this.getColor()));
         }
     }
 
@@ -89,7 +89,7 @@ public class Cushion extends BlockAttachedEntity {
     }
 
     public ItemStack getPickResult() {
-        return new ItemStack((ItemLike)ModItems.CUSHION.pick(this.getColor()));
+        return new ItemStack(ModItems.getCushion(this.getColor()));
     }
 
     protected void tickAtCheckInterval() {
@@ -111,7 +111,7 @@ public class Cushion extends BlockAttachedEntity {
     private void showBreakingParticles() {
         Level var2 = this.level();
         if (var2 instanceof ServerLevel level) {
-            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, ((Block) Blocks.WOOL.pick(this.getColor())).defaultBlockState()), this.getX(), this.getY(0.6666666666666666), this.getZ(), 10, (double)(this.getBbWidth() / 4.0F), (double)(this.getBbHeight() / 4.0F), (double)(this.getBbWidth() / 4.0F), 0.05);
+            level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, ((Block) ModBlocks.getWool(this.getColor())).defaultBlockState()), this.getX(), this.getY(0.6666666666666666), this.getZ(), 10, (double)(this.getBbWidth() / 4.0F), (double)(this.getBbHeight() / 4.0F), (double)(this.getBbWidth() / 4.0F), 0.05);
         }
 
     }
@@ -161,7 +161,7 @@ public class Cushion extends BlockAttachedEntity {
 
     protected void readAdditionalSaveData(final ValueInput input) {
         super.readAdditionalSaveData(input);
-        this.setColor((DyeColor)input.read("color", DyeColor.CODEC).orElse(DEFAULT_COLOR));
+        this.setColor(input.read("color", DyeColor.CODEC).orElse(DEFAULT_COLOR));
     }
 
     static {

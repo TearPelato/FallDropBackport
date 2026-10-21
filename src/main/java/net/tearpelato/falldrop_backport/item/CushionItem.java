@@ -63,6 +63,7 @@ public class CushionItem extends Item {
                         return InteractionResult.FAIL;
                     }
 
+                    cushion.setColor(color);
                     cushion.snapTo(entityPos, Direction.fromYRot((double)placeContext.getRotation()).toYRot(), 0.0F);
                     serverLevel.addFreshEntity(cushion);
                     level.playSound((Entity)null, cushion.getX(), cushion.getY(), cushion.getZ(), ModSounds.CUSHION_PLACE, SoundSource.BLOCKS, 0.75F, 0.8F);

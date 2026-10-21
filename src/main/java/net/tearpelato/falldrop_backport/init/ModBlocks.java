@@ -159,14 +159,14 @@ public class ModBlocks {
 
 
     public static final Block RED_POPLAR_LEAVES = registerBlock("red_poplar_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.01f,ModParticleTypes.RED_POPLAR_LEAVES, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.01f,ModParticleTypes.RED_POPLAR_LEAVES, properties.mapColor(MapColor.COLOR_RED)
                     .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor((_, _, _) -> false)));
 
     public static final Block ORANGE_POPLAR_LEAVES = registerBlock("orange_poplar_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.01f,ModParticleTypes.ORANGE_POPLAR_LEAVES, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.01f,ModParticleTypes.ORANGE_POPLAR_LEAVES, properties.mapColor(MapColor.COLOR_ORANGE)
                     .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
@@ -174,7 +174,7 @@ public class ModBlocks {
 
 
     public static final Block YELLOW_POPLAR_LEAVES = registerBlock("yellow_poplar_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.01f,ModParticleTypes.YELLOW_POPLAR_LEAVES, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.01f,ModParticleTypes.YELLOW_POPLAR_LEAVES, properties.mapColor(MapColor.COLOR_YELLOW)
                     .strength(0.2F).randomTicks().sound(ModSounds.POPLAR_LEAVES).noOcclusion()
                     .isValidSpawn(Blocks::ocelotOrParrot).isSuffocating((_, _, _) -> false)
                     .isViewBlocking((_, _, _) -> false)
@@ -219,7 +219,7 @@ public class ModBlocks {
             properties -> new ButtonBlock(BlockSetType.PALE_OAK, 20,
                     properties.strength(2f).noCollision().pushReaction(PushReaction.DESTROY)));
 
-    public static final Block STRAW_BED = registerBlockWithoutBlockItem("straw_bed",
+    public static final Block STRAW_BED = registerSimpleBlock("straw_bed",
             properties-> new StrawBedBlock(properties.strength(0.2f).sound(ModSounds.STRAW_BED)));
 
     public static final Block POPLAR_SIGN = registerBlockWithoutBlockItem("poplar_sign",
@@ -268,6 +268,13 @@ public class ModBlocks {
         Block toRegister = function.apply(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, Constants.vanilla(name))));
         registerBlockItem(Constants.vanilla(name), toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Constants.vanilla(name), toRegister);
+    }
+
+    private static Block registerSimpleBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, Constants.vanilla(name))));
+
         return Registry.register(BuiltInRegistries.BLOCK, Constants.vanilla(name), toRegister);
     }
 
