@@ -41,7 +41,7 @@ public class Cushion extends BlockAttachedEntity {
     }
 
     public DyeColor getColor() {
-        return (DyeColor)this.entityData.get(DATA_COLOR);
+        return this.entityData.get(DATA_COLOR);
     }
 
     public void setColor(final DyeColor color) {
@@ -63,7 +63,7 @@ public class Cushion extends BlockAttachedEntity {
                 }
             }
 
-            this.spawnAtLocation(level, (ItemLike) ModItems.getCushion(this.getColor()));
+            this.spawnAtLocation(level, ModItems.getCushion(this.getColor()));
         }
     }
 
@@ -89,7 +89,7 @@ public class Cushion extends BlockAttachedEntity {
     }
 
     public ItemStack getPickResult() {
-        return new ItemStack((ItemLike)ModItems.getCushion(this.getColor()));
+        return new ItemStack(ModItems.getCushion(this.getColor()));
     }
 
     protected void tickAtCheckInterval() {
@@ -161,7 +161,7 @@ public class Cushion extends BlockAttachedEntity {
 
     protected void readAdditionalSaveData(final ValueInput input) {
         super.readAdditionalSaveData(input);
-        this.setColor((DyeColor)input.read("color", DyeColor.CODEC).orElse(DEFAULT_COLOR));
+        this.setColor(input.read("color", DyeColor.CODEC).orElse(DEFAULT_COLOR));
     }
 
     static {

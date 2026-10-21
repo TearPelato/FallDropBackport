@@ -1,11 +1,12 @@
 package net.tearpelato.falldrop_backport.init;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.component.MapDecorations;
 import net.tearpelato.falldrop_backport.Constants;
 import net.tearpelato.falldrop_backport.item.CushionItem;
 
@@ -57,8 +58,43 @@ public class ModItems {
     public static final Item PINK_CUSHION = registerItem("pink_cushion",
             properties -> new CushionItem(properties.stacksTo(16), DyeColor.PINK));
 
-    public static final Item STRAW_BED = registerBlockItem("straw_bed", ModBlocks.STRAW_BED,
-            properties -> new Item(properties.stacksTo(16)));
+    public static final Item STRAW_BED = registerItem("straw_bed",
+            properties -> new BlockItem(ModBlocks.STRAW_BED, properties.stacksTo(16)));
+
+
+    public static final MapItem OCEAN_MONUMENT_MAP = (MapItem) registerItem("ocean_monument_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem WOODLAND_MANSION_MAP = (MapItem) registerItem("woodland_mansion_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem BURIED_TRIAL_MAP = (MapItem) registerItem("buried_trial_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem JUNGLE_PYRAMID_MAP = (MapItem) registerItem("jungle_pyramid_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem SWAMP_HUT_MAP = (MapItem) registerItem("swamp_hut_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem DESERT_VILLAGE_MAP = (MapItem) registerItem("desert_village_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem PLAINS_VILLAGE_MAP = (MapItem) registerItem("plains_village_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem SAVANNA_VILLAGE_MAP = (MapItem) registerItem("savanna_village_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem SNOWY_VILLAGE_MAP = (MapItem) registerItem("snowy_village_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem TAIGA_VILLAGE_MAP = (MapItem) registerItem("taiga_village_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem BURIED_TREASURE_MAP = (MapItem) registerItem("buried_treasure_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem BURIED_ANCIENT_CITY_MAP = (MapItem) registerItem("buried_ancient_city_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem BURIED_MINESHAFT_MAP = (MapItem) registerItem("buried_mineshaft_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem DESERT_PYRAMID_MAP = (MapItem) registerItem("desert_pyramid_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem ABANDONED_CAMP_MAP = (MapItem) registerItem("abandoned_camp_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+    public static final MapItem WARM_OCEAN_RUINS_MAP = (MapItem) registerItem("warm_ocena_ruins_map",
+            properties -> new MapItem(properties.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
+
 
 
     public static Item getCushion(DyeColor color) {
@@ -84,11 +120,6 @@ public class ModItems {
 
 
 
-    private static Item registerBlockItem(String name, Block block, Function<Item.Properties, Item> function) {
-        return Registry.register(BuiltInRegistries.ITEM, Constants.vanilla(name),
-                new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
-                        .setId(ResourceKey.create(Registries.ITEM, Constants.vanilla(name)))));
-    }
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.blockentity.ShelfRenderer;
 import net.minecraft.client.renderer.blockentity.StandingSignRenderer;
 import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.tearpelato.falldrop_backport.client.item.ExplorerMapItemModel;
 import net.tearpelato.falldrop_backport.entity.client.CushionModel;
 import net.tearpelato.falldrop_backport.entity.client.ModModelLayerLocations;
 import net.tearpelato.falldrop_backport.entity.renderer.CushionRenderer;
@@ -23,13 +24,13 @@ import net.tearpelato.falldrop_backport.init.ModParticleTypes;
 public class FallDropBackportClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-
+        ExplorerMapItemModel.init();
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.POPLAR_BOAT, BoatModel::createBoatModel);
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.POPLAR_CHEST_BOAT, BoatModel::createChestBoatModel);
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.CUSHION, CushionModel::createBodyLayer);
         EntityRenderers.register(ModEntities.POPLAR_BOAT, context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_BOAT));
         EntityRenderers.register(ModEntities.POPLAR_CHEST_BOAT, context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_CHEST_BOAT));
-        EntityRenderers.register(ModEntities.CUSHION, context -> new CushionRenderer(context));
+        EntityRenderers.register(ModEntities.CUSHION, CushionRenderer::new);
 
 
         ParticleProviderRegistry.getInstance().register(ModParticleTypes.RED_POPLAR_LEAVES, PoplarParticles.PoplarProvider::new);
