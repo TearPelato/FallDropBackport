@@ -10,7 +10,6 @@ import terrablender.api.TerraBlenderApi;
 public class FallDropBackport implements ModInitializer, TerraBlenderApi {
     @Override
     public void onInitialize() {
-        ExplorerMapItemModel.init();
         ModCreativeTabs.registerCreativeModeTabs();
 
         ModItems.registerModItems();
