@@ -18,6 +18,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.gui.map.IMapDecorationRenderer;
 import net.neoforged.neoforge.client.gui.map.RegisterMapDecorationRenderersEvent;
+import net.tearpelato.falldrop_backport.client.item.ExplorerMapItemModel;
 import net.tearpelato.falldrop_backport.entity.client.CushionModel;
 import net.tearpelato.falldrop_backport.entity.client.ModModelLayerLocations;
 import net.tearpelato.falldrop_backport.entity.renderer.CushionRenderer;
@@ -32,6 +33,7 @@ public class FallDropBackportClient {
 
     @SubscribeEvent
     public static void onClientSetupEvent(FMLClientSetupEvent event) {
+        ExplorerMapItemModel.init();
         EntityRenderers.register(ModEntities.POPLAR_BOAT.get(), context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_BOAT));
         EntityRenderers.register(ModEntities.POPLAR_CHEST_BOAT.get(), context -> new BoatRenderer(context, ModModelLayerLocations.POPLAR_CHEST_BOAT));
         EntityRenderers.register(ModEntities.CUSHION.get(), context -> new CushionRenderer(context));

@@ -14,7 +14,6 @@ import net.tearpelato.falldrop_backport.init.*;
 public class FallDropBackport {
 
     public FallDropBackport(IEventBus modEventBus, ModContainer modContainer) {
-        ExplorerMapItemModel.init();
 
         ModItems.init(modEventBus);
         ModBlocks.init(modEventBus);
